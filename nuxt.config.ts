@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     "vue-loading-overlay/dist/css/index.css",
   ],
   // build modules
-  modules: ["@vueuse/nuxt", "@pinia/nuxt", "@element-plus/nuxt", "@nuxtjs/color-mode", "nuxt-primevue", "nuxt-swiper"],
+  modules: ["@vueuse/nuxt", "@pinia/nuxt", "@element-plus/nuxt", "@nuxtjs/color-mode", "nuxt-primevue", "nuxt-swiper", "@vant/nuxt"],
   plugins: ["~/plugins/fontawesome", { src: "~/plugins/jquery.client", mode: "client" }],
   // vueuse
   vueuse: {

@@ -60,11 +60,13 @@
     "@element-plus/nuxt": "^1.0.8",
     "@nuxtjs/color-mode": "^3.3.3",
     "@pinia/nuxt": "^0.5.1",
+    "@vant/nuxt": "^1.0.6",
     "@vueuse/nuxt": "^10.9.0",
     "consola": "^3.2.3",
     "nuxt": "^3.11.2",
     "sass": "^1.74.1",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.4",
+    "vant": "^4.9.16"
   },
   "peerDependencies": {
     "pinia": "^2.1.6"
