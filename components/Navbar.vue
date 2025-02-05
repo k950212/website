@@ -5,10 +5,10 @@
       <div class="nav" style="height: 100%">
         <div class="title pointer" @click="goHome">個人網站</div>
         <div class="navLink">
-          <div class="link" @click="dropdown = !dropdown">
+          <div class="link" @click="openMask">
             專案介紹 <img class="px-1" src="@/assets/img/chevron-down.png" alt="" />
             <div class="link-dropdown" v-if="dropdown">
-              <div class="link-dropdown-item mb-2">
+              <div class="link-dropdown-item mb-2" @click="goTo('familyMart')">
                 <div>全家記帳本</div>
               </div>
               <div class="link-dropdown-item mb-2">
@@ -57,12 +57,21 @@ onMounted(() => {
 const settingDisplay = ref(false);
 const setting = () => {
   settingDisplay.value = !settingDisplay.value;
+  dropdown.value = false;
 };
 const goHome = () => {
-  // router.push("/home");
+  router.push("/");
 };
-
+const goTo = (text) => {
+  if (text == "familyMart") {
+    router.push("/family-mart");
+  }
+};
 const dropdown = ref(false);
+const openMask = () => {
+  dropdown.value = !dropdown.value;
+  settingDisplay.value = !settingDisplay.value;
+};
 </script>
 <style scoped>
 .navbar-stack {
@@ -85,6 +94,7 @@ const dropdown = ref(false);
       position: relative;
       display: flex;
       flex-direction: row;
+      cursor: pointer;
       .link {
         margin: 0rem 24px;
         display: flex;
@@ -103,6 +113,7 @@ const dropdown = ref(false);
       .link-dropdown {
         top: 80px;
         position: absolute;
+        z-index: 100010 !important;
         box-shadow: 2px 3px 20px 0px #00000014;
         background-color: white;
         min-height: 200px;
@@ -134,8 +145,8 @@ const dropdown = ref(false);
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 100;
-  background-color: rgba(255, 255, 255, 0);
+  z-index: 5000;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 991px) {
   .navbar-basic {

@@ -36,7 +36,7 @@
         <div class="col-xl-6 col-sm-12">
           <div class="skill-circle-box">
             <div class="rate">
-              <van-circle v-model:current-rate="vueRate" :rate="95" :text="`${vueRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#0032ff" />
+              <van-circle v-model:current-rate="vueRate" :rate="95" :text="`${vueRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
             </div>
             <div class="content">
               <div class="title">vue.js</div>
@@ -47,7 +47,7 @@
         <div class="col-xl-6 col-sm-12">
           <div class="skill-circle-box">
             <div class="rate">
-              <van-circle v-model:current-rate="cssRate" :rate="100" :text="`${cssRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#0032ff" />
+              <van-circle v-model:current-rate="cssRate" :rate="100" :text="`${cssRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
             </div>
             <div class="content">
               <div class="title">html、css</div>
@@ -58,7 +58,7 @@
         <div class="col-xl-6 col-sm-12">
           <div class="skill-circle-box">
             <div class="rate">
-              <van-circle v-model:current-rate="jsRate" :rate="85" :text="`${jsRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#0032ff" />
+              <van-circle v-model:current-rate="jsRate" :rate="85" :text="`${jsRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
             </div>
             <div class="content">
               <div class="title">javaScript</div>
@@ -69,7 +69,7 @@
         <div class="col-xl-6 col-sm-12">
           <div class="skill-circle-box">
             <div class="rate">
-              <van-circle v-model:current-rate="cRate" :rate="75" :text="`${cRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#0032ff" />
+              <van-circle v-model:current-rate="cRate" :rate="75" :text="`${cRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
             </div>
             <div class="content">
               <div class="title">C</div>
@@ -101,7 +101,7 @@
         <div class="f42" style="color: rgba(20, 40, 68, 1); font-weight: 700">104 找工作中 前端工程師</div>
         <!-- <div class="f18" style="color: rgba(33, 39, 42, 1); font-weight: 400">如有興趣 歡迎與我聯繫</div> -->
       </div>
-      <div class="d-flex align-items-center"><button class="btn">立即聯繫</button></div>
+      <div class="d-flex align-items-center"><button class="btn word-nowrap">立即聯繫</button></div>
     </div>
   </div>
 
@@ -270,7 +270,7 @@ const viteRate = ref(0);
   padding: 4rem;
   display: flex;
   align-items: center;
-  height: 300px;
+  min-height: 300px;
   img {
     width: 100%;
     height: 300px;
@@ -290,5 +290,12 @@ const viteRate = ref(0);
 }
 .popupBg {
   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+@media (max-width: 500px) {
+  .home-bottom {
+    .content {
+      flex-direction: column;
+    }
+  }
 }
 </style>
