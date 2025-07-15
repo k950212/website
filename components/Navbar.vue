@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="link">工作經歷</div>
-          <div class="link">關於我</div>
+          <div class="link" @click="goAbout">關於我</div>
           <button class="btn link" @click="setting">聯絡資訊</button>
         </div>
         <div class="navMenu">
@@ -61,6 +61,9 @@ const setting = () => {
 };
 const goHome = () => {
   router.push("/");
+};
+const goAbout = () => {
+  router.push("/about");
 };
 const goTo = (text) => {
   if (text == "familyMart") {
