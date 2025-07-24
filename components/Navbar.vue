@@ -11,17 +11,20 @@
               <div class="link-dropdown-item mb-2" @click="goTo('familyMart')">
                 <div>全家記帳本</div>
               </div>
-              <div class="link-dropdown-item mb-2">
+              <div class="link-dropdown-item mb-2" @click="goTo('goYourStudio')">
                 <div>去你的工作室</div>
               </div>
-              <div class="link-dropdown-item mb-2">
+              <div class="link-dropdown-item mb-2" @click="goTo('crestRma')">
                 <div>八洋RMA</div>
               </div>
-              <div class="link-dropdown-item mb-2">
+              <div class="link-dropdown-item mb-2" @click="goTo('charming')">
                 <div>碩美牙醫</div>
               </div>
-              <div class="link-dropdown-item mb-2">
+              <div class="link-dropdown-item mb-2" @click="goTo('tongxin')">
                 <div>協力國際</div>
+              </div>
+              <div class="link-dropdown-item mb-2" @click="goTo('bremsinn')">
+                <div>慎行科技</div>
               </div>
               <div class="link-dropdown-item">
                 <div>EIP 系統</div>
@@ -68,6 +71,16 @@ const goAbout = () => {
 const goTo = (text) => {
   if (text == "familyMart") {
     router.push("/family-mart");
+  } else if (text == "goYourStudio") {
+    router.push("/go-your-studio");
+  } else if (text == "crestRma") {
+    router.push("/crest-rma-web");
+  } else if (text == "charming") {
+    router.push("/charming-web");
+  } else if (text == "tongxin") {
+    router.push("/tongxin-xili-web");
+  } else if (text == "bremsinn") {
+    router.push("bremsinn-web");
   }
 };
 const dropdown = ref(false);

@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <div class="container">
+  <div id="familyPage" class="container">
     <div class="project row">
       <div class="col-xl-5 col-md-12 left">
         <div class="img">

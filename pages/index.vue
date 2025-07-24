@@ -1,30 +1,32 @@
 <template>
   <Navbar />
   <div class="section1">
-    <div class="title">Coming soon.</div>
+    <div class="title">前端工程師</div>
   </div>
   <div class="container-fluid swiper-boxs" style="margin: 0">
     <swiper :slidesPerView="3" :spaceBetween="30" :modules="modules" class="mySwiper" :loop="true">
-      <swiper-slide class="box"><img src="@/assets/img/swiper1.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/swiper2.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/swiper3.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/swiper4.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/swiper5.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/swiper6.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/goYourStudio1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/crestRma2.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/charming1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/tongxin1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/bremsinnNew1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/bremsinn1.png" alt="" /></swiper-slide>
     </swiper>
   </div>
   <div class="section2">
-    <div class="title">Coming soon.</div>
+    <div class="title">Kevin.Chang</div>
   </div>
 
   <div class="project container">
-    <div class="title f20 themeColor mb-2">參與專案 慎行公司 2023.12~2025.02</div>
+    <div class="title f20 themeColor mb-2">參與專案 慎行公司 2023.12~2025.07</div>
     <div class="d-flex row justify-content-center py-3">
       <template v-for="item in projectList">
         <div class="col-xl-2 col-sm-4 col-6">
-          <div class="box mb-2">
-            {{ item.name }}
-            <img src="@/assets/img/king.png" alt="" v-if="item.name == '全家記帳本'" />
+          <div class="box-wrapper">
+            <div class="box mb-2" @click="goToProject(item.link)">
+              <div class="fancy-text">{{ item.name }}</div>
+              <img src="@/assets/img/king.png" alt="" v-if="item.name == '全家記帳本'" />
+            </div>
           </div>
         </div>
       </template>
@@ -118,27 +120,47 @@ const modules = [Pagination, Navigation, Autoplay];
 const projectList = ref([
   {
     name: "全家記帳本",
-    link: "",
+    link: "https://daybook2wu.family.com.tw/mynote/index?Trans_info2=VOOJp0lISGFiKDAx1YUDvfepHSXfdxMLtftabOFvYwyaa4AGvq1qBBZOHyRW2jYyE%2BvQrF6uAgsyZwtH%2BBRKVmS%2FPrTzBk7BR0Zow2C2uwGUfHOYaaGU7LdpCIUXqvG21xqTrQ8BhPWOIavY9DM7RZz3fmQggU6Hv%2Bi1USeOzmLaoXK0T8DrPDfbqOJN0BPB",
   },
   {
     name: "去你的工作室",
-    link: "",
+    link: "https://goyourstudio.com/book/?openExternalBrowser=1",
   },
   {
     name: "八洋RMA ",
-    link: "",
+    link: "https://rma.bremsinn.com/home",
   },
   {
     name: "碩美牙醫",
-    link: "",
+    link: "https://www.charmingdent.com.tw/",
   },
   {
     name: "協力國際",
+    link: "https://www.tongxin-xili.com.tw/",
+  },
+  {
+    name: "慎行官網",
+    link: "https://www.bremsinn.com/",
+  },
+  {
+    name: "高強建設官網",
     link: "",
   },
   {
+    name: "網路小工具",
+    link: "https://www.sinnigtool.com/",
+  },
+  {
+    name: "超群特產購物網",
+    link: "https://km5257.bremsinn.com/",
+  },
+  {
     name: "EIP系統",
-    link: "",
+    link: "https://eip.bremsinn.com/hr/dashboard",
+  },
+  {
+    name: "PM系統",
+    link: "https://pm.bremsinn.com/login",
   },
 ]);
 const vueRate = ref(0);
@@ -147,6 +169,9 @@ const jsRate = ref(0);
 const cRate = ref(0);
 const nuxtRate = ref(0);
 const viteRate = ref(0);
+const goToProject = (link) => {
+  window.open(link);
+};
 </script>
 <style scoped>
 .section1 {
@@ -155,6 +180,7 @@ const viteRate = ref(0);
   top: 50px;
   z-index: 1000;
   background-color: white;
+  border-bottom: 2px solid #6192d38f;
   border-radius: 0px 0px 40% 40%;
   display: flex;
   flex-direction: column;
@@ -173,6 +199,7 @@ const viteRate = ref(0);
   top: -50px;
   z-index: 1000;
   background-color: white;
+  border-top: 2px solid #6192d38f;
   border-radius: 40% 40% 0px 0px;
   display: flex;
   flex-direction: column;
@@ -252,14 +279,32 @@ const viteRate = ref(0);
     padding: 1rem;
     border-radius: 8px;
     background-color: #6192d38f;
+    cursor: pointer;
     color: white;
     text-align: center;
+    .fancy-text {
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffffff, #00c8ff);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: background-position 1s ease;
+    }
     img {
       position: absolute;
       height: 50px;
       left: -20px;
       top: -30px;
       transform: rotate(-10deg);
+    }
+  }
+  .box-wrapper {
+    /* display: inline-block; */
+    &:hover {
+      border-radius: 9px;
+      background: linear-gradient(to bottom right, #6192d38f, rgb(0, 157, 255));
+      /* box-shadow: 0px 0px 10px 0px rgba(255, 158, 69, 0.5); */
     }
   }
 }
