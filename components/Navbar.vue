@@ -8,26 +8,41 @@
           <div class="link" @click="openMask">
             專案介紹 <img class="px-1" src="@/assets/img/chevron-down.png" alt="" />
             <div class="link-dropdown" v-if="dropdown">
-              <div class="link-dropdown-item mb-2" @click="goTo('familyMart')">
-                <div>全家記帳本</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('familyMart')" :class="{ active: routerPath == 'family-mart' }">
+                <div>全家記帳本(WebView)</div>
               </div>
-              <div class="link-dropdown-item mb-2" @click="goTo('goYourStudio')">
-                <div>去你的工作室</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('goYourStudio')" :class="{ active: routerPath == 'go-your-studio' }">
+                <div>去你的工作室(租借場地)</div>
               </div>
-              <div class="link-dropdown-item mb-2" @click="goTo('crestRma')">
-                <div>八洋RMA</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('crestRma')" :class="{ active: routerPath == 'crest-rma-web' }">
+                <div>八洋RMA(送修平台)</div>
               </div>
-              <div class="link-dropdown-item mb-2" @click="goTo('charming')">
-                <div>碩美牙醫</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('charming')" :class="{ active: routerPath == 'charming-web' }">
+                <div>碩美牙醫(形象官網)</div>
               </div>
-              <div class="link-dropdown-item mb-2" @click="goTo('tongxin')">
-                <div>協力國際</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('tongxin')" :class="{ active: routerPath == 'tongxin-xili-web' }">
+                <div>協力國際(形象官網)</div>
               </div>
-              <div class="link-dropdown-item mb-2" @click="goTo('bremsinn')">
-                <div>慎行科技</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('bremsinn')" :class="{ active: routerPath == 'bremsinn-web' }">
+                <div>慎行科技(形象官網)</div>
               </div>
-              <div class="link-dropdown-item">
-                <div>EIP 系統</div>
+              <div class="link-dropdown-item mb-2" @click="goTo('gaocheung')" :class="{ active: routerPath == 'gaocheung-web' }">
+                <div>高強建設(形象官網)</div>
+              </div>
+              <div class="link-dropdown-item" @click="goTo('sinnigtool')" :class="{ active: routerPath == 'sinnigtool' }">
+                <div>網路小工具(小工具)</div>
+              </div>
+              <div class="link-dropdown-item" @click="goTo('wintechWeb')" :class="{ active: routerPath == 'wintech-web' }">
+                <div>成浩管理平台(監測平台)</div>
+              </div>
+              <div class="link-dropdown-item" @click="goTo('km5257')" :class="{ active: routerPath == 'km5257' }">
+                <div>超群特產行(購物平台)</div>
+              </div>
+              <div class="link-dropdown-item" @click="goTo('gameStore')" :class="{ active: routerPath == 'gameStore' }">
+                <div>GamerStore(購物平台)</div>
+              </div>
+              <div class="link-dropdown-item" @click="goTo('personalWebsite')" :class="{ active: routerPath == 'personalWebsite' }">
+                <div>個人網站</div>
               </div>
             </div>
           </div>
@@ -53,9 +68,10 @@ const { loginStatusCheck, loginStatus } = commonFun();
 const route = useRoute();
 const router = useRouter();
 const props = defineProps(["login"]);
-
+const routerPath = ref("");
 onMounted(() => {
   loginStatusCheck();
+  routerPath.value = route.name;
 });
 const settingDisplay = ref(false);
 const setting = () => {
@@ -80,7 +96,15 @@ const goTo = (text) => {
   } else if (text == "tongxin") {
     router.push("/tongxin-xili-web");
   } else if (text == "bremsinn") {
-    router.push("bremsinn-web");
+    router.push("/bremsinn-web");
+  } else if (text == "gaocheung") {
+    router.push("/gaocheung-web");
+  } else if (text == "sinnigtool") {
+    router.push("sinnigtool");
+  } else if (text == "wintechWeb") {
+    router.push("wintech-web");
+  } else if (text == "km5257") {
+    router.push("km5257");
   }
 };
 const dropdown = ref(false);
@@ -133,12 +157,16 @@ const openMask = () => {
         box-shadow: 2px 3px 20px 0px #00000014;
         background-color: white;
         min-height: 200px;
-        width: 200px;
+        width: 260px;
         padding: 16px 20px;
         border-radius: 6px;
         .link-dropdown-item {
           display: flex;
           padding: 8px;
+          &:hover {
+            color: #6192d3;
+            font-weight: bold;
+          }
           img {
             margin-right: 4px;
           }
@@ -163,6 +191,10 @@ const openMask = () => {
   position: fixed;
   z-index: 5000;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.active {
+  color: #6192d3;
+  font-weight: bold;
 }
 @media screen and (max-width: 991px) {
   .navbar-basic {

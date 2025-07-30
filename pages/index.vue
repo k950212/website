@@ -1,24 +1,39 @@
 <template>
   <Navbar />
   <div class="section1">
-    <div class="title">前端工程師</div>
+    <div class="title">{{ currentSwiperName }}</div>
   </div>
   <div class="container-fluid swiper-boxs" style="margin: 0">
-    <swiper :slidesPerView="3" :spaceBetween="30" :modules="modules" class="mySwiper" :loop="true">
+    <swiper
+      :slidesPerView="3"
+      :spaceBetween="30"
+      :modules="modules"
+      class="mySwiper"
+      :loop="true"
+      :autoplay="{ delay: 2500, disableOnInteraction: false }"
+      @swiper="onSwiperInit"
+      @realIndexChange="onRealSlideChange"
+    >
       <swiper-slide class="box"><img src="@/assets/img/goYourStudio1.png" alt="" /></swiper-slide>
-      <swiper-slide class="box"><img src="@/assets/img/crestRma2.png" alt="" /></swiper-slide>
+      <!-- <swiper-slide class="box"><img src="@/assets/img/crestRma2.png" alt="" /></swiper-slide> -->
       <swiper-slide class="box"><img src="@/assets/img/charming1.png" alt="" /></swiper-slide>
       <swiper-slide class="box"><img src="@/assets/img/tongxin1.png" alt="" /></swiper-slide>
       <swiper-slide class="box"><img src="@/assets/img/bremsinnNew1.png" alt="" /></swiper-slide>
       <swiper-slide class="box"><img src="@/assets/img/bremsinn1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/gaocheung1.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/wintech3.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/km52571.png" alt="" /></swiper-slide>
     </swiper>
   </div>
   <div class="section2">
     <div class="title">Kevin.Chang</div>
   </div>
-
+  <div class="experience container">
+    <div class="title f20 themeColor mb-2">工作經歷</div>
+    <div class="company">慎行科技有限公司 2023.12 - 2025.08</div>
+  </div>
   <div class="project container">
-    <div class="title f20 themeColor mb-2">參與專案 慎行公司 2023.12~2025.07</div>
+    <div class="title f20 themeColor mb-2">參與專案</div>
     <div class="d-flex row justify-content-center py-3">
       <template v-for="item in projectList">
         <div class="col-xl-2 col-sm-4 col-6">
@@ -33,6 +48,7 @@
     </div>
   </div>
   <div class="skill-circle">
+    <div class="title-main"><div>熟練度</div></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-6 col-sm-12">
@@ -43,6 +59,17 @@
             <div class="content">
               <div class="title">vue.js</div>
               <div>常使用Nuxt、Vite開發專案 Vue cli 也ok,熟悉 vue3 composition api 與 vue2 options api 寫法.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-sm-12">
+          <div class="skill-circle-box">
+            <div class="rate">
+              <van-circle v-model:current-rate="reactRate" :rate="50" :text="`${reactRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
+            </div>
+            <div class="content">
+              <div class="title">React.js</div>
+              <div>目前實作案子不多，僅有一兩個將vue3寫法全換成React寫法經驗</div>
             </div>
           </div>
         </div>
@@ -60,7 +87,18 @@
         <div class="col-xl-6 col-sm-12">
           <div class="skill-circle-box">
             <div class="rate">
-              <van-circle v-model:current-rate="jsRate" :rate="85" :text="`${jsRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
+              <van-circle v-model:current-rate="rwdRate" :rate="95" :text="`${rwdRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
+            </div>
+            <div class="content">
+              <div class="title">RWD</div>
+              <div>桌機、筆電、MAC、平板、手機 RWD實作案子數量多熟悉</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-sm-12">
+          <div class="skill-circle-box">
+            <div class="rate">
+              <van-circle v-model:current-rate="jsRate" :rate="90" :text="`${jsRate}%`" :stroke-width="100" start-position="right" layer-color="#ffffff" color="#6192d38f" />
             </div>
             <div class="content">
               <div class="title">javaScript</div>
@@ -151,20 +189,35 @@ const projectList = ref([
     link: "https://www.sinnigtool.com/",
   },
   {
+    name: "成浩管理平台",
+    link: "https://web-wintech.bremsinn.com/overview",
+  },
+  {
     name: "超群特產購物網",
     link: "https://km5257.bremsinn.com/",
   },
   {
-    name: "EIP系統",
-    link: "https://eip.bremsinn.com/hr/dashboard",
+    name: "GamerStore(工作前)",
+    link: "https://k950212.github.io/GamerStore/dist/#/",
   },
   {
-    name: "PM系統",
-    link: "https://pm.bremsinn.com/login",
+    name: "個人網站(工作前)",
+    link: "https://k950212.github.io/PersonalWebsite/dist/#/",
   },
+  // {
+  //   name: "EIP系統",
+  //   link: "https://eip.bremsinn.com/hr/dashboard",
+  // },
+  // {
+  //   name: "PM系統",
+  //   link: "https://pm.bremsinn.com/login",
+  // },
 ]);
+
 const vueRate = ref(0);
+const reactRate = ref(0);
 const cssRate = ref(0);
+const rwdRate = ref(0);
 const jsRate = ref(0);
 const cRate = ref(0);
 const nuxtRate = ref(0);
@@ -172,6 +225,28 @@ const viteRate = ref(0);
 const goToProject = (link) => {
   window.open(link);
 };
+const swiperRef = ref(null);
+const currentIndex = ref(0);
+const onSwiperInit = (swiper) => {
+  swiperRef.value = swiper;
+  currentIndex.value = swiper.realIndex; // realIndex 忽略 loop clone 的部分
+};
+
+const onRealSlideChange = (swiper) => {
+  currentIndex.value = swiper.realIndex;
+  currentSwiperName.value = swiperNam.value[currentIndex.value].name;
+};
+const currentSwiperName = ref("碩美牙醫");
+const swiperNam = ref([
+  { name: "碩美牙醫" },
+  { name: "協力國際" },
+  { name: "慎行科技官網(新)" },
+  { name: "慎行科技官網(舊)" },
+  { name: "高強建設官網" },
+  { name: "成浩管理平台" },
+  { name: "超群特產購物網" },
+  { name: "去你的工作室" },
+]);
 </script>
 <style scoped>
 .section1 {
@@ -198,7 +273,7 @@ const goToProject = (link) => {
   position: relative;
   top: -50px;
   z-index: 1000;
-  background-color: white;
+  background-color: #ffffff;
   border-top: 2px solid #6192d38f;
   border-radius: 40% 40% 0px 0px;
   display: flex;
@@ -242,6 +317,14 @@ const goToProject = (link) => {
   }
 }
 .skill-circle {
+  .title-main {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #3966a2;
+    padding: 1rem 0rem;
+  }
   .skill-circle-box {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
@@ -267,7 +350,20 @@ const goToProject = (link) => {
     }
   }
 }
-
+.experience {
+  .title {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .company {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem 0rem;
+    font-weight: bold;
+  }
+}
 .project {
   .title {
     display: flex;

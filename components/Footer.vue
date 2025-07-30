@@ -7,14 +7,12 @@
         <div class="title">專案介紹</div>
         <div class="link">全家記帳本</div>
         <div class="link">去你的工作室</div>
-        <div class="link">八洋RMA</div>
-        <div class="link">碩美牙醫</div>
-        <div class="link">協力國際</div>
-        <div class="link">EIP系統</div>
+        <div class="link">電商網站(工作前)</div>
+        <div class="link">個人網站(工作前)</div>
       </div>
       <div class="item">
         <div class="title">工作經歷</div>
-        <div class="link">經歷</div>
+        <div class="link">慎行科技 23.12-25.08</div>
       </div>
       <div class="item">
         <div class="title">關於我</div>

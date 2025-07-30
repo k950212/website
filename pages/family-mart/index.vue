@@ -138,7 +138,7 @@ const modules = [Pagination];
 
 const goFamilyMary = () => {
   window.open(
-    "https://daybook2wu.family.com.tw/mynote/overview?Trans_info2=VOOJp0lISGFiKDAx1YUDvfepHSXfdxMLtftabOFvYwyaa4AGvq1qBBZOHyRW2jYyE%2BvQrF6uAgsyZwtH%2BBRKVmS%2FPrTzBk7BR0Zow2C2uwGUfHOYaaGU7LdpCIUXqvG21xqTrQ8BhPWOIavY9DM7RZz3fmQggU6Hv%2Bi1USeOzmLaoXK0T8DrPDfbqOJN0BPB"
+    "https://daybook2wu.family.com.tw/mynote/index?Trans_info2=VOOJp0lISGFiKDAx1YUDvfepHSXfdxMLtftabOFvYwyaa4AGvq1qBBZOHyRW2jYyE%2BvQrF6uAgsyZwtH%2BBRKVmS%2FPrTzBk7BR0Zow2C2uwGUfHOYaaGU7LdpCIUXqvG21xqTrQ8BhPWOIavY9DM7RZz3fmQggU6Hv%2Bi1USeOzmLaoXK0T8DrPDfbqOJN0BPB"
   );
 };
 </script>
