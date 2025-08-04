@@ -23,6 +23,7 @@
       <swiper-slide class="box"><img src="@/assets/img/gaocheung1.png" alt="" /></swiper-slide>
       <swiper-slide class="box"><img src="@/assets/img/wintech3.png" alt="" /></swiper-slide>
       <swiper-slide class="box"><img src="@/assets/img/km52571.png" alt="" /></swiper-slide>
+      <swiper-slide class="box"><img src="@/assets/img/gamerStore1.png" alt="" /></swiper-slide>
     </swiper>
   </div>
   <div class="section2">
@@ -245,6 +246,7 @@ const swiperNam = ref([
   { name: "高強建設官網" },
   { name: "成浩管理平台" },
   { name: "超群特產購物網" },
+  { name: "Gamer-Store" },
   { name: "去你的工作室" },
 ]);
 </script>

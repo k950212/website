@@ -38,20 +38,33 @@
               <div class="link-dropdown-item" @click="goTo('km5257')" :class="{ active: routerPath == 'km5257' }">
                 <div>超群特產行(購物平台)</div>
               </div>
-              <div class="link-dropdown-item" @click="goTo('gameStore')" :class="{ active: routerPath == 'gameStore' }">
+              <div class="link-dropdown-item" @click="goTo('gamerStore')" :class="{ active: routerPath == 'gamer-store' }">
                 <div>GamerStore(購物平台)</div>
               </div>
-              <div class="link-dropdown-item" @click="goTo('personalWebsite')" :class="{ active: routerPath == 'personalWebsite' }">
+              <div class="link-dropdown-item" @click="goTo('personalWeb')" :class="{ active: routerPath == 'personal-web' }">
                 <div>個人網站</div>
               </div>
             </div>
           </div>
-          <div class="link">工作經歷</div>
           <div class="link" @click="goAbout">關於我</div>
           <button class="btn link" @click="setting">聯絡資訊</button>
         </div>
         <div class="navMenu">
-          <img src="@/assets/img/menu_icons.png" alt="" style="width: 40px; height: 50px" />
+          <img src="@/assets/img/menu_icons.png" alt="" style="width: 40px; height: 50px" @click="openMenu" />
+          <div v-if="phoneMenu" class="phoneMenu">
+            <div class="link" @click="goTo('familyMart')" :class="{ active: routerPath == 'family-mart' }">全家記帳本(WebView)</div>
+            <div class="link" @click="goTo('goYourStudio')" :class="{ active: routerPath == 'go-your-studio' }">去你的工作室(租借場地)</div>
+            <div class="link" @click="goTo('crestRma')" :class="{ active: routerPath == 'crest-rma-web' }">八洋RMA(送修平台)</div>
+            <div class="link" @click="goTo('charming')" :class="{ active: routerPath == 'charming-web' }">碩美牙醫(形象官網)</div>
+            <div class="link" @click="goTo('tongxin')" :class="{ active: routerPath == 'tongxin-xili-web' }">協力國際(形象官網)</div>
+            <div class="link" @click="goTo('bremsinn')" :class="{ active: routerPath == 'bremsinn-web' }">慎行科技(形象官網)</div>
+            <div class="link" @click="goTo('gaocheung')" :class="{ active: routerPath == 'gaocheung-web' }">高強建設(形象官網)</div>
+            <div class="link" @click="goTo('sinnigtool')" :class="{ active: routerPath == 'sinnigtool' }">網路小工具(小工具)</div>
+            <div class="link" @click="goTo('wintechWeb')" :class="{ active: routerPath == 'wintech-web' }">成浩管理平台(監測平台)</div>
+            <div class="link" @click="goTo('km5257')" :class="{ active: routerPath == 'km5257' }">超群特產行(購物平台)</div>
+            <div class="link" @click="goTo('gamerStore')" :class="{ active: routerPath == 'gamer-store' }">GamerStore(購物平台)</div>
+            <div class="link" @click="goTo('personalWeb')" :class="{ active: routerPath == 'personal-web' }">個人網站</div>
+          </div>
         </div>
       </div>
     </div>
@@ -77,6 +90,7 @@ const settingDisplay = ref(false);
 const setting = () => {
   settingDisplay.value = !settingDisplay.value;
   dropdown.value = false;
+  phoneMenu.value = false;
 };
 const goHome = () => {
   router.push("/");
@@ -105,11 +119,20 @@ const goTo = (text) => {
     router.push("wintech-web");
   } else if (text == "km5257") {
     router.push("km5257");
+  } else if (text == "gamerStore") {
+    router.push("gamer-store");
+  } else if (text == "personalWeb") {
+    router.push("personal-web");
   }
 };
 const dropdown = ref(false);
 const openMask = () => {
   dropdown.value = !dropdown.value;
+  settingDisplay.value = !settingDisplay.value;
+};
+const phoneMenu = ref(false);
+const openMenu = () => {
+  phoneMenu.value = !phoneMenu.value;
   settingDisplay.value = !settingDisplay.value;
 };
 </script>
@@ -182,7 +205,27 @@ const openMask = () => {
   }
 }
 .navMenu {
+  position: relative;
   display: none;
+  .phoneMenu {
+    position: absolute;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    top: 80px;
+    right: 0;
+    width: 260px;
+    min-height: 200px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    .link {
+      padding: 8px;
+      cursor: pointer;
+      &:hover {
+        color: #6192d3;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .fullScreen {
@@ -196,6 +239,7 @@ const openMask = () => {
   color: #6192d3;
   font-weight: bold;
 }
+
 @media screen and (max-width: 991px) {
   .navbar-basic {
     .nav {

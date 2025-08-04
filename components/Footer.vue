@@ -4,7 +4,7 @@
     <div class="content container">
       <!-- <div class="item"><img src="@/assets/img/LOGO_udigit_2.png" alt="" /></div> -->
       <div class="item">
-        <div class="title">專案介紹</div>
+        <div class="title">重點專案</div>
         <div class="link">全家記帳本</div>
         <div class="link">去你的工作室</div>
         <div class="link">電商網站(工作前)</div>
@@ -30,7 +30,7 @@
     </div>
     <div class="footer-text py-2">
       <div>此為個人練習作品 無商業用途</div>
-      <div>2025.01.22</div>
+      <div>2025.09</div>
     </div>
   </div>
 </template>
