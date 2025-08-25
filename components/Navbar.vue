@@ -47,10 +47,12 @@
             </div>
           </div>
           <div class="link" @click="goAbout">關於我</div>
-          <button class="btn link" @click="setting">聯絡資訊</button>
+          <button class="btn link" @click="contactDialog">聯絡資訊</button>
         </div>
         <div class="navMenu">
-          <img src="@/assets/img/menu_icons.png" alt="" style="width: 40px; height: 50px" @click="openMenu" />
+          <img src="@/assets/img/user.svg" alt="" style="width: 35px; height: 35px; margin-right: 1rem" @click="goAbout()" />
+          <img src="@/assets/img/phone.svg" alt="" style="width: 35px; height: 35px; margin-right: 1rem" @click="contactDialog()" />
+          <img src="@/assets/img/menu_icons.png" alt="" style="width: 40px; height: 50px" @click="openMenu()" />
           <div v-if="phoneMenu" class="phoneMenu">
             <div class="link" @click="goTo('familyMart')" :class="{ active: routerPath == 'family-mart' }">全家記帳本(WebView)</div>
             <div class="link" @click="goTo('goYourStudio')" :class="{ active: routerPath == 'go-your-studio' }">去你的工作室(租借場地)</div>
@@ -70,10 +72,17 @@
     </div>
   </div>
   <div class="fullScreen" v-if="settingDisplay" @click="setting"></div>
+  <van-dialog v-model:show="dialogShow" title="聯絡資訊">
+    <div class="dialogContact">
+      <div>姓名：張允豪</div>
+      <div>電話：0909786383</div>
+      <div>Email：k950212@gmail.com</div>
+    </div>
+  </van-dialog>
 </template>
 <script setup>
 import { onMounted } from "vue";
-
+import { showDialog } from "vant";
 import apiMember from "@/apis/member";
 import { commonFun } from "@/mixin/commonFun";
 const { loginStatusCheck, loginStatus } = commonFun();
@@ -87,10 +96,14 @@ onMounted(() => {
   routerPath.value = route.name;
 });
 const settingDisplay = ref(false);
+const dialogShow = ref(false);
 const setting = () => {
   settingDisplay.value = !settingDisplay.value;
   dropdown.value = false;
   phoneMenu.value = false;
+};
+const contactDialog = () => {
+  dialogShow.value = true;
 };
 const goHome = () => {
   router.push("/");
@@ -204,6 +217,7 @@ const openMenu = () => {
     font-size: 20px;
   }
 }
+
 .navMenu {
   position: relative;
   display: none;
@@ -253,5 +267,8 @@ const openMenu = () => {
   .navLink {
     display: none !important;
   }
+}
+.dialogContact {
+  padding: 1rem;
 }
 </style>

@@ -27,6 +27,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../plugins/fontawesome").default> &
   InjectionType<typeof import("../../plugins/jquery.client").default> &
   InjectionType<typeof import("../../plugins/bootstrap.client").default> &
+  InjectionType<typeof import("../../plugins/vant-locale.client").default> &
   InjectionType<typeof import("../../plugins/vue3-goolge-login.client").default>
 
 declare module '#app' {

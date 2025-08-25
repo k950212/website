@@ -142,11 +142,18 @@
         <div class="f42" style="color: rgba(20, 40, 68, 1); font-weight: 700">104 找工作中 前端工程師</div>
         <!-- <div class="f18" style="color: rgba(33, 39, 42, 1); font-weight: 400">如有興趣 歡迎與我聯繫</div> -->
       </div>
-      <div class="d-flex align-items-center"><button class="btn word-nowrap">立即聯繫</button></div>
+      <div class="d-flex align-items-center"><button class="btn word-nowrap" @click="contactDialog">立即聯繫</button></div>
     </div>
   </div>
 
   <Footer />
+  <van-dialog v-model:show="dialogShow" title="聯絡資訊">
+    <div class="dialogContact">
+      <div>姓名：張允豪</div>
+      <div>電話：0909786383</div>
+      <div>Email：k950212@gmail.com</div>
+    </div>
+  </van-dialog>
 </template>
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -249,6 +256,10 @@ const swiperNam = ref([
   { name: "Gamer-Store" },
   { name: "去你的工作室" },
 ]);
+const dialogShow = ref(false);
+const contactDialog = () => {
+  dialogShow.value = true;
+};
 </script>
 <style scoped>
 .section1 {
@@ -440,5 +451,8 @@ const swiperNam = ref([
       flex-direction: column;
     }
   }
+}
+.dialogContact {
+  padding: 1rem;
 }
 </style>

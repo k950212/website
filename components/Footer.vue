@@ -20,7 +20,7 @@
       </div>
       <div class="item">
         <div class="title">聯絡資訊</div>
-        <div class="link">地址：<span style="font-weight: bold">台北市信義區忠孝東路五段xxx號x樓</span></div>
+        <div class="link">地址：<span style="font-weight: bold">台北市信義區XXX</span></div>
         <div class="link">電話：<span style="font-weight: bold">09 0978 6383</span></div>
       </div>
       <div class="item item-desk">
