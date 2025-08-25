@@ -1,0 +1,244 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/components/Skill.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"skill\">\n    <div class=\"title\"><div>專業能力</div></div>\n\n    <div class=\"container\">\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_web.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>打造</div>\n          <div>專屬網站</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_mobile.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>RWD</div>\n          <div>手機裝置</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_pad.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>RWD</div>\n          <div>平板裝置</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_cms.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>後台cms</div>\n          <div>數據管理</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_seo.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>搜尋引擎</div>\n          <div>SEO/SSR</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_api.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>API調用</div>\n          <div>串接應用</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_vue.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>前端框架</div>\n          <div>Vue.js</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_javascript.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>JavaScript</div>\n          <div>語法</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_html.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>HTML5</div>\n          <div>語義化標籤</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_css.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>CSS</div>\n          <div>排版變化</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n<script setup></script>\n<style scoped>\n.skill {\n  background-image: url(\"@/assets/img/skill_background.png\");\n  background-size: cover;\n  min-height: 600px;\n  padding: 3rem 0rem;\n\n  .title {\n    display: flex;\n    justify-content: center;\n    font-size: 40px;\n    font-weight: 700;\n    color: white;\n    padding: 1rem 0rem;\n  }\n  .container {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr); /* 預設為 5 個格子，每列佔 1fr 空間 */\n    gap: 20px;\n    .box {\n      background-color: rgba(255, 255, 255, 0.16);\n      border-radius: 12px;\n      padding: 20px; /* 內邊距 */\n      text-align: center; /* 文字居中 */\n      .img {\n        height: 100px;\n        img {\n          height: 100%;\n        }\n      }\n      .text {\n        margin-top: 1rem;\n      }\n    }\n  }\n}\n@media (max-width: 1200px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n  }\n}\n@media (max-width: 991px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(3, 1fr);\n    }\n  }\n}\n\n@media (max-width: 767px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n}\n@media (max-width: 520px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(1, 1fr);\n    }\n  }\n}\n</style>\n",
+      "start": 1756100532818,
+      "end": 1756100532876,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100532876,
+      "end": 1756100532876,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/skill_web.png'\nimport _imports_1 from '@/assets/img/skill_mobile.png'\nimport _imports_2 from '@/assets/img/skill_pad.png'\nimport _imports_3 from '@/assets/img/skill_cms.png'\nimport _imports_4 from '@/assets/img/skill_seo.png'\nimport _imports_5 from '@/assets/img/skill_api.png'\nimport _imports_6 from '@/assets/img/logo_vue.svg'\nimport _imports_7 from '@/assets/img/logo_javascript.png'\nimport _imports_8 from '@/assets/img/logo_html.svg'\nimport _imports_9 from '@/assets/img/logo_css.svg'\n\n\nconst _hoisted_1 = { class: \"skill\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _cache[0] || (_cache[0] = [\n    _createStaticVNode(\"<div class=\\\"title\\\" data-v-eb9ad393><div data-v-eb9ad393>專業能力</div></div><div class=\\\"container\\\" data-v-eb9ad393><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>打造</div><div data-v-eb9ad393>專屬網站</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>手機裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>平板裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>後台cms</div><div data-v-eb9ad393>數據管理</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>搜尋引擎</div><div data-v-eb9ad393>SEO/SSR</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>API調用</div><div data-v-eb9ad393>串接應用</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>前端框架</div><div data-v-eb9ad393>Vue.js</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>JavaScript</div><div data-v-eb9ad393>語法</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>HTML5</div><div data-v-eb9ad393>語義化標籤</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>CSS</div><div data-v-eb9ad393>排版變化</div></div></div></div>\", 2)\n  ])))\n}\n\nimport \"/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-eb9ad393\"]])",
+      "start": 1756100532876,
+      "end": 1756100532877,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100532877,
+      "end": 1756100532877,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100532877,
+      "end": 1756100532877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100532877,
+      "end": 1756100532877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100532879,
+      "end": 1756100532879,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100532879,
+      "end": 1756100532879,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100532879,
+      "end": 1756100532879,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/skill_web.png'\nimport _imports_1 from '@/assets/img/skill_mobile.png'\nimport _imports_2 from '@/assets/img/skill_pad.png'\nimport _imports_3 from '@/assets/img/skill_cms.png'\nimport _imports_4 from '@/assets/img/skill_seo.png'\nimport _imports_5 from '@/assets/img/skill_api.png'\nimport _imports_6 from '@/assets/img/logo_vue.svg'\nimport _imports_7 from '@/assets/img/logo_javascript.png'\nimport _imports_8 from '@/assets/img/logo_html.svg'\nimport _imports_9 from '@/assets/img/logo_css.svg'\n\n\nconst _hoisted_1 = { class: \"skill\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _cache[0] || (_cache[0] = [\n    _createStaticVNode(\"<div class=\\\"title\\\" data-v-eb9ad393><div data-v-eb9ad393>專業能力</div></div><div class=\\\"container\\\" data-v-eb9ad393><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>打造</div><div data-v-eb9ad393>專屬網站</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>手機裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>平板裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>後台cms</div><div data-v-eb9ad393>數據管理</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>搜尋引擎</div><div data-v-eb9ad393>SEO/SSR</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>API調用</div><div data-v-eb9ad393>串接應用</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>前端框架</div><div data-v-eb9ad393>Vue.js</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>JavaScript</div><div data-v-eb9ad393>語法</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>HTML5</div><div data-v-eb9ad393>語義化標籤</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>CSS</div><div data-v-eb9ad393>排版變化</div></div></div></div>\", 2)\n  ])))\n}\n\nimport \"/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-eb9ad393\"]])",
+      "start": 1756100532880,
+      "end": 1756100532880,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue"
+        ],
+        "sourcesContent": [
+          "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/skill_web.png'\nimport _imports_1 from '@/assets/img/skill_mobile.png'\nimport _imports_2 from '@/assets/img/skill_pad.png'\nimport _imports_3 from '@/assets/img/skill_cms.png'\nimport _imports_4 from '@/assets/img/skill_seo.png'\nimport _imports_5 from '@/assets/img/skill_api.png'\nimport _imports_6 from '@/assets/img/logo_vue.svg'\nimport _imports_7 from '@/assets/img/logo_javascript.png'\nimport _imports_8 from '@/assets/img/logo_html.svg'\nimport _imports_9 from '@/assets/img/logo_css.svg'\n\n\nconst _hoisted_1 = { class: \"skill\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _cache[0] || (_cache[0] = [\n    _createStaticVNode(\"<div class=\\\"title\\\" data-v-eb9ad393><div data-v-eb9ad393>專業能力</div></div><div class=\\\"container\\\" data-v-eb9ad393><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>打造</div><div data-v-eb9ad393>專屬網站</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>手機裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>RWD</div><div data-v-eb9ad393>平板裝置</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>後台cms</div><div data-v-eb9ad393>數據管理</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>搜尋引擎</div><div data-v-eb9ad393>SEO/SSR</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>API調用</div><div data-v-eb9ad393>串接應用</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>前端框架</div><div data-v-eb9ad393>Vue.js</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>JavaScript</div><div data-v-eb9ad393>語法</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>HTML5</div><div data-v-eb9ad393>語義化標籤</div></div></div><div class=\\\"box\\\" data-v-eb9ad393><div class=\\\"img\\\" data-v-eb9ad393><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-eb9ad393></div><div class=\\\"text\\\" data-v-eb9ad393><div data-v-eb9ad393>CSS</div><div data-v-eb9ad393>排版變化</div></div></div></div>\", 2)\n  ])))\n}\n\nimport \"/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-eb9ad393\"]])"
+        ],
+        "names": [],
+        "mappings": "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C,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,UAAU,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5hF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;AACD;AACA,MAAM,CAAC,CAAC,CAAC,KAAK,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,CAAC,UAAU,CAAC,KAAK,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,MAAM,CAAC,QAAQ,CAAC,IAAI,CAAC,GAAG,CAAC;AAC3G;AACA,MAAM,CAAC,WAAW,CAAC,IAAI,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC;AACnD,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,WAAW,CAAC,SAAS,CAAC,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,CAAC,WAAW,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100532881,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100532883,
+      "end": 1756100532883,
+      "order": "normal"
+    }
+  ]
+}

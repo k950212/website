@@ -1,0 +1,237 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/plugins/fontawesome.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "// For Nuxt 3\nimport { library, config } from \"@fortawesome/fontawesome-svg-core\";\nimport { FontAwesomeIcon } from \"@fortawesome/vue-fontawesome\";\nimport { fas } from \"@fortawesome/free-solid-svg-icons\";\nimport { far } from \"@fortawesome/free-regular-svg-icons\";\nimport { fab } from \"@fortawesome/free-brands-svg-icons\";\n// This is important, we are going to let Nuxt worry about the CSS\nconfig.autoAddCss = false;\n\n// You can add your icons directly in this plugin. See other examples for how you\n// can add other styles or just individual icons.\nlibrary.add(fas, far, fab);\n\nexport default defineNuxtPlugin((nuxtApp) => {\n  nuxtApp.vueApp.component(\"font-awesome-icon\", FontAwesomeIcon, {});\n});\n",
+      "start": 1756100529241,
+      "end": 1756100529346,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { defineNuxtPlugin } from '#app/nuxt';\n// For Nuxt 3\nimport { library, config } from \"@fortawesome/fontawesome-svg-core\";\nimport { FontAwesomeIcon } from \"@fortawesome/vue-fontawesome\";\nimport { fas } from \"@fortawesome/free-solid-svg-icons\";\nimport { far } from \"@fortawesome/free-regular-svg-icons\";\nimport { fab } from \"@fortawesome/free-brands-svg-icons\";\n// This is important, we are going to let Nuxt worry about the CSS\nconfig.autoAddCss = false;\n\n// You can add your icons directly in this plugin. See other examples for how you\n// can add other styles or just individual icons.\nlibrary.add(fas, far, fab);\n\nexport default defineNuxtPlugin((nuxtApp) => {\n  nuxtApp.vueApp.component(\"font-awesome-icon\", FontAwesomeIcon, {});\n});\n",
+      "start": 1756100529346,
+      "end": 1756100529346,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100529346,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100529347,
+      "end": 1756100529347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100529347,
+      "end": 1756100529348,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100529348,
+      "end": 1756100529348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100529348,
+      "end": 1756100529348,
+      "order": "normal"
+    }
+  ]
+}

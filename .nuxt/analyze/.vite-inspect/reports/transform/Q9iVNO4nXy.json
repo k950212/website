@@ -1,0 +1,228 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/rolling-text/RollingText.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ref, defineComponent, computed, watch, createVNode as _createVNode } from \"vue\";\nimport { raf } from \"@vant/use\";\nimport { createNamespace, makeArrayProp, makeNumberProp, makeStringProp, truthProp, padZero } from \"../utils/index.mjs\";\nimport { useExpose } from \"../composables/use-expose.mjs\";\nimport RollingTextItem from \"./RollingTextItem.mjs\";\nconst [name, bem] = createNamespace(\"rolling-text\");\nconst rollingTextProps = {\n  startNum: makeNumberProp(0),\n  targetNum: Number,\n  textList: makeArrayProp(),\n  duration: makeNumberProp(2),\n  autoStart: truthProp,\n  direction: makeStringProp(\"down\"),\n  stopOrder: makeStringProp(\"ltr\"),\n  height: makeNumberProp(40)\n};\nconst CIRCLE_NUM = 2;\nvar stdin_default = defineComponent({\n  name,\n  props: rollingTextProps,\n  setup(props) {\n    const isCustomType = computed(() => Array.isArray(props.textList) && props.textList.length);\n    const itemLength = computed(() => {\n      if (isCustomType.value) return props.textList[0].length;\n      return `${Math.max(props.startNum, props.targetNum)}`.length;\n    });\n    const getTextArrByIdx = (idx) => {\n      const result = [];\n      for (let i = 0; i < props.textList.length; i++) {\n        result.push(props.textList[i][idx]);\n      }\n      return result;\n    };\n    const targetNumArr = computed(() => {\n      if (isCustomType.value) return new Array(itemLength.value).fill(\"\");\n      return padZero(props.targetNum, itemLength.value).split(\"\");\n    });\n    const startNumArr = computed(() => padZero(props.startNum, itemLength.value).split(\"\"));\n    const getFigureArr = (i) => {\n      const start2 = +startNumArr.value[i];\n      const target = +targetNumArr.value[i];\n      const result = [];\n      for (let i2 = start2; i2 <= 9; i2++) {\n        result.push(i2);\n      }\n      for (let i2 = 0; i2 <= CIRCLE_NUM; i2++) {\n        for (let j = 0; j <= 9; j++) {\n          result.push(j);\n        }\n      }\n      for (let i2 = 0; i2 <= target; i2++) {\n        result.push(i2);\n      }\n      return result;\n    };\n    const getDelay = (i, len) => {\n      if (props.stopOrder === \"ltr\") return 0.2 * i;\n      return 0.2 * (len - 1 - i);\n    };\n    const rolling = ref(props.autoStart);\n    const start = () => {\n      rolling.value = true;\n    };\n    const reset = () => {\n      rolling.value = false;\n      if (props.autoStart) {\n        raf(() => start());\n      }\n    };\n    watch(() => props.autoStart, (value) => {\n      if (value) {\n        start();\n      }\n    });\n    useExpose({\n      start,\n      reset\n    });\n    return () => _createVNode(\"div\", {\n      \"class\": bem()\n    }, [targetNumArr.value.map((_, i) => _createVNode(RollingTextItem, {\n      \"figureArr\": isCustomType.value ? getTextArrByIdx(i) : getFigureArr(i),\n      \"duration\": props.duration,\n      \"direction\": props.direction,\n      \"isStart\": rolling.value,\n      \"height\": props.height,\n      \"delay\": getDelay(i, itemLength.value)\n    }, null))]);\n  }\n});\nexport {\n  stdin_default as default,\n  rollingTextProps\n};\n",
+      "start": 1756100533437,
+      "end": 1756100533453,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100533453,
+      "end": 1756100533453,
+      "order": "normal"
+    }
+  ]
+}

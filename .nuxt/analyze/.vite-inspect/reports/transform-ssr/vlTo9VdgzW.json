@@ -1,0 +1,287 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/back-top/BackTop.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ref, watch, computed, Teleport, nextTick, onMounted, defineComponent, onDeactivated, onActivated, createVNode as _createVNode, mergeProps as _mergeProps } from \"vue\";\nimport { extend, addUnit, inBrowser, numericProp, getScrollTop, getZIndexStyle, createNamespace, makeNumericProp } from \"../utils/index.mjs\";\nimport { throttle } from \"../lazyload/vue-lazyload/util.mjs\";\nimport { useEventListener, getScrollParent } from \"@vant/use\";\nimport { Icon } from \"../icon/index.mjs\";\nconst [name, bem] = createNamespace(\"back-top\");\nconst backTopProps = {\n  right: numericProp,\n  bottom: numericProp,\n  zIndex: numericProp,\n  target: [String, Object],\n  offset: makeNumericProp(200),\n  immediate: Boolean,\n  teleport: {\n    type: [String, Object],\n    default: \"body\"\n  }\n};\nvar stdin_default = defineComponent({\n  name,\n  inheritAttrs: false,\n  props: backTopProps,\n  emits: [\"click\"],\n  setup(props, {\n    emit,\n    slots,\n    attrs\n  }) {\n    let shouldReshow = false;\n    const show = ref(false);\n    const root = ref();\n    const scrollParent = ref();\n    const style = computed(() => extend(getZIndexStyle(props.zIndex), {\n      right: addUnit(props.right),\n      bottom: addUnit(props.bottom)\n    }));\n    const onClick = (event) => {\n      var _a;\n      emit(\"click\", event);\n      (_a = scrollParent.value) == null ? void 0 : _a.scrollTo({\n        top: 0,\n        behavior: props.immediate ? \"auto\" : \"smooth\"\n      });\n    };\n    const scroll = () => {\n      show.value = scrollParent.value ? getScrollTop(scrollParent.value) >= +props.offset : false;\n    };\n    const getTarget = () => {\n      const {\n        target\n      } = props;\n      if (typeof target === \"string\") {\n        const el = document.querySelector(target);\n        if (el) {\n          return el;\n        }\n        if (process.env.NODE_ENV !== \"production\") {\n          console.error(`[Vant] BackTop: target element \"${target}\" was not found, the BackTop component will not be rendered.`);\n        }\n      } else {\n        return target;\n      }\n    };\n    const updateTarget = () => {\n      if (inBrowser) {\n        nextTick(() => {\n          scrollParent.value = props.target ? getTarget() : getScrollParent(root.value);\n          scroll();\n        });\n      }\n    };\n    useEventListener(\"scroll\", throttle(scroll, 100), {\n      target: scrollParent\n    });\n    onMounted(updateTarget);\n    onActivated(() => {\n      if (shouldReshow) {\n        show.value = true;\n        shouldReshow = false;\n      }\n    });\n    onDeactivated(() => {\n      if (show.value && props.teleport) {\n        show.value = false;\n        shouldReshow = true;\n      }\n    });\n    watch(() => props.target, updateTarget);\n    return () => {\n      const Content = _createVNode(\"div\", _mergeProps({\n        \"ref\": !props.teleport ? root : void 0,\n        \"class\": bem({\n          active: show.value\n        }),\n        \"style\": style.value,\n        \"onClick\": onClick\n      }, attrs), [slots.default ? slots.default() : _createVNode(Icon, {\n        \"name\": \"back-top\",\n        \"class\": bem(\"icon\")\n      }, null)]);\n      if (props.teleport) {\n        return [_createVNode(\"div\", {\n          \"ref\": root,\n          \"class\": bem(\"placeholder\")\n        }, null), _createVNode(Teleport, {\n          \"to\": props.teleport\n        }, {\n          default: () => [Content]\n        })];\n      }\n      return Content;\n    };\n  }\n});\nexport {\n  backTopProps,\n  stdin_default as default\n};\n",
+      "start": 1756100544595,
+      "end": 1756100544617,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544617,
+      "end": 1756100544617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { ref, watch, computed, Teleport, nextTick, onMounted, defineComponent, onDeactivated, onActivated, createVNode as _createVNode, mergeProps as _mergeProps } from \"vue\";\nimport { extend, addUnit, inBrowser, numericProp, getScrollTop, getZIndexStyle, createNamespace, makeNumericProp } from \"../utils/index.mjs\";\nimport { throttle } from \"../lazyload/vue-lazyload/util.mjs\";\nimport { useEventListener, getScrollParent } from \"@vant/use\";\nimport { Icon } from \"../icon/index.mjs\";\nconst [name, bem] = createNamespace(\"back-top\");\nconst backTopProps = {\n  right: numericProp,\n  bottom: numericProp,\n  zIndex: numericProp,\n  target: [String, Object],\n  offset: makeNumericProp(200),\n  immediate: Boolean,\n  teleport: {\n    type: [String, Object],\n    default: \"body\"\n  }\n};\nvar stdin_default = defineComponent({\n  name,\n  inheritAttrs: false,\n  props: backTopProps,\n  emits: [\"click\"],\n  setup(props, {\n    emit,\n    slots,\n    attrs\n  }) {\n    let shouldReshow = false;\n    const show = ref(false);\n    const root = ref();\n    const scrollParent = ref();\n    const style = computed(() => extend(getZIndexStyle(props.zIndex), {\n      right: addUnit(props.right),\n      bottom: addUnit(props.bottom)\n    }));\n    const onClick = (event) => {\n      var _a;\n      emit(\"click\", event);\n      (_a = scrollParent.value) == null ? void 0 : _a.scrollTo({\n        top: 0,\n        behavior: props.immediate ? \"auto\" : \"smooth\"\n      });\n    };\n    const scroll = () => {\n      show.value = scrollParent.value ? getScrollTop(scrollParent.value) >= +props.offset : false;\n    };\n    const getTarget = () => {\n      const {\n        target\n      } = props;\n      if (typeof target === \"string\") {\n        const el = (void 0).querySelector(target);\n        if (el) {\n          return el;\n        }\n        if (process.env.NODE_ENV !== \"production\") {\n          console.error(`[Vant] BackTop: target element \"${target}\" was not found, the BackTop component will not be rendered.`);\n        }\n      } else {\n        return target;\n      }\n    };\n    const updateTarget = () => {\n      if (inBrowser) {\n        nextTick(() => {\n          scrollParent.value = props.target ? getTarget() : getScrollParent(root.value);\n          scroll();\n        });\n      }\n    };\n    useEventListener(\"scroll\", throttle(scroll, 100), {\n      target: scrollParent\n    });\n    onMounted(updateTarget);\n    onActivated(() => {\n      if (shouldReshow) {\n        show.value = true;\n        shouldReshow = false;\n      }\n    });\n    onDeactivated(() => {\n      if (show.value && props.teleport) {\n        show.value = false;\n        shouldReshow = true;\n      }\n    });\n    watch(() => props.target, updateTarget);\n    return () => {\n      const Content = _createVNode(\"div\", _mergeProps({\n        \"ref\": !props.teleport ? root : void 0,\n        \"class\": bem({\n          active: show.value\n        }),\n        \"style\": style.value,\n        \"onClick\": onClick\n      }, attrs), [slots.default ? slots.default() : _createVNode(Icon, {\n        \"name\": \"back-top\",\n        \"class\": bem(\"icon\")\n      }, null)]);\n      if (props.teleport) {\n        return [_createVNode(\"div\", {\n          \"ref\": root,\n          \"class\": bem(\"placeholder\")\n        }, null), _createVNode(Teleport, {\n          \"to\": props.teleport\n        }, {\n          default: () => [Content]\n        })];\n      }\n      return Content;\n    };\n  }\n});\nexport {\n  backTopProps,\n  stdin_default as default\n};\n",
+      "start": 1756100544617,
+      "end": 1756100544924,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/back-top/BackTop.mjs\"],\n  \"sourcesContent\": [\"import { ref, watch, computed, Teleport, nextTick, onMounted, defineComponent, onDeactivated, onActivated, createVNode as _createVNode, mergeProps as _mergeProps } from \\\"vue\\\";\\nimport { extend, addUnit, inBrowser, numericProp, getScrollTop, getZIndexStyle, createNamespace, makeNumericProp } from \\\"../utils/index.mjs\\\";\\nimport { throttle } from \\\"../lazyload/vue-lazyload/util.mjs\\\";\\nimport { useEventListener, getScrollParent } from \\\"@vant/use\\\";\\nimport { Icon } from \\\"../icon/index.mjs\\\";\\nconst [name, bem] = createNamespace(\\\"back-top\\\");\\nconst backTopProps = {\\n  right: numericProp,\\n  bottom: numericProp,\\n  zIndex: numericProp,\\n  target: [String, Object],\\n  offset: makeNumericProp(200),\\n  immediate: Boolean,\\n  teleport: {\\n    type: [String, Object],\\n    default: \\\"body\\\"\\n  }\\n};\\nvar stdin_default = defineComponent({\\n  name,\\n  inheritAttrs: false,\\n  props: backTopProps,\\n  emits: [\\\"click\\\"],\\n  setup(props, {\\n    emit,\\n    slots,\\n    attrs\\n  }) {\\n    let shouldReshow = false;\\n    const show = ref(false);\\n    const root = ref();\\n    const scrollParent = ref();\\n    const style = computed(() => extend(getZIndexStyle(props.zIndex), {\\n      right: addUnit(props.right),\\n      bottom: addUnit(props.bottom)\\n    }));\\n    const onClick = (event) => {\\n      var _a;\\n      emit(\\\"click\\\", event);\\n      (_a = scrollParent.value) == null ? void 0 : _a.scrollTo({\\n        top: 0,\\n        behavior: props.immediate ? \\\"auto\\\" : \\\"smooth\\\"\\n      });\\n    };\\n    const scroll = () => {\\n      show.value = scrollParent.value ? getScrollTop(scrollParent.value) >= +props.offset : false;\\n    };\\n    const getTarget = () => {\\n      const {\\n        target\\n      } = props;\\n      if (typeof target === \\\"string\\\") {\\n        const el = document.querySelector(target);\\n        if (el) {\\n          return el;\\n        }\\n        if (process.env.NODE_ENV !== \\\"production\\\") {\\n          console.error(`[Vant] BackTop: target element \\\"${target}\\\" was not found, the BackTop component will not be rendered.`);\\n        }\\n      } else {\\n        return target;\\n      }\\n    };\\n    const updateTarget = () => {\\n      if (inBrowser) {\\n        nextTick(() => {\\n          scrollParent.value = props.target ? getTarget() : getScrollParent(root.value);\\n          scroll();\\n        });\\n      }\\n    };\\n    useEventListener(\\\"scroll\\\", throttle(scroll, 100), {\\n      target: scrollParent\\n    });\\n    onMounted(updateTarget);\\n    onActivated(() => {\\n      if (shouldReshow) {\\n        show.value = true;\\n        shouldReshow = false;\\n      }\\n    });\\n    onDeactivated(() => {\\n      if (show.value && props.teleport) {\\n        show.value = false;\\n        shouldReshow = true;\\n      }\\n    });\\n    watch(() => props.target, updateTarget);\\n    return () => {\\n      const Content = _createVNode(\\\"div\\\", _mergeProps({\\n        \\\"ref\\\": !props.teleport ? root : void 0,\\n        \\\"class\\\": bem({\\n          active: show.value\\n        }),\\n        \\\"style\\\": style.value,\\n        \\\"onClick\\\": onClick\\n      }, attrs), [slots.default ? slots.default() : _createVNode(Icon, {\\n        \\\"name\\\": \\\"back-top\\\",\\n        \\\"class\\\": bem(\\\"icon\\\")\\n      }, null)]);\\n      if (props.teleport) {\\n        return [_createVNode(\\\"div\\\", {\\n          \\\"ref\\\": root,\\n          \\\"class\\\": bem(\\\"placeholder\\\")\\n        }, null), _createVNode(Teleport, {\\n          \\\"to\\\": props.teleport\\n        }, {\\n          default: () => [Content]\\n        })];\\n      }\\n      return Content;\\n    };\\n  }\\n});\\nexport {\\n  backTopProps,\\n  stdin_default as default\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,KAAK,OAAO,UAAU,UAAU,UAAU,WAAW,iBAAiB,eAAe,aAAa,eAAe,cAAc,cAAc,mBAAmB;AACzK,SAAS,QAAQ,SAAS,WAAW,aAAa,cAAc,gBAAgB,iBAAiB,uBAAuB;AACxH,SAAS,gBAAgB;AACzB,SAAS,kBAAkB,uBAAuB;AAClD,SAAS,YAAY;AACrB,MAAM,CAAC,MAAM,GAAG,IAAI,gBAAgB,UAAU;AAC9C,MAAM,eAAe;AAAA,EACnB,OAAO;AAAA,EACP,QAAQ;AAAA,EACR,QAAQ;AAAA,EACR,QAAQ,CAAC,QAAQ,MAAM;AAAA,EACvB,QAAQ,gBAAgB,GAAG;AAAA,EAC3B,WAAW;AAAA,EACX,UAAU;AAAA,IACR,MAAM,CAAC,QAAQ,MAAM;AAAA,IACrB,SAAS;AAAA,EACX;AACF;AACA,IAAI,gBAAgB,gBAAgB;AAAA,EAClC;AAAA,EACA,cAAc;AAAA,EACd,OAAO;AAAA,EACP,OAAO,CAAC,OAAO;AAAA,EACf,MAAM,OAAO;AAAA,IACX;AAAA,IACA;AAAA,IACA;AAAA,EACF,GAAG;AACD,QAAI,eAAe;AACnB,UAAM,OAAO,IAAI,KAAK;AACtB,UAAM,OAAO,IAAI;AACjB,UAAM,eAAe,IAAI;AACzB,UAAM,QAAQ,SAAS,MAAM,OAAO,eAAe,MAAM,MAAM,GAAG;AAAA,MAChE,OAAO,QAAQ,MAAM,KAAK;AAAA,MAC1B,QAAQ,QAAQ,MAAM,MAAM;AAAA,IAC9B,CAAC,CAAC;AACF,UAAM,UAAU,CAAC,UAAU;AACzB,UAAI;AACJ,WAAK,SAAS,KAAK;AACnB,OAAC,KAAK,aAAa,UAAU,OAAO,SAAS,GAAG,SAAS;AAAA,QACvD,KAAK;AAAA,QACL,UAAU,MAAM,YAAY,SAAS;AAAA,MACvC,CAAC;AAAA,IACH;AACA,UAAM,SAAS,MAAM;AACnB,WAAK,QAAQ,aAAa,QAAQ,aAAa,aAAa,KAAK,KAAK,CAAC,MAAM,SAAS;AAAA,IACxF;AACA,UAAM,YAAY,MAAM;AACtB,YAAM;AAAA,QACJ;AAAA,MACF,IAAI;AACJ,UAAI,OAAO,WAAW,UAAU;AAC9B,cAAM,KAAK,SAAS,cAAc,MAAM;AACxC,YAAI,IAAI;AACN,iBAAO;AAAA,QACT;AACA,YAAI,QAAQ,IAAI,aAAa,cAAc;AACzC,kBAAQ,MAAM,mCAAmC,MAAM,8DAA8D;AAAA,QACvH;AAAA,MACF,OAAO;AACL,eAAO;AAAA,MACT;AAAA,IACF;AACA,UAAM,eAAe,MAAM;AACzB,UAAI,WAAW;AACb,iBAAS,MAAM;AACb,uBAAa,QAAQ,MAAM,SAAS,UAAU,IAAI,gBAAgB,KAAK,KAAK;AAC5E,iBAAO;AAAA,QACT,CAAC;AAAA,MACH;AAAA,IACF;AACA,qBAAiB,UAAU,SAAS,QAAQ,GAAG,GAAG;AAAA,MAChD,QAAQ;AAAA,IACV,CAAC;AACD,cAAU,YAAY;AACtB,gBAAY,MAAM;AAChB,UAAI,cAAc;AAChB,aAAK,QAAQ;AACb,uBAAe;AAAA,MACjB;AAAA,IACF,CAAC;AACD,kBAAc,MAAM;AAClB,UAAI,KAAK,SAAS,MAAM,UAAU;AAChC,aAAK,QAAQ;AACb,uBAAe;AAAA,MACjB;AAAA,IACF,CAAC;AACD,UAAM,MAAM,MAAM,QAAQ,YAAY;AACtC,WAAO,MAAM;AACX,YAAM,UAAU,aAAa,OAAO,YAAY;AAAA,QAC9C,OAAO,CAAC,MAAM,WAAW,OAAO;AAAA,QAChC,SAAS,IAAI;AAAA,UACX,QAAQ,KAAK;AAAA,QACf,CAAC;AAAA,QACD,SAAS,MAAM;AAAA,QACf,WAAW;AAAA,MACb,GAAG,KAAK,GAAG,CAAC,MAAM,UAAU,MAAM,QAAQ,IAAI,aAAa,MAAM;AAAA,QAC/D,QAAQ;AAAA,QACR,SAAS,IAAI,MAAM;AAAA,MACrB,GAAG,IAAI,CAAC,CAAC;AACT,UAAI,MAAM,UAAU;AAClB,eAAO,CAAC,aAAa,OAAO;AAAA,UAC1B,OAAO;AAAA,UACP,SAAS,IAAI,aAAa;AAAA,QAC5B,GAAG,IAAI,GAAG,aAAa,UAAU;AAAA,UAC/B,MAAM,MAAM;AAAA,QACd,GAAG;AAAA,UACD,SAAS,MAAM,CAAC,OAAO;AAAA,QACzB,CAAC,CAAC;AAAA,MACJ;AACA,aAAO;AAAA,IACT;AAAA,EACF;AACF,CAAC;AACD;AAAA,EACE;AAAA,EACA,iBAAiB;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544924,
+      "end": 1756100544924,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544924,
+      "end": 1756100544925,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544925,
+      "end": 1756100544925,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "result": "import { ref, watch, computed, Teleport, nextTick, onMounted, defineComponent, onDeactivated, onActivated, createVNode as _createVNode, mergeProps as _mergeProps } from \"vue\";\nimport { extend, addUnit, inBrowser, numericProp, getScrollTop, getZIndexStyle, createNamespace, makeNumericProp } from \"../utils/index.mjs\";\nimport { throttle } from \"../lazyload/vue-lazyload/util.mjs\";\nimport { useEventListener, getScrollParent } from \"@vant/use\";\nimport { Icon } from \"../icon/index.mjs\";\nconst [name, bem] = createNamespace(\"back-top\");\nconst backTopProps = {\n  right: numericProp,\n  bottom: numericProp,\n  zIndex: numericProp,\n  target: [String, Object],\n  offset: makeNumericProp(200),\n  immediate: Boolean,\n  teleport: {\n    type: [String, Object],\n    default: \"body\"\n  }\n};\nvar stdin_default = defineComponent({\n  name,\n  inheritAttrs: false,\n  props: backTopProps,\n  emits: [\"click\"],\n  setup(props, {\n    emit,\n    slots,\n    attrs\n  }) {\n    let shouldReshow = false;\n    const show = ref(false);\n    const root = ref();\n    const scrollParent = ref();\n    const style = computed(() => extend(getZIndexStyle(props.zIndex), {\n      right: addUnit(props.right),\n      bottom: addUnit(props.bottom)\n    }));\n    const onClick = (event) => {\n      var _a;\n      emit(\"click\", event);\n      (_a = scrollParent.value) == null ? void 0 : _a.scrollTo({\n        top: 0,\n        behavior: props.immediate ? \"auto\" : \"smooth\"\n      });\n    };\n    const scroll = () => {\n      show.value = scrollParent.value ? getScrollTop(scrollParent.value) >= +props.offset : false;\n    };\n    const getTarget = () => {\n      const {\n        target\n      } = props;\n      if (typeof target === \"string\") {\n        const el = (void 0).querySelector(target);\n        if (el) {\n          return el;\n        }\n        if (process.env.NODE_ENV !== \"production\") {\n          console.error(`[Vant] BackTop: target element \"${target}\" was not found, the BackTop component will not be rendered.`);\n        }\n      } else {\n        return target;\n      }\n    };\n    const updateTarget = () => {\n      if (inBrowser) {\n        nextTick(() => {\n          scrollParent.value = props.target ? getTarget() : getScrollParent(root.value);\n          scroll();\n        });\n      }\n    };\n    useEventListener(\"scroll\", throttle(scroll, 100), {\n      target: scrollParent\n    });\n     false && /*@__PURE__*/ onMounted(updateTarget);\n     false && /*@__PURE__*/ onActivated(() => {\n      if (shouldReshow) {\n        show.value = true;\n        shouldReshow = false;\n      }\n    });\n     false && /*@__PURE__*/ onDeactivated(() => {\n      if (show.value && props.teleport) {\n        show.value = false;\n        shouldReshow = true;\n      }\n    });\n    watch(() => props.target, updateTarget);\n    return () => {\n      const Content = _createVNode(\"div\", _mergeProps({\n        \"ref\": !props.teleport ? root : void 0,\n        \"class\": bem({\n          active: show.value\n        }),\n        \"style\": style.value,\n        \"onClick\": onClick\n      }, attrs), [slots.default ? slots.default() : _createVNode(Icon, {\n        \"name\": \"back-top\",\n        \"class\": bem(\"icon\")\n      }, null)]);\n      if (props.teleport) {\n        return [_createVNode(\"div\", {\n          \"ref\": root,\n          \"class\": bem(\"placeholder\")\n        }, null), _createVNode(Teleport, {\n          \"to\": props.teleport\n        }, {\n          default: () => [Content]\n        })];\n      }\n      return Content;\n    };\n  }\n});\nexport {\n  backTopProps,\n  stdin_default as default\n};\n",
+      "start": 1756100544925,
+      "end": 1756100544925,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,qCAAa,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,uCAAe,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,yCAAiB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544925,
+      "end": 1756100544925,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544925,
+      "end": 1756100544925,
+      "order": "normal"
+    }
+  ]
+}

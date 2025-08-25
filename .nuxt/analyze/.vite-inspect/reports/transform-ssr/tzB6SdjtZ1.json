@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/utils/format.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { inBrowser } from \"./basic.mjs\";\nimport { windowWidth, windowHeight } from \"./dom.mjs\";\nimport { isDef, isNumeric } from \"./basic.mjs\";\nfunction addUnit(value) {\n  if (isDef(value)) {\n    return isNumeric(value) ? `${value}px` : String(value);\n  }\n  return void 0;\n}\nfunction getSizeStyle(originSize) {\n  if (isDef(originSize)) {\n    if (Array.isArray(originSize)) {\n      return {\n        width: addUnit(originSize[0]),\n        height: addUnit(originSize[1])\n      };\n    }\n    const size = addUnit(originSize);\n    return {\n      width: size,\n      height: size\n    };\n  }\n}\nfunction getZIndexStyle(zIndex) {\n  const style = {};\n  if (zIndex !== void 0) {\n    style.zIndex = +zIndex;\n  }\n  return style;\n}\nlet rootFontSize;\nfunction getRootFontSize() {\n  if (!rootFontSize) {\n    const doc = document.documentElement;\n    const fontSize = doc.style.fontSize || window.getComputedStyle(doc).fontSize;\n    rootFontSize = parseFloat(fontSize);\n  }\n  return rootFontSize;\n}\nfunction convertRem(value) {\n  value = value.replace(/rem/g, \"\");\n  return +value * getRootFontSize();\n}\nfunction convertVw(value) {\n  value = value.replace(/vw/g, \"\");\n  return +value * windowWidth.value / 100;\n}\nfunction convertVh(value) {\n  value = value.replace(/vh/g, \"\");\n  return +value * windowHeight.value / 100;\n}\nfunction unitToPx(value) {\n  if (typeof value === \"number\") {\n    return value;\n  }\n  if (inBrowser) {\n    if (value.includes(\"rem\")) {\n      return convertRem(value);\n    }\n    if (value.includes(\"vw\")) {\n      return convertVw(value);\n    }\n    if (value.includes(\"vh\")) {\n      return convertVh(value);\n    }\n  }\n  return parseFloat(value);\n}\nconst camelizeRE = /-(\\w)/g;\nconst camelize = (str) => str.replace(camelizeRE, (_, c) => c.toUpperCase());\nconst kebabCase = (str) => str.replace(/([A-Z])/g, \"-$1\").toLowerCase().replace(/^-/, \"\");\nfunction padZero(num, targetLength = 2) {\n  let str = num + \"\";\n  while (str.length < targetLength) {\n    str = \"0\" + str;\n  }\n  return str;\n}\nconst clamp = (num, min, max) => Math.min(Math.max(num, min), max);\nfunction trimExtraChar(value, char, regExp) {\n  const index = value.indexOf(char);\n  if (index === -1) {\n    return value;\n  }\n  if (char === \"-\" && index !== 0) {\n    return value.slice(0, index);\n  }\n  return value.slice(0, index + 1) + value.slice(index).replace(regExp, \"\");\n}\nfunction formatNumber(value, allowDot = true, allowMinus = true) {\n  if (allowDot) {\n    value = trimExtraChar(value, \".\", /\\./g);\n  } else {\n    value = value.split(\".\")[0];\n  }\n  if (allowMinus) {\n    value = trimExtraChar(value, \"-\", /-/g);\n  } else {\n    value = value.replace(/-/, \"\");\n  }\n  const regExp = allowDot ? /[^-0-9.]/g : /[^-0-9]/g;\n  return value.replace(regExp, \"\");\n}\nfunction addNumber(num1, num2) {\n  const cardinal = 10 ** 10;\n  return Math.round((num1 + num2) * cardinal) / cardinal;\n}\nexport {\n  addNumber,\n  addUnit,\n  camelize,\n  clamp,\n  formatNumber,\n  getSizeStyle,\n  getZIndexStyle,\n  kebabCase,\n  padZero,\n  unitToPx\n};\n",
+      "start": 1756100544515,
+      "end": 1756100544532,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544532,
+      "end": 1756100544532,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544532,
+      "end": 1756100544534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { inBrowser } from \"./basic.mjs\";\nimport { windowWidth, windowHeight } from \"./dom.mjs\";\nimport { isDef, isNumeric } from \"./basic.mjs\";\nfunction addUnit(value) {\n  if (isDef(value)) {\n    return isNumeric(value) ? `${value}px` : String(value);\n  }\n  return void 0;\n}\nfunction getSizeStyle(originSize) {\n  if (isDef(originSize)) {\n    if (Array.isArray(originSize)) {\n      return {\n        width: addUnit(originSize[0]),\n        height: addUnit(originSize[1])\n      };\n    }\n    const size = addUnit(originSize);\n    return {\n      width: size,\n      height: size\n    };\n  }\n}\nfunction getZIndexStyle(zIndex) {\n  const style = {};\n  if (zIndex !== void 0) {\n    style.zIndex = +zIndex;\n  }\n  return style;\n}\nlet rootFontSize;\nfunction getRootFontSize() {\n  if (!rootFontSize) {\n    const doc = (void 0).documentElement;\n    const fontSize = doc.style.fontSize || (void 0).getComputedStyle(doc).fontSize;\n    rootFontSize = parseFloat(fontSize);\n  }\n  return rootFontSize;\n}\nfunction convertRem(value) {\n  value = value.replace(/rem/g, \"\");\n  return +value * getRootFontSize();\n}\nfunction convertVw(value) {\n  value = value.replace(/vw/g, \"\");\n  return +value * windowWidth.value / 100;\n}\nfunction convertVh(value) {\n  value = value.replace(/vh/g, \"\");\n  return +value * windowHeight.value / 100;\n}\nfunction unitToPx(value) {\n  if (typeof value === \"number\") {\n    return value;\n  }\n  if (inBrowser) {\n    if (value.includes(\"rem\")) {\n      return convertRem(value);\n    }\n    if (value.includes(\"vw\")) {\n      return convertVw(value);\n    }\n    if (value.includes(\"vh\")) {\n      return convertVh(value);\n    }\n  }\n  return parseFloat(value);\n}\nconst camelizeRE = /-(\\w)/g;\nconst camelize = (str) => str.replace(camelizeRE, (_, c) => c.toUpperCase());\nconst kebabCase = (str) => str.replace(/([A-Z])/g, \"-$1\").toLowerCase().replace(/^-/, \"\");\nfunction padZero(num, targetLength = 2) {\n  let str = num + \"\";\n  while (str.length < targetLength) {\n    str = \"0\" + str;\n  }\n  return str;\n}\nconst clamp = (num, min, max) => Math.min(Math.max(num, min), max);\nfunction trimExtraChar(value, char, regExp) {\n  const index = value.indexOf(char);\n  if (index === -1) {\n    return value;\n  }\n  if (char === \"-\" && index !== 0) {\n    return value.slice(0, index);\n  }\n  return value.slice(0, index + 1) + value.slice(index).replace(regExp, \"\");\n}\nfunction formatNumber(value, allowDot = true, allowMinus = true) {\n  if (allowDot) {\n    value = trimExtraChar(value, \".\", /\\./g);\n  } else {\n    value = value.split(\".\")[0];\n  }\n  if (allowMinus) {\n    value = trimExtraChar(value, \"-\", /-/g);\n  } else {\n    value = value.replace(/-/, \"\");\n  }\n  const regExp = allowDot ? /[^-0-9.]/g : /[^-0-9]/g;\n  return value.replace(regExp, \"\");\n}\nfunction addNumber(num1, num2) {\n  const cardinal = 10 ** 10;\n  return Math.round((num1 + num2) * cardinal) / cardinal;\n}\nexport {\n  addNumber,\n  addUnit,\n  camelize,\n  clamp,\n  formatNumber,\n  getSizeStyle,\n  getZIndexStyle,\n  kebabCase,\n  padZero,\n  unitToPx\n};\n",
+      "start": 1756100544534,
+      "end": 1756100544890,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/utils/format.mjs\"],\n  \"sourcesContent\": [\"import { inBrowser } from \\\"./basic.mjs\\\";\\nimport { windowWidth, windowHeight } from \\\"./dom.mjs\\\";\\nimport { isDef, isNumeric } from \\\"./basic.mjs\\\";\\nfunction addUnit(value) {\\n  if (isDef(value)) {\\n    return isNumeric(value) ? `${value}px` : String(value);\\n  }\\n  return void 0;\\n}\\nfunction getSizeStyle(originSize) {\\n  if (isDef(originSize)) {\\n    if (Array.isArray(originSize)) {\\n      return {\\n        width: addUnit(originSize[0]),\\n        height: addUnit(originSize[1])\\n      };\\n    }\\n    const size = addUnit(originSize);\\n    return {\\n      width: size,\\n      height: size\\n    };\\n  }\\n}\\nfunction getZIndexStyle(zIndex) {\\n  const style = {};\\n  if (zIndex !== void 0) {\\n    style.zIndex = +zIndex;\\n  }\\n  return style;\\n}\\nlet rootFontSize;\\nfunction getRootFontSize() {\\n  if (!rootFontSize) {\\n    const doc = document.documentElement;\\n    const fontSize = doc.style.fontSize || window.getComputedStyle(doc).fontSize;\\n    rootFontSize = parseFloat(fontSize);\\n  }\\n  return rootFontSize;\\n}\\nfunction convertRem(value) {\\n  value = value.replace(/rem/g, \\\"\\\");\\n  return +value * getRootFontSize();\\n}\\nfunction convertVw(value) {\\n  value = value.replace(/vw/g, \\\"\\\");\\n  return +value * windowWidth.value / 100;\\n}\\nfunction convertVh(value) {\\n  value = value.replace(/vh/g, \\\"\\\");\\n  return +value * windowHeight.value / 100;\\n}\\nfunction unitToPx(value) {\\n  if (typeof value === \\\"number\\\") {\\n    return value;\\n  }\\n  if (inBrowser) {\\n    if (value.includes(\\\"rem\\\")) {\\n      return convertRem(value);\\n    }\\n    if (value.includes(\\\"vw\\\")) {\\n      return convertVw(value);\\n    }\\n    if (value.includes(\\\"vh\\\")) {\\n      return convertVh(value);\\n    }\\n  }\\n  return parseFloat(value);\\n}\\nconst camelizeRE = /-(\\\\w)/g;\\nconst camelize = (str) => str.replace(camelizeRE, (_, c) => c.toUpperCase());\\nconst kebabCase = (str) => str.replace(/([A-Z])/g, \\\"-$1\\\").toLowerCase().replace(/^-/, \\\"\\\");\\nfunction padZero(num, targetLength = 2) {\\n  let str = num + \\\"\\\";\\n  while (str.length < targetLength) {\\n    str = \\\"0\\\" + str;\\n  }\\n  return str;\\n}\\nconst clamp = (num, min, max) => Math.min(Math.max(num, min), max);\\nfunction trimExtraChar(value, char, regExp) {\\n  const index = value.indexOf(char);\\n  if (index === -1) {\\n    return value;\\n  }\\n  if (char === \\\"-\\\" && index !== 0) {\\n    return value.slice(0, index);\\n  }\\n  return value.slice(0, index + 1) + value.slice(index).replace(regExp, \\\"\\\");\\n}\\nfunction formatNumber(value, allowDot = true, allowMinus = true) {\\n  if (allowDot) {\\n    value = trimExtraChar(value, \\\".\\\", /\\\\./g);\\n  } else {\\n    value = value.split(\\\".\\\")[0];\\n  }\\n  if (allowMinus) {\\n    value = trimExtraChar(value, \\\"-\\\", /-/g);\\n  } else {\\n    value = value.replace(/-/, \\\"\\\");\\n  }\\n  const regExp = allowDot ? /[^-0-9.]/g : /[^-0-9]/g;\\n  return value.replace(regExp, \\\"\\\");\\n}\\nfunction addNumber(num1, num2) {\\n  const cardinal = 10 ** 10;\\n  return Math.round((num1 + num2) * cardinal) / cardinal;\\n}\\nexport {\\n  addNumber,\\n  addUnit,\\n  camelize,\\n  clamp,\\n  formatNumber,\\n  getSizeStyle,\\n  getZIndexStyle,\\n  kebabCase,\\n  padZero,\\n  unitToPx\\n};\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544890,
+      "end": 1756100544890,
+      "order": "normal"
+    }
+  ]
+}

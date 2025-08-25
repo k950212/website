@@ -1,0 +1,287 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/composables/use-visibility-change.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { inBrowser } from \"../utils/index.mjs\";\nimport { onDeactivated, onBeforeUnmount } from \"vue\";\nimport { onMountedOrActivated } from \"@vant/use\";\nfunction useVisibilityChange(target, onChange) {\n  if (!inBrowser || !window.IntersectionObserver) {\n    return;\n  }\n  const observer = new IntersectionObserver(\n    (entries) => {\n      onChange(entries[0].intersectionRatio > 0);\n    },\n    { root: document.body }\n  );\n  const observe = () => {\n    if (target.value) {\n      observer.observe(target.value);\n    }\n  };\n  const unobserve = () => {\n    if (target.value) {\n      observer.unobserve(target.value);\n    }\n  };\n  onDeactivated(unobserve);\n  onBeforeUnmount(unobserve);\n  onMountedOrActivated(observe);\n}\nexport {\n  useVisibilityChange\n};\n",
+      "start": 1756100544950,
+      "end": 1756100544959,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { inBrowser } from \"../utils/index.mjs\";\nimport { onDeactivated, onBeforeUnmount } from \"vue\";\nimport { onMountedOrActivated } from \"@vant/use\";\nfunction useVisibilityChange(target, onChange) {\n  if (!inBrowser || !(void 0).IntersectionObserver) {\n    return;\n  }\n  const observer = new IntersectionObserver(\n    (entries) => {\n      onChange(entries[0].intersectionRatio > 0);\n    },\n    { root: (void 0).body }\n  );\n  const observe = () => {\n    if (target.value) {\n      observer.observe(target.value);\n    }\n  };\n  const unobserve = () => {\n    if (target.value) {\n      observer.unobserve(target.value);\n    }\n  };\n  onDeactivated(unobserve);\n  onBeforeUnmount(unobserve);\n  onMountedOrActivated(observe);\n}\nexport {\n  useVisibilityChange\n};\n",
+      "start": 1756100544959,
+      "end": 1756100544987,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/composables/use-visibility-change.mjs\"],\n  \"sourcesContent\": [\"import { inBrowser } from \\\"../utils/index.mjs\\\";\\nimport { onDeactivated, onBeforeUnmount } from \\\"vue\\\";\\nimport { onMountedOrActivated } from \\\"@vant/use\\\";\\nfunction useVisibilityChange(target, onChange) {\\n  if (!inBrowser || !window.IntersectionObserver) {\\n    return;\\n  }\\n  const observer = new IntersectionObserver(\\n    (entries) => {\\n      onChange(entries[0].intersectionRatio > 0);\\n    },\\n    { root: document.body }\\n  );\\n  const observe = () => {\\n    if (target.value) {\\n      observer.observe(target.value);\\n    }\\n  };\\n  const unobserve = () => {\\n    if (target.value) {\\n      observer.unobserve(target.value);\\n    }\\n  };\\n  onDeactivated(unobserve);\\n  onBeforeUnmount(unobserve);\\n  onMountedOrActivated(observe);\\n}\\nexport {\\n  useVisibilityChange\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,iBAAiB;AAC1B,SAAS,eAAe,uBAAuB;AAC/C,SAAS,4BAA4B;AACrC,SAAS,oBAAoB,QAAQ,UAAU;AAC7C,MAAI,CAAC,aAAa,CAAC,SAAO,sBAAsB;AAC9C;AAAA,EACF;AACA,QAAM,WAAW,IAAI;AAAA,IACnB,CAAC,YAAY;AACX,eAAS,QAAQ,CAAC,EAAE,oBAAoB,CAAC;AAAA,IAC3C;AAAA,IACA,EAAE,MAAM,SAAS,KAAK;AAAA,EACxB;AACA,QAAM,UAAU,MAAM;AACpB,QAAI,OAAO,OAAO;AAChB,eAAS,QAAQ,OAAO,KAAK;AAAA,IAC/B;AAAA,EACF;AACA,QAAM,YAAY,MAAM;AACtB,QAAI,OAAO,OAAO;AAChB,eAAS,UAAU,OAAO,KAAK;AAAA,IACjC;AAAA,EACF;AACA,gBAAc,SAAS;AACvB,kBAAgB,SAAS;AACzB,uBAAqB,OAAO;AAC9B;AACA;AAAA,EACE;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "result": "import { inBrowser } from \"../utils/index.mjs\";\nimport { onDeactivated, onBeforeUnmount } from \"vue\";\nimport { onMountedOrActivated } from \"@vant/use\";\nfunction useVisibilityChange(target, onChange) {\n  if (!inBrowser || !(void 0).IntersectionObserver) {\n    return;\n  }\n  const observer = new IntersectionObserver(\n    (entries) => {\n      onChange(entries[0].intersectionRatio > 0);\n    },\n    { root: (void 0).body }\n  );\n  const observe = () => {\n    if (target.value) {\n      observer.observe(target.value);\n    }\n  };\n  const unobserve = () => {\n    if (target.value) {\n      observer.unobserve(target.value);\n    }\n  };\n   false && /*@__PURE__*/ onDeactivated(unobserve);\n   false && /*@__PURE__*/ onBeforeUnmount(unobserve);\n  onMountedOrActivated(observe);\n}\nexport {\n  useVisibilityChange\n};\n",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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"
+      }
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544987,
+      "end": 1756100544987,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/shared/ssr-window.esm.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/**\n * SSR Window 4.0.2\n * Better handling for window object in SSR environment\n * https://github.com/nolimits4web/ssr-window\n *\n * Copyright 2021, Vladimir Kharlampidi\n *\n * Licensed under MIT\n *\n * Released on: December 13, 2021\n */\n/* eslint-disable no-param-reassign */\nfunction isObject(obj) {\n  return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;\n}\nfunction extend(target, src) {\n  if (target === void 0) {\n    target = {};\n  }\n  if (src === void 0) {\n    src = {};\n  }\n  Object.keys(src).forEach(key => {\n    if (typeof target[key] === 'undefined') target[key] = src[key];else if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {\n      extend(target[key], src[key]);\n    }\n  });\n}\nconst ssrDocument = {\n  body: {},\n  addEventListener() {},\n  removeEventListener() {},\n  activeElement: {\n    blur() {},\n    nodeName: ''\n  },\n  querySelector() {\n    return null;\n  },\n  querySelectorAll() {\n    return [];\n  },\n  getElementById() {\n    return null;\n  },\n  createEvent() {\n    return {\n      initEvent() {}\n    };\n  },\n  createElement() {\n    return {\n      children: [],\n      childNodes: [],\n      style: {},\n      setAttribute() {},\n      getElementsByTagName() {\n        return [];\n      }\n    };\n  },\n  createElementNS() {\n    return {};\n  },\n  importNode() {\n    return null;\n  },\n  location: {\n    hash: '',\n    host: '',\n    hostname: '',\n    href: '',\n    origin: '',\n    pathname: '',\n    protocol: '',\n    search: ''\n  }\n};\nfunction getDocument() {\n  const doc = typeof document !== 'undefined' ? document : {};\n  extend(doc, ssrDocument);\n  return doc;\n}\nconst ssrWindow = {\n  document: ssrDocument,\n  navigator: {\n    userAgent: ''\n  },\n  location: {\n    hash: '',\n    host: '',\n    hostname: '',\n    href: '',\n    origin: '',\n    pathname: '',\n    protocol: '',\n    search: ''\n  },\n  history: {\n    replaceState() {},\n    pushState() {},\n    go() {},\n    back() {}\n  },\n  CustomEvent: function CustomEvent() {\n    return this;\n  },\n  addEventListener() {},\n  removeEventListener() {},\n  getComputedStyle() {\n    return {\n      getPropertyValue() {\n        return '';\n      }\n    };\n  },\n  Image() {},\n  Date() {},\n  screen: {},\n  setTimeout() {},\n  clearTimeout() {},\n  matchMedia() {\n    return {};\n  },\n  requestAnimationFrame(callback) {\n    if (typeof setTimeout === 'undefined') {\n      callback();\n      return null;\n    }\n    return setTimeout(callback, 0);\n  },\n  cancelAnimationFrame(id) {\n    if (typeof setTimeout === 'undefined') {\n      return;\n    }\n    clearTimeout(id);\n  }\n};\nfunction getWindow() {\n  const win = typeof window !== 'undefined' ? window : {};\n  extend(win, ssrWindow);\n  return win;\n}\n\nexport { getWindow as a, getDocument as g };\n",
+      "start": 1756100544898,
+      "end": 1756100544907,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544907,
+      "end": 1756100544907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544907,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544908,
+      "end": 1756100544908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "function isObject(obj) {\n  return obj !== null && typeof obj === \"object\" && \"constructor\" in obj && obj.constructor === Object;\n}\nfunction extend(target, src) {\n  if (target === void 0) {\n    target = {};\n  }\n  if (src === void 0) {\n    src = {};\n  }\n  Object.keys(src).forEach((key) => {\n    if (typeof target[key] === \"undefined\")\n      target[key] = src[key];\n    else if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {\n      extend(target[key], src[key]);\n    }\n  });\n}\nconst ssrDocument = {\n  body: {},\n  addEventListener() {\n  },\n  removeEventListener() {\n  },\n  activeElement: {\n    blur() {\n    },\n    nodeName: \"\"\n  },\n  querySelector() {\n    return null;\n  },\n  querySelectorAll() {\n    return [];\n  },\n  getElementById() {\n    return null;\n  },\n  createEvent() {\n    return {\n      initEvent() {\n      }\n    };\n  },\n  createElement() {\n    return {\n      children: [],\n      childNodes: [],\n      style: {},\n      setAttribute() {\n      },\n      getElementsByTagName() {\n        return [];\n      }\n    };\n  },\n  createElementNS() {\n    return {};\n  },\n  importNode() {\n    return null;\n  },\n  location: {\n    hash: \"\",\n    host: \"\",\n    hostname: \"\",\n    href: \"\",\n    origin: \"\",\n    pathname: \"\",\n    protocol: \"\",\n    search: \"\"\n  }\n};\nfunction getDocument() {\n  const doc = false ? void 0 : {};\n  extend(doc, ssrDocument);\n  return doc;\n}\nconst ssrWindow = {\n  document: ssrDocument,\n  navigator: {\n    userAgent: \"\"\n  },\n  location: {\n    hash: \"\",\n    host: \"\",\n    hostname: \"\",\n    href: \"\",\n    origin: \"\",\n    pathname: \"\",\n    protocol: \"\",\n    search: \"\"\n  },\n  history: {\n    replaceState() {\n    },\n    pushState() {\n    },\n    go() {\n    },\n    back() {\n    }\n  },\n  CustomEvent: function CustomEvent() {\n    return this;\n  },\n  addEventListener() {\n  },\n  removeEventListener() {\n  },\n  getComputedStyle() {\n    return {\n      getPropertyValue() {\n        return \"\";\n      }\n    };\n  },\n  Image() {\n  },\n  Date() {\n  },\n  screen: {},\n  setTimeout() {\n  },\n  clearTimeout() {\n  },\n  matchMedia() {\n    return {};\n  },\n  requestAnimationFrame(callback) {\n    if (typeof setTimeout === \"undefined\") {\n      callback();\n      return null;\n    }\n    return setTimeout(callback, 0);\n  },\n  cancelAnimationFrame(id) {\n    if (typeof setTimeout === \"undefined\") {\n      return;\n    }\n    clearTimeout(id);\n  }\n};\nfunction getWindow() {\n  const win = false ? void 0 : {};\n  extend(win, ssrWindow);\n  return win;\n}\nexport { getWindow as a, getDocument as g };\n",
+      "start": 1756100544908,
+      "end": 1756100544986,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/shared/ssr-window.esm.mjs\"],\n  \"sourcesContent\": [\"/**\\n * SSR Window 4.0.2\\n * Better handling for window object in SSR environment\\n * https://github.com/nolimits4web/ssr-window\\n *\\n * Copyright 2021, Vladimir Kharlampidi\\n *\\n * Licensed under MIT\\n *\\n * Released on: December 13, 2021\\n */\\n/* eslint-disable no-param-reassign */\\nfunction isObject(obj) {\\n  return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;\\n}\\nfunction extend(target, src) {\\n  if (target === void 0) {\\n    target = {};\\n  }\\n  if (src === void 0) {\\n    src = {};\\n  }\\n  Object.keys(src).forEach(key => {\\n    if (typeof target[key] === 'undefined') target[key] = src[key];else if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {\\n      extend(target[key], src[key]);\\n    }\\n  });\\n}\\nconst ssrDocument = {\\n  body: {},\\n  addEventListener() {},\\n  removeEventListener() {},\\n  activeElement: {\\n    blur() {},\\n    nodeName: ''\\n  },\\n  querySelector() {\\n    return null;\\n  },\\n  querySelectorAll() {\\n    return [];\\n  },\\n  getElementById() {\\n    return null;\\n  },\\n  createEvent() {\\n    return {\\n      initEvent() {}\\n    };\\n  },\\n  createElement() {\\n    return {\\n      children: [],\\n      childNodes: [],\\n      style: {},\\n      setAttribute() {},\\n      getElementsByTagName() {\\n        return [];\\n      }\\n    };\\n  },\\n  createElementNS() {\\n    return {};\\n  },\\n  importNode() {\\n    return null;\\n  },\\n  location: {\\n    hash: '',\\n    host: '',\\n    hostname: '',\\n    href: '',\\n    origin: '',\\n    pathname: '',\\n    protocol: '',\\n    search: ''\\n  }\\n};\\nfunction getDocument() {\\n  const doc = typeof document !== 'undefined' ? document : {};\\n  extend(doc, ssrDocument);\\n  return doc;\\n}\\nconst ssrWindow = {\\n  document: ssrDocument,\\n  navigator: {\\n    userAgent: ''\\n  },\\n  location: {\\n    hash: '',\\n    host: '',\\n    hostname: '',\\n    href: '',\\n    origin: '',\\n    pathname: '',\\n    protocol: '',\\n    search: ''\\n  },\\n  history: {\\n    replaceState() {},\\n    pushState() {},\\n    go() {},\\n    back() {}\\n  },\\n  CustomEvent: function CustomEvent() {\\n    return this;\\n  },\\n  addEventListener() {},\\n  removeEventListener() {},\\n  getComputedStyle() {\\n    return {\\n      getPropertyValue() {\\n        return '';\\n      }\\n    };\\n  },\\n  Image() {},\\n  Date() {},\\n  screen: {},\\n  setTimeout() {},\\n  clearTimeout() {},\\n  matchMedia() {\\n    return {};\\n  },\\n  requestAnimationFrame(callback) {\\n    if (typeof setTimeout === 'undefined') {\\n      callback();\\n      return null;\\n    }\\n    return setTimeout(callback, 0);\\n  },\\n  cancelAnimationFrame(id) {\\n    if (typeof setTimeout === 'undefined') {\\n      return;\\n    }\\n    clearTimeout(id);\\n  }\\n};\\nfunction getWindow() {\\n  const win = typeof window !== 'undefined' ? window : {};\\n  extend(win, ssrWindow);\\n  return win;\\n}\\n\\nexport { getWindow as a, getDocument as g };\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544986,
+      "end": 1756100544986,
+      "order": "normal"
+    }
+  ]
+}

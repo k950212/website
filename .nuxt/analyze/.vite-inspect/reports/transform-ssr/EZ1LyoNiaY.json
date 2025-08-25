@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/utils/mount-component.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createApp, reactive } from \"vue\";\nimport { extend } from \"./basic.mjs\";\nimport { useExpose } from \"../composables/use-expose.mjs\";\nfunction usePopupState() {\n  const state = reactive({\n    show: false\n  });\n  const toggle = (show) => {\n    state.show = show;\n  };\n  const open = (props) => {\n    extend(state, props, { transitionAppear: true });\n    toggle(true);\n  };\n  const close = () => toggle(false);\n  useExpose({ open, close, toggle });\n  return {\n    open,\n    close,\n    state,\n    toggle\n  };\n}\nfunction mountComponent(RootComponent) {\n  const app = createApp(RootComponent);\n  const root = document.createElement(\"div\");\n  document.body.appendChild(root);\n  return {\n    instance: app.mount(root),\n    unmount() {\n      app.unmount();\n      document.body.removeChild(root);\n    }\n  };\n}\nexport {\n  mountComponent,\n  usePopupState\n};\n",
+      "start": 1756100544747,
+      "end": 1756100544765,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544765,
+      "end": 1756100544765,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { createApp, reactive } from \"vue\";\nimport { extend } from \"./basic.mjs\";\nimport { useExpose } from \"../composables/use-expose.mjs\";\nfunction usePopupState() {\n  const state = reactive({\n    show: false\n  });\n  const toggle = (show) => {\n    state.show = show;\n  };\n  const open = (props) => {\n    extend(state, props, { transitionAppear: true });\n    toggle(true);\n  };\n  const close = () => toggle(false);\n  useExpose({ open, close, toggle });\n  return {\n    open,\n    close,\n    state,\n    toggle\n  };\n}\nfunction mountComponent(RootComponent) {\n  const app = createApp(RootComponent);\n  const root = (void 0).createElement(\"div\");\n  (void 0).body.appendChild(root);\n  return {\n    instance: app.mount(root),\n    unmount() {\n      app.unmount();\n      (void 0).body.removeChild(root);\n    }\n  };\n}\nexport {\n  mountComponent,\n  usePopupState\n};\n",
+      "start": 1756100544765,
+      "end": 1756100544957,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/utils/mount-component.mjs\"],\n  \"sourcesContent\": [\"import { createApp, reactive } from \\\"vue\\\";\\nimport { extend } from \\\"./basic.mjs\\\";\\nimport { useExpose } from \\\"../composables/use-expose.mjs\\\";\\nfunction usePopupState() {\\n  const state = reactive({\\n    show: false\\n  });\\n  const toggle = (show) => {\\n    state.show = show;\\n  };\\n  const open = (props) => {\\n    extend(state, props, { transitionAppear: true });\\n    toggle(true);\\n  };\\n  const close = () => toggle(false);\\n  useExpose({ open, close, toggle });\\n  return {\\n    open,\\n    close,\\n    state,\\n    toggle\\n  };\\n}\\nfunction mountComponent(RootComponent) {\\n  const app = createApp(RootComponent);\\n  const root = document.createElement(\\\"div\\\");\\n  document.body.appendChild(root);\\n  return {\\n    instance: app.mount(root),\\n    unmount() {\\n      app.unmount();\\n      document.body.removeChild(root);\\n    }\\n  };\\n}\\nexport {\\n  mountComponent,\\n  usePopupState\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,WAAW,gBAAgB;AACpC,SAAS,cAAc;AACvB,SAAS,iBAAiB;AAC1B,SAAS,gBAAgB;AACvB,QAAM,QAAQ,SAAS;AAAA,IACrB,MAAM;AAAA,EACR,CAAC;AACD,QAAM,SAAS,CAAC,SAAS;AACvB,UAAM,OAAO;AAAA,EACf;AACA,QAAM,OAAO,CAAC,UAAU;AACtB,WAAO,OAAO,OAAO,EAAE,kBAAkB,KAAK,CAAC;AAC/C,WAAO,IAAI;AAAA,EACb;AACA,QAAM,QAAQ,MAAM,OAAO,KAAK;AAChC,YAAU,EAAE,MAAM,OAAO,OAAO,CAAC;AACjC,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF;AACA,SAAS,eAAe,eAAe;AACrC,QAAM,MAAM,UAAU,aAAa;AACnC,QAAM,OAAO,SAAS,cAAc,KAAK;AACzC,WAAS,KAAK,YAAY,IAAI;AAC9B,SAAO;AAAA,IACL,UAAU,IAAI,MAAM,IAAI;AAAA,IACxB,UAAU;AACR,UAAI,QAAQ;AACZ,eAAS,KAAK,YAAY,IAAI;AAAA,IAChC;AAAA,EACF;AACF;AACA;AAAA,EACE;AAAA,EACA;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544957,
+      "end": 1756100544957,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544958,
+      "end": 1756100544959,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544959,
+      "end": 1756100544959,
+      "order": "normal"
+    }
+  ]
+}

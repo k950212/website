@@ -1,0 +1,228 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/address-edit/AddressEditDetail.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ref, defineComponent, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nimport { createNamespace, numericProp } from \"../utils/index.mjs\";\nimport { Cell } from \"../cell/index.mjs\";\nimport { Field } from \"../field/index.mjs\";\nconst [name, bem] = createNamespace(\"address-edit-detail\");\nconst t = createNamespace(\"address-edit\")[2];\nvar stdin_default = defineComponent({\n  name,\n  props: {\n    show: Boolean,\n    rows: numericProp,\n    value: String,\n    rules: Array,\n    focused: Boolean,\n    maxlength: numericProp,\n    searchResult: Array,\n    showSearchResult: Boolean\n  },\n  emits: [\"blur\", \"focus\", \"input\", \"selectSearch\"],\n  setup(props, {\n    emit\n  }) {\n    const field = ref();\n    const showSearchResult = () => props.focused && props.searchResult && props.showSearchResult;\n    const onSelect = (express) => {\n      emit(\"selectSearch\", express);\n      emit(\"input\", `${express.address || \"\"} ${express.name || \"\"}`.trim());\n    };\n    const renderSearchResult = () => {\n      if (!showSearchResult()) {\n        return;\n      }\n      const {\n        searchResult\n      } = props;\n      return searchResult.map((express) => _createVNode(Cell, {\n        \"clickable\": true,\n        \"key\": (express.name || \"\") + (express.address || \"\"),\n        \"icon\": \"location-o\",\n        \"title\": express.name,\n        \"label\": express.address,\n        \"class\": bem(\"search-item\"),\n        \"border\": false,\n        \"onClick\": () => onSelect(express)\n      }, null));\n    };\n    const onBlur = (event) => emit(\"blur\", event);\n    const onFocus = (event) => emit(\"focus\", event);\n    const onInput = (value) => emit(\"input\", value);\n    return () => {\n      if (props.show) {\n        return _createVNode(_Fragment, null, [_createVNode(Field, {\n          \"autosize\": true,\n          \"clearable\": true,\n          \"ref\": field,\n          \"class\": bem(),\n          \"rows\": props.rows,\n          \"type\": \"textarea\",\n          \"rules\": props.rules,\n          \"label\": t(\"addressDetail\"),\n          \"border\": !showSearchResult(),\n          \"maxlength\": props.maxlength,\n          \"modelValue\": props.value,\n          \"placeholder\": t(\"addressDetail\"),\n          \"onBlur\": onBlur,\n          \"onFocus\": onFocus,\n          \"onUpdate:modelValue\": onInput\n        }, null), renderSearchResult()]);\n      }\n    };\n  }\n});\nexport {\n  stdin_default as default\n};\n",
+      "start": 1756100534029,
+      "end": 1756100534048,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100534048,
+      "end": 1756100534048,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/autoplay.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { g as getDocument } from '../shared/ssr-window.esm.mjs';\n\n/* eslint no-underscore-dangle: \"off\" */\n/* eslint no-use-before-define: \"off\" */\nfunction Autoplay(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on,\n    emit,\n    params\n  } = _ref;\n  swiper.autoplay = {\n    running: false,\n    paused: false,\n    timeLeft: 0\n  };\n  extendParams({\n    autoplay: {\n      enabled: false,\n      delay: 3000,\n      waitForTransition: true,\n      disableOnInteraction: true,\n      stopOnLastSlide: false,\n      reverseDirection: false,\n      pauseOnMouseEnter: false\n    }\n  });\n  let timeout;\n  let raf;\n  let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3000;\n  let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3000;\n  let autoplayTimeLeft;\n  let autoplayStartTime = new Date().getTime;\n  let wasPaused;\n  let isTouched;\n  let pausedByTouch;\n  let touchStartTimeout;\n  let slideChanged;\n  let pausedByInteraction;\n  function onTransitionEnd(e) {\n    if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;\n    if (e.target !== swiper.wrapperEl) return;\n    swiper.wrapperEl.removeEventListener('transitionend', onTransitionEnd);\n    resume();\n  }\n  const calcTimeLeft = () => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    if (swiper.autoplay.paused) {\n      wasPaused = true;\n    } else if (wasPaused) {\n      autoplayDelayCurrent = autoplayTimeLeft;\n      wasPaused = false;\n    }\n    const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - new Date().getTime();\n    swiper.autoplay.timeLeft = timeLeft;\n    emit('autoplayTimeLeft', timeLeft, timeLeft / autoplayDelayTotal);\n    raf = requestAnimationFrame(() => {\n      calcTimeLeft();\n    });\n  };\n  const getSlideDelay = () => {\n    let activeSlideEl;\n    if (swiper.virtual && swiper.params.virtual.enabled) {\n      activeSlideEl = swiper.slides.filter(slideEl => slideEl.classList.contains('swiper-slide-active'))[0];\n    } else {\n      activeSlideEl = swiper.slides[swiper.activeIndex];\n    }\n    if (!activeSlideEl) return undefined;\n    const currentSlideDelay = parseInt(activeSlideEl.getAttribute('data-swiper-autoplay'), 10);\n    return currentSlideDelay;\n  };\n  const run = delayForce => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    cancelAnimationFrame(raf);\n    calcTimeLeft();\n    let delay = typeof delayForce === 'undefined' ? swiper.params.autoplay.delay : delayForce;\n    autoplayDelayTotal = swiper.params.autoplay.delay;\n    autoplayDelayCurrent = swiper.params.autoplay.delay;\n    const currentSlideDelay = getSlideDelay();\n    if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && typeof delayForce === 'undefined') {\n      delay = currentSlideDelay;\n      autoplayDelayTotal = currentSlideDelay;\n      autoplayDelayCurrent = currentSlideDelay;\n    }\n    autoplayTimeLeft = delay;\n    const speed = swiper.params.speed;\n    const proceed = () => {\n      if (!swiper || swiper.destroyed) return;\n      if (swiper.params.autoplay.reverseDirection) {\n        if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {\n          swiper.slidePrev(speed, true, true);\n          emit('autoplay');\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\n          swiper.slideTo(swiper.slides.length - 1, speed, true, true);\n          emit('autoplay');\n        }\n      } else {\n        if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {\n          swiper.slideNext(speed, true, true);\n          emit('autoplay');\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\n          swiper.slideTo(0, speed, true, true);\n          emit('autoplay');\n        }\n      }\n      if (swiper.params.cssMode) {\n        autoplayStartTime = new Date().getTime();\n        requestAnimationFrame(() => {\n          run();\n        });\n      }\n    };\n    if (delay > 0) {\n      clearTimeout(timeout);\n      timeout = setTimeout(() => {\n        proceed();\n      }, delay);\n    } else {\n      requestAnimationFrame(() => {\n        proceed();\n      });\n    }\n\n    // eslint-disable-next-line\n    return delay;\n  };\n  const start = () => {\n    swiper.autoplay.running = true;\n    run();\n    emit('autoplayStart');\n  };\n  const stop = () => {\n    swiper.autoplay.running = false;\n    clearTimeout(timeout);\n    cancelAnimationFrame(raf);\n    emit('autoplayStop');\n  };\n  const pause = (internal, reset) => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    clearTimeout(timeout);\n    if (!internal) {\n      pausedByInteraction = true;\n    }\n    const proceed = () => {\n      emit('autoplayPause');\n      if (swiper.params.autoplay.waitForTransition) {\n        swiper.wrapperEl.addEventListener('transitionend', onTransitionEnd);\n      } else {\n        resume();\n      }\n    };\n    swiper.autoplay.paused = true;\n    if (reset) {\n      if (slideChanged) {\n        autoplayTimeLeft = swiper.params.autoplay.delay;\n      }\n      slideChanged = false;\n      proceed();\n      return;\n    }\n    const delay = autoplayTimeLeft || swiper.params.autoplay.delay;\n    autoplayTimeLeft = delay - (new Date().getTime() - autoplayStartTime);\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop) return;\n    if (autoplayTimeLeft < 0) autoplayTimeLeft = 0;\n    proceed();\n  };\n  const resume = () => {\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running) return;\n    autoplayStartTime = new Date().getTime();\n    if (pausedByInteraction) {\n      pausedByInteraction = false;\n      run(autoplayTimeLeft);\n    } else {\n      run();\n    }\n    swiper.autoplay.paused = false;\n    emit('autoplayResume');\n  };\n  const onVisibilityChange = () => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    const document = getDocument();\n    if (document.visibilityState === 'hidden') {\n      pausedByInteraction = true;\n      pause(true);\n    }\n    if (document.visibilityState === 'visible') {\n      resume();\n    }\n  };\n  const onPointerEnter = e => {\n    if (e.pointerType !== 'mouse') return;\n    pausedByInteraction = true;\n    if (swiper.animating || swiper.autoplay.paused) return;\n    pause(true);\n  };\n  const onPointerLeave = e => {\n    if (e.pointerType !== 'mouse') return;\n    if (swiper.autoplay.paused) {\n      resume();\n    }\n  };\n  const attachMouseEvents = () => {\n    if (swiper.params.autoplay.pauseOnMouseEnter) {\n      swiper.el.addEventListener('pointerenter', onPointerEnter);\n      swiper.el.addEventListener('pointerleave', onPointerLeave);\n    }\n  };\n  const detachMouseEvents = () => {\n    swiper.el.removeEventListener('pointerenter', onPointerEnter);\n    swiper.el.removeEventListener('pointerleave', onPointerLeave);\n  };\n  const attachDocumentEvents = () => {\n    const document = getDocument();\n    document.addEventListener('visibilitychange', onVisibilityChange);\n  };\n  const detachDocumentEvents = () => {\n    const document = getDocument();\n    document.removeEventListener('visibilitychange', onVisibilityChange);\n  };\n  on('init', () => {\n    if (swiper.params.autoplay.enabled) {\n      attachMouseEvents();\n      attachDocumentEvents();\n      autoplayStartTime = new Date().getTime();\n      start();\n    }\n  });\n  on('destroy', () => {\n    detachMouseEvents();\n    detachDocumentEvents();\n    if (swiper.autoplay.running) {\n      stop();\n    }\n  });\n  on('beforeTransitionStart', (_s, speed, internal) => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    if (internal || !swiper.params.autoplay.disableOnInteraction) {\n      pause(true, true);\n    } else {\n      stop();\n    }\n  });\n  on('sliderFirstMove', () => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    if (swiper.params.autoplay.disableOnInteraction) {\n      stop();\n      return;\n    }\n    isTouched = true;\n    pausedByTouch = false;\n    pausedByInteraction = false;\n    touchStartTimeout = setTimeout(() => {\n      pausedByInteraction = true;\n      pausedByTouch = true;\n      pause(true);\n    }, 200);\n  });\n  on('touchEnd', () => {\n    if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;\n    clearTimeout(touchStartTimeout);\n    clearTimeout(timeout);\n    if (swiper.params.autoplay.disableOnInteraction) {\n      pausedByTouch = false;\n      isTouched = false;\n      return;\n    }\n    if (pausedByTouch && swiper.params.cssMode) resume();\n    pausedByTouch = false;\n    isTouched = false;\n  });\n  on('slideChange', () => {\n    if (swiper.destroyed || !swiper.autoplay.running) return;\n    slideChanged = true;\n  });\n  Object.assign(swiper.autoplay, {\n    start,\n    stop,\n    pause,\n    resume\n  });\n}\n\nexport { Autoplay as default };\n",
+      "start": 1756100544574,
+      "end": 1756100544599,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544599,
+      "end": 1756100544599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { g as getDocument } from \"../shared/ssr-window.esm.mjs\";\nfunction Autoplay(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on,\n    emit,\n    params\n  } = _ref;\n  swiper.autoplay = {\n    running: false,\n    paused: false,\n    timeLeft: 0\n  };\n  extendParams({\n    autoplay: {\n      enabled: false,\n      delay: 3e3,\n      waitForTransition: true,\n      disableOnInteraction: true,\n      stopOnLastSlide: false,\n      reverseDirection: false,\n      pauseOnMouseEnter: false\n    }\n  });\n  let timeout;\n  let raf;\n  let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3e3;\n  let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3e3;\n  let autoplayTimeLeft;\n  let autoplayStartTime = (/* @__PURE__ */ new Date()).getTime;\n  let wasPaused;\n  let isTouched;\n  let pausedByTouch;\n  let touchStartTimeout;\n  let slideChanged;\n  let pausedByInteraction;\n  function onTransitionEnd(e) {\n    if (!swiper || swiper.destroyed || !swiper.wrapperEl)\n      return;\n    if (e.target !== swiper.wrapperEl)\n      return;\n    swiper.wrapperEl.removeEventListener(\"transitionend\", onTransitionEnd);\n    resume();\n  }\n  const calcTimeLeft = () => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    if (swiper.autoplay.paused) {\n      wasPaused = true;\n    } else if (wasPaused) {\n      autoplayDelayCurrent = autoplayTimeLeft;\n      wasPaused = false;\n    }\n    const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - (/* @__PURE__ */ new Date()).getTime();\n    swiper.autoplay.timeLeft = timeLeft;\n    emit(\"autoplayTimeLeft\", timeLeft, timeLeft / autoplayDelayTotal);\n    raf = requestAnimationFrame(() => {\n      calcTimeLeft();\n    });\n  };\n  const getSlideDelay = () => {\n    let activeSlideEl;\n    if (swiper.virtual && swiper.params.virtual.enabled) {\n      activeSlideEl = swiper.slides.filter((slideEl) => slideEl.classList.contains(\"swiper-slide-active\"))[0];\n    } else {\n      activeSlideEl = swiper.slides[swiper.activeIndex];\n    }\n    if (!activeSlideEl)\n      return void 0;\n    const currentSlideDelay = parseInt(activeSlideEl.getAttribute(\"data-swiper-autoplay\"), 10);\n    return currentSlideDelay;\n  };\n  const run = (delayForce) => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    cancelAnimationFrame(raf);\n    calcTimeLeft();\n    let delay = typeof delayForce === \"undefined\" ? swiper.params.autoplay.delay : delayForce;\n    autoplayDelayTotal = swiper.params.autoplay.delay;\n    autoplayDelayCurrent = swiper.params.autoplay.delay;\n    const currentSlideDelay = getSlideDelay();\n    if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && typeof delayForce === \"undefined\") {\n      delay = currentSlideDelay;\n      autoplayDelayTotal = currentSlideDelay;\n      autoplayDelayCurrent = currentSlideDelay;\n    }\n    autoplayTimeLeft = delay;\n    const speed = swiper.params.speed;\n    const proceed = () => {\n      if (!swiper || swiper.destroyed)\n        return;\n      if (swiper.params.autoplay.reverseDirection) {\n        if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {\n          swiper.slidePrev(speed, true, true);\n          emit(\"autoplay\");\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\n          swiper.slideTo(swiper.slides.length - 1, speed, true, true);\n          emit(\"autoplay\");\n        }\n      } else {\n        if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {\n          swiper.slideNext(speed, true, true);\n          emit(\"autoplay\");\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\n          swiper.slideTo(0, speed, true, true);\n          emit(\"autoplay\");\n        }\n      }\n      if (swiper.params.cssMode) {\n        autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();\n        requestAnimationFrame(() => {\n          run();\n        });\n      }\n    };\n    if (delay > 0) {\n      clearTimeout(timeout);\n      timeout = setTimeout(() => {\n        proceed();\n      }, delay);\n    } else {\n      requestAnimationFrame(() => {\n        proceed();\n      });\n    }\n    return delay;\n  };\n  const start = () => {\n    swiper.autoplay.running = true;\n    run();\n    emit(\"autoplayStart\");\n  };\n  const stop = () => {\n    swiper.autoplay.running = false;\n    clearTimeout(timeout);\n    cancelAnimationFrame(raf);\n    emit(\"autoplayStop\");\n  };\n  const pause = (internal, reset) => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    clearTimeout(timeout);\n    if (!internal) {\n      pausedByInteraction = true;\n    }\n    const proceed = () => {\n      emit(\"autoplayPause\");\n      if (swiper.params.autoplay.waitForTransition) {\n        swiper.wrapperEl.addEventListener(\"transitionend\", onTransitionEnd);\n      } else {\n        resume();\n      }\n    };\n    swiper.autoplay.paused = true;\n    if (reset) {\n      if (slideChanged) {\n        autoplayTimeLeft = swiper.params.autoplay.delay;\n      }\n      slideChanged = false;\n      proceed();\n      return;\n    }\n    const delay = autoplayTimeLeft || swiper.params.autoplay.delay;\n    autoplayTimeLeft = delay - ((/* @__PURE__ */ new Date()).getTime() - autoplayStartTime);\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop)\n      return;\n    if (autoplayTimeLeft < 0)\n      autoplayTimeLeft = 0;\n    proceed();\n  };\n  const resume = () => {\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running)\n      return;\n    autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();\n    if (pausedByInteraction) {\n      pausedByInteraction = false;\n      run(autoplayTimeLeft);\n    } else {\n      run();\n    }\n    swiper.autoplay.paused = false;\n    emit(\"autoplayResume\");\n  };\n  const onVisibilityChange = () => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    const document = getDocument();\n    if (document.visibilityState === \"hidden\") {\n      pausedByInteraction = true;\n      pause(true);\n    }\n    if (document.visibilityState === \"visible\") {\n      resume();\n    }\n  };\n  const onPointerEnter = (e) => {\n    if (e.pointerType !== \"mouse\")\n      return;\n    pausedByInteraction = true;\n    if (swiper.animating || swiper.autoplay.paused)\n      return;\n    pause(true);\n  };\n  const onPointerLeave = (e) => {\n    if (e.pointerType !== \"mouse\")\n      return;\n    if (swiper.autoplay.paused) {\n      resume();\n    }\n  };\n  const attachMouseEvents = () => {\n    if (swiper.params.autoplay.pauseOnMouseEnter) {\n      swiper.el.addEventListener(\"pointerenter\", onPointerEnter);\n      swiper.el.addEventListener(\"pointerleave\", onPointerLeave);\n    }\n  };\n  const detachMouseEvents = () => {\n    swiper.el.removeEventListener(\"pointerenter\", onPointerEnter);\n    swiper.el.removeEventListener(\"pointerleave\", onPointerLeave);\n  };\n  const attachDocumentEvents = () => {\n    const document = getDocument();\n    document.addEventListener(\"visibilitychange\", onVisibilityChange);\n  };\n  const detachDocumentEvents = () => {\n    const document = getDocument();\n    document.removeEventListener(\"visibilitychange\", onVisibilityChange);\n  };\n  on(\"init\", () => {\n    if (swiper.params.autoplay.enabled) {\n      attachMouseEvents();\n      attachDocumentEvents();\n      autoplayStartTime = (/* @__PURE__ */ new Date()).getTime();\n      start();\n    }\n  });\n  on(\"destroy\", () => {\n    detachMouseEvents();\n    detachDocumentEvents();\n    if (swiper.autoplay.running) {\n      stop();\n    }\n  });\n  on(\"beforeTransitionStart\", (_s, speed, internal) => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    if (internal || !swiper.params.autoplay.disableOnInteraction) {\n      pause(true, true);\n    } else {\n      stop();\n    }\n  });\n  on(\"sliderFirstMove\", () => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    if (swiper.params.autoplay.disableOnInteraction) {\n      stop();\n      return;\n    }\n    isTouched = true;\n    pausedByTouch = false;\n    pausedByInteraction = false;\n    touchStartTimeout = setTimeout(() => {\n      pausedByInteraction = true;\n      pausedByTouch = true;\n      pause(true);\n    }, 200);\n  });\n  on(\"touchEnd\", () => {\n    if (swiper.destroyed || !swiper.autoplay.running || !isTouched)\n      return;\n    clearTimeout(touchStartTimeout);\n    clearTimeout(timeout);\n    if (swiper.params.autoplay.disableOnInteraction) {\n      pausedByTouch = false;\n      isTouched = false;\n      return;\n    }\n    if (pausedByTouch && swiper.params.cssMode)\n      resume();\n    pausedByTouch = false;\n    isTouched = false;\n  });\n  on(\"slideChange\", () => {\n    if (swiper.destroyed || !swiper.autoplay.running)\n      return;\n    slideChanged = true;\n  });\n  Object.assign(swiper.autoplay, {\n    start,\n    stop,\n    pause,\n    resume\n  });\n}\nexport { Autoplay as default };\n",
+      "start": 1756100544599,
+      "end": 1756100544920,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/autoplay.mjs\"],\n  \"sourcesContent\": [\"import { g as getDocument } from '../shared/ssr-window.esm.mjs';\\n\\n/* eslint no-underscore-dangle: \\\"off\\\" */\\n/* eslint no-use-before-define: \\\"off\\\" */\\nfunction Autoplay(_ref) {\\n  let {\\n    swiper,\\n    extendParams,\\n    on,\\n    emit,\\n    params\\n  } = _ref;\\n  swiper.autoplay = {\\n    running: false,\\n    paused: false,\\n    timeLeft: 0\\n  };\\n  extendParams({\\n    autoplay: {\\n      enabled: false,\\n      delay: 3000,\\n      waitForTransition: true,\\n      disableOnInteraction: true,\\n      stopOnLastSlide: false,\\n      reverseDirection: false,\\n      pauseOnMouseEnter: false\\n    }\\n  });\\n  let timeout;\\n  let raf;\\n  let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3000;\\n  let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3000;\\n  let autoplayTimeLeft;\\n  let autoplayStartTime = new Date().getTime;\\n  let wasPaused;\\n  let isTouched;\\n  let pausedByTouch;\\n  let touchStartTimeout;\\n  let slideChanged;\\n  let pausedByInteraction;\\n  function onTransitionEnd(e) {\\n    if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;\\n    if (e.target !== swiper.wrapperEl) return;\\n    swiper.wrapperEl.removeEventListener('transitionend', onTransitionEnd);\\n    resume();\\n  }\\n  const calcTimeLeft = () => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    if (swiper.autoplay.paused) {\\n      wasPaused = true;\\n    } else if (wasPaused) {\\n      autoplayDelayCurrent = autoplayTimeLeft;\\n      wasPaused = false;\\n    }\\n    const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - new Date().getTime();\\n    swiper.autoplay.timeLeft = timeLeft;\\n    emit('autoplayTimeLeft', timeLeft, timeLeft / autoplayDelayTotal);\\n    raf = requestAnimationFrame(() => {\\n      calcTimeLeft();\\n    });\\n  };\\n  const getSlideDelay = () => {\\n    let activeSlideEl;\\n    if (swiper.virtual && swiper.params.virtual.enabled) {\\n      activeSlideEl = swiper.slides.filter(slideEl => slideEl.classList.contains('swiper-slide-active'))[0];\\n    } else {\\n      activeSlideEl = swiper.slides[swiper.activeIndex];\\n    }\\n    if (!activeSlideEl) return undefined;\\n    const currentSlideDelay = parseInt(activeSlideEl.getAttribute('data-swiper-autoplay'), 10);\\n    return currentSlideDelay;\\n  };\\n  const run = delayForce => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    cancelAnimationFrame(raf);\\n    calcTimeLeft();\\n    let delay = typeof delayForce === 'undefined' ? swiper.params.autoplay.delay : delayForce;\\n    autoplayDelayTotal = swiper.params.autoplay.delay;\\n    autoplayDelayCurrent = swiper.params.autoplay.delay;\\n    const currentSlideDelay = getSlideDelay();\\n    if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && typeof delayForce === 'undefined') {\\n      delay = currentSlideDelay;\\n      autoplayDelayTotal = currentSlideDelay;\\n      autoplayDelayCurrent = currentSlideDelay;\\n    }\\n    autoplayTimeLeft = delay;\\n    const speed = swiper.params.speed;\\n    const proceed = () => {\\n      if (!swiper || swiper.destroyed) return;\\n      if (swiper.params.autoplay.reverseDirection) {\\n        if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {\\n          swiper.slidePrev(speed, true, true);\\n          emit('autoplay');\\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\\n          swiper.slideTo(swiper.slides.length - 1, speed, true, true);\\n          emit('autoplay');\\n        }\\n      } else {\\n        if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {\\n          swiper.slideNext(speed, true, true);\\n          emit('autoplay');\\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\\n          swiper.slideTo(0, speed, true, true);\\n          emit('autoplay');\\n        }\\n      }\\n      if (swiper.params.cssMode) {\\n        autoplayStartTime = new Date().getTime();\\n        requestAnimationFrame(() => {\\n          run();\\n        });\\n      }\\n    };\\n    if (delay > 0) {\\n      clearTimeout(timeout);\\n      timeout = setTimeout(() => {\\n        proceed();\\n      }, delay);\\n    } else {\\n      requestAnimationFrame(() => {\\n        proceed();\\n      });\\n    }\\n\\n    // eslint-disable-next-line\\n    return delay;\\n  };\\n  const start = () => {\\n    swiper.autoplay.running = true;\\n    run();\\n    emit('autoplayStart');\\n  };\\n  const stop = () => {\\n    swiper.autoplay.running = false;\\n    clearTimeout(timeout);\\n    cancelAnimationFrame(raf);\\n    emit('autoplayStop');\\n  };\\n  const pause = (internal, reset) => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    clearTimeout(timeout);\\n    if (!internal) {\\n      pausedByInteraction = true;\\n    }\\n    const proceed = () => {\\n      emit('autoplayPause');\\n      if (swiper.params.autoplay.waitForTransition) {\\n        swiper.wrapperEl.addEventListener('transitionend', onTransitionEnd);\\n      } else {\\n        resume();\\n      }\\n    };\\n    swiper.autoplay.paused = true;\\n    if (reset) {\\n      if (slideChanged) {\\n        autoplayTimeLeft = swiper.params.autoplay.delay;\\n      }\\n      slideChanged = false;\\n      proceed();\\n      return;\\n    }\\n    const delay = autoplayTimeLeft || swiper.params.autoplay.delay;\\n    autoplayTimeLeft = delay - (new Date().getTime() - autoplayStartTime);\\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop) return;\\n    if (autoplayTimeLeft < 0) autoplayTimeLeft = 0;\\n    proceed();\\n  };\\n  const resume = () => {\\n    if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running) return;\\n    autoplayStartTime = new Date().getTime();\\n    if (pausedByInteraction) {\\n      pausedByInteraction = false;\\n      run(autoplayTimeLeft);\\n    } else {\\n      run();\\n    }\\n    swiper.autoplay.paused = false;\\n    emit('autoplayResume');\\n  };\\n  const onVisibilityChange = () => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    const document = getDocument();\\n    if (document.visibilityState === 'hidden') {\\n      pausedByInteraction = true;\\n      pause(true);\\n    }\\n    if (document.visibilityState === 'visible') {\\n      resume();\\n    }\\n  };\\n  const onPointerEnter = e => {\\n    if (e.pointerType !== 'mouse') return;\\n    pausedByInteraction = true;\\n    if (swiper.animating || swiper.autoplay.paused) return;\\n    pause(true);\\n  };\\n  const onPointerLeave = e => {\\n    if (e.pointerType !== 'mouse') return;\\n    if (swiper.autoplay.paused) {\\n      resume();\\n    }\\n  };\\n  const attachMouseEvents = () => {\\n    if (swiper.params.autoplay.pauseOnMouseEnter) {\\n      swiper.el.addEventListener('pointerenter', onPointerEnter);\\n      swiper.el.addEventListener('pointerleave', onPointerLeave);\\n    }\\n  };\\n  const detachMouseEvents = () => {\\n    swiper.el.removeEventListener('pointerenter', onPointerEnter);\\n    swiper.el.removeEventListener('pointerleave', onPointerLeave);\\n  };\\n  const attachDocumentEvents = () => {\\n    const document = getDocument();\\n    document.addEventListener('visibilitychange', onVisibilityChange);\\n  };\\n  const detachDocumentEvents = () => {\\n    const document = getDocument();\\n    document.removeEventListener('visibilitychange', onVisibilityChange);\\n  };\\n  on('init', () => {\\n    if (swiper.params.autoplay.enabled) {\\n      attachMouseEvents();\\n      attachDocumentEvents();\\n      autoplayStartTime = new Date().getTime();\\n      start();\\n    }\\n  });\\n  on('destroy', () => {\\n    detachMouseEvents();\\n    detachDocumentEvents();\\n    if (swiper.autoplay.running) {\\n      stop();\\n    }\\n  });\\n  on('beforeTransitionStart', (_s, speed, internal) => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    if (internal || !swiper.params.autoplay.disableOnInteraction) {\\n      pause(true, true);\\n    } else {\\n      stop();\\n    }\\n  });\\n  on('sliderFirstMove', () => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    if (swiper.params.autoplay.disableOnInteraction) {\\n      stop();\\n      return;\\n    }\\n    isTouched = true;\\n    pausedByTouch = false;\\n    pausedByInteraction = false;\\n    touchStartTimeout = setTimeout(() => {\\n      pausedByInteraction = true;\\n      pausedByTouch = true;\\n      pause(true);\\n    }, 200);\\n  });\\n  on('touchEnd', () => {\\n    if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;\\n    clearTimeout(touchStartTimeout);\\n    clearTimeout(timeout);\\n    if (swiper.params.autoplay.disableOnInteraction) {\\n      pausedByTouch = false;\\n      isTouched = false;\\n      return;\\n    }\\n    if (pausedByTouch && swiper.params.cssMode) resume();\\n    pausedByTouch = false;\\n    isTouched = false;\\n  });\\n  on('slideChange', () => {\\n    if (swiper.destroyed || !swiper.autoplay.running) return;\\n    slideChanged = true;\\n  });\\n  Object.assign(swiper.autoplay, {\\n    start,\\n    stop,\\n    pause,\\n    resume\\n  });\\n}\\n\\nexport { Autoplay as default };\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544920,
+      "end": 1756100544920,
+      "order": "normal"
+    }
+  ]
+}

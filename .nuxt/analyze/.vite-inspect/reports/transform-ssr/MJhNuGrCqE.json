@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/@vue+devtools-api@6.6.1/node_modules/@vue/devtools-api/lib/esm/time.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "let supported;\nlet perf;\nexport function isPerformanceSupported() {\n    var _a;\n    if (supported !== undefined) {\n        return supported;\n    }\n    if (typeof window !== 'undefined' && window.performance) {\n        supported = true;\n        perf = window.performance;\n    }\n    else if (typeof globalThis !== 'undefined' && ((_a = globalThis.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {\n        supported = true;\n        perf = globalThis.perf_hooks.performance;\n    }\n    else {\n        supported = false;\n    }\n    return supported;\n}\nexport function now() {\n    return isPerformanceSupported() ? perf.now() : Date.now();\n}\n",
+      "start": 1756100543119,
+      "end": 1756100543129,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100543129,
+      "end": 1756100543129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "let supported;\nlet perf;\nexport function isPerformanceSupported() {\n  var _a;\n  if (supported !== void 0) {\n    return supported;\n  }\n  if (false) {\n    supported = true;\n    perf = (void 0).performance;\n  } else if (typeof globalThis !== \"undefined\" && ((_a = globalThis.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {\n    supported = true;\n    perf = globalThis.perf_hooks.performance;\n  } else {\n    supported = false;\n  }\n  return supported;\n}\nexport function now() {\n  return isPerformanceSupported() ? perf.now() : Date.now();\n}\n",
+      "start": 1756100543129,
+      "end": 1756100544793,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/@vue+devtools-api@6.6.1/node_modules/@vue/devtools-api/lib/esm/time.js\"],\n  \"sourcesContent\": [\"let supported;\\nlet perf;\\nexport function isPerformanceSupported() {\\n    var _a;\\n    if (supported !== undefined) {\\n        return supported;\\n    }\\n    if (typeof window !== 'undefined' && window.performance) {\\n        supported = true;\\n        perf = window.performance;\\n    }\\n    else if (typeof globalThis !== 'undefined' && ((_a = globalThis.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {\\n        supported = true;\\n        perf = globalThis.perf_hooks.performance;\\n    }\\n    else {\\n        supported = false;\\n    }\\n    return supported;\\n}\\nexport function now() {\\n    return isPerformanceSupported() ? perf.now() : Date.now();\\n}\\n\"],\n  \"mappings\": \"AAAA,IAAI;AACJ,IAAI;AACG,gBAAS,yBAAyB;AACrC,MAAI;AACJ,MAAI,cAAc,QAAW;AACzB,WAAO;AAAA,EACX;AACA,MAAI,OAAqD;AACrD,gBAAY;AACZ,WAAO,SAAO;AAAA,EAClB,WACS,OAAO,eAAe,iBAAiB,KAAK,WAAW,gBAAgB,QAAQ,OAAO,SAAS,SAAS,GAAG,cAAc;AAC9H,gBAAY;AACZ,WAAO,WAAW,WAAW;AAAA,EACjC,OACK;AACD,gBAAY;AAAA,EAChB;AACA,SAAO;AACX;AACO,gBAAS,MAAM;AAClB,SAAO,uBAAuB,IAAI,KAAK,IAAI,IAAI,KAAK,IAAI;AAC5D;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544793,
+      "end": 1756100544793,
+      "order": "normal"
+    }
+  ]
+}

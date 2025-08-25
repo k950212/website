@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/shared/effect-virtual-transition-end.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { i as elementTransitionEnd } from './utils.mjs';\n\nfunction effectVirtualTransitionEnd(_ref) {\n  let {\n    swiper,\n    duration,\n    transformElements,\n    allSlides\n  } = _ref;\n  const {\n    activeIndex\n  } = swiper;\n  const getSlide = el => {\n    if (!el.parentElement) {\n      // assume shadow root\n      const slide = swiper.slides.filter(slideEl => slideEl.shadowRoot && slideEl.shadowRoot === el.parentNode)[0];\n      return slide;\n    }\n    return el.parentElement;\n  };\n  if (swiper.params.virtualTranslate && duration !== 0) {\n    let eventTriggered = false;\n    let transitionEndTarget;\n    if (allSlides) {\n      transitionEndTarget = transformElements;\n    } else {\n      transitionEndTarget = transformElements.filter(transformEl => {\n        const el = transformEl.classList.contains('swiper-slide-transform') ? getSlide(transformEl) : transformEl;\n        return swiper.getSlideIndex(el) === activeIndex;\n      });\n    }\n    transitionEndTarget.forEach(el => {\n      elementTransitionEnd(el, () => {\n        if (eventTriggered) return;\n        if (!swiper || swiper.destroyed) return;\n        eventTriggered = true;\n        swiper.animating = false;\n        const evt = new window.CustomEvent('transitionend', {\n          bubbles: true,\n          cancelable: true\n        });\n        swiper.wrapperEl.dispatchEvent(evt);\n      });\n    });\n  }\n}\n\nexport { effectVirtualTransitionEnd as e };\n",
+      "start": 1756100544727,
+      "end": 1756100544749,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544749,
+      "end": 1756100544749,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { i as elementTransitionEnd } from \"./utils.mjs\";\nfunction effectVirtualTransitionEnd(_ref) {\n  let {\n    swiper,\n    duration,\n    transformElements,\n    allSlides\n  } = _ref;\n  const {\n    activeIndex\n  } = swiper;\n  const getSlide = (el) => {\n    if (!el.parentElement) {\n      const slide = swiper.slides.filter((slideEl) => slideEl.shadowRoot && slideEl.shadowRoot === el.parentNode)[0];\n      return slide;\n    }\n    return el.parentElement;\n  };\n  if (swiper.params.virtualTranslate && duration !== 0) {\n    let eventTriggered = false;\n    let transitionEndTarget;\n    if (allSlides) {\n      transitionEndTarget = transformElements;\n    } else {\n      transitionEndTarget = transformElements.filter((transformEl) => {\n        const el = transformEl.classList.contains(\"swiper-slide-transform\") ? getSlide(transformEl) : transformEl;\n        return swiper.getSlideIndex(el) === activeIndex;\n      });\n    }\n    transitionEndTarget.forEach((el) => {\n      elementTransitionEnd(el, () => {\n        if (eventTriggered)\n          return;\n        if (!swiper || swiper.destroyed)\n          return;\n        eventTriggered = true;\n        swiper.animating = false;\n        const evt = new (void 0).CustomEvent(\"transitionend\", {\n          bubbles: true,\n          cancelable: true\n        });\n        swiper.wrapperEl.dispatchEvent(evt);\n      });\n    });\n  }\n}\nexport { effectVirtualTransitionEnd as e };\n",
+      "start": 1756100544749,
+      "end": 1756100544953,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/shared/effect-virtual-transition-end.mjs\"],\n  \"sourcesContent\": [\"import { i as elementTransitionEnd } from './utils.mjs';\\n\\nfunction effectVirtualTransitionEnd(_ref) {\\n  let {\\n    swiper,\\n    duration,\\n    transformElements,\\n    allSlides\\n  } = _ref;\\n  const {\\n    activeIndex\\n  } = swiper;\\n  const getSlide = el => {\\n    if (!el.parentElement) {\\n      // assume shadow root\\n      const slide = swiper.slides.filter(slideEl => slideEl.shadowRoot && slideEl.shadowRoot === el.parentNode)[0];\\n      return slide;\\n    }\\n    return el.parentElement;\\n  };\\n  if (swiper.params.virtualTranslate && duration !== 0) {\\n    let eventTriggered = false;\\n    let transitionEndTarget;\\n    if (allSlides) {\\n      transitionEndTarget = transformElements;\\n    } else {\\n      transitionEndTarget = transformElements.filter(transformEl => {\\n        const el = transformEl.classList.contains('swiper-slide-transform') ? getSlide(transformEl) : transformEl;\\n        return swiper.getSlideIndex(el) === activeIndex;\\n      });\\n    }\\n    transitionEndTarget.forEach(el => {\\n      elementTransitionEnd(el, () => {\\n        if (eventTriggered) return;\\n        if (!swiper || swiper.destroyed) return;\\n        eventTriggered = true;\\n        swiper.animating = false;\\n        const evt = new window.CustomEvent('transitionend', {\\n          bubbles: true,\\n          cancelable: true\\n        });\\n        swiper.wrapperEl.dispatchEvent(evt);\\n      });\\n    });\\n  }\\n}\\n\\nexport { effectVirtualTransitionEnd as e };\\n\"],\n  \"mappings\": \"AAAA,SAAS,KAAK,4BAA4B;AAE1C,SAAS,2BAA2B,MAAM;AACxC,MAAI;AAAA,IACF;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF,IAAI;AACJ,QAAM;AAAA,IACJ;AAAA,EACF,IAAI;AACJ,QAAM,WAAW,QAAM;AACrB,QAAI,CAAC,GAAG,eAAe;AAErB,YAAM,QAAQ,OAAO,OAAO,OAAO,aAAW,QAAQ,cAAc,QAAQ,eAAe,GAAG,UAAU,EAAE,CAAC;AAC3G,aAAO;AAAA,IACT;AACA,WAAO,GAAG;AAAA,EACZ;AACA,MAAI,OAAO,OAAO,oBAAoB,aAAa,GAAG;AACpD,QAAI,iBAAiB;AACrB,QAAI;AACJ,QAAI,WAAW;AACb,4BAAsB;AAAA,IACxB,OAAO;AACL,4BAAsB,kBAAkB,OAAO,iBAAe;AAC5D,cAAM,KAAK,YAAY,UAAU,SAAS,wBAAwB,IAAI,SAAS,WAAW,IAAI;AAC9F,eAAO,OAAO,cAAc,EAAE,MAAM;AAAA,MACtC,CAAC;AAAA,IACH;AACA,wBAAoB,QAAQ,QAAM;AAChC,2BAAqB,IAAI,MAAM;AAC7B,YAAI;AAAgB;AACpB,YAAI,CAAC,UAAU,OAAO;AAAW;AACjC,yBAAiB;AACjB,eAAO,YAAY;AACnB,cAAM,MAAM,IAAI,SAAO,YAAY,iBAAiB;AAAA,UAClD,SAAS;AAAA,UACT,YAAY;AAAA,QACd,CAAC;AACD,eAAO,UAAU,cAAc,GAAG;AAAA,MACpC,CAAC;AAAA,IACH,CAAC;AAAA,EACH;AACF;AAEA,SAAS,8BAA8B;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544953,
+      "end": 1756100544953,
+      "order": "normal"
+    }
+  ]
+}

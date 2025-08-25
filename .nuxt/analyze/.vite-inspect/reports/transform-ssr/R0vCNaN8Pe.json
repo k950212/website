@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/history.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { a as getWindow } from '../shared/ssr-window.esm.mjs';\n\nfunction History(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on\n  } = _ref;\n  extendParams({\n    history: {\n      enabled: false,\n      root: '',\n      replaceState: false,\n      key: 'slides',\n      keepQuery: false\n    }\n  });\n  let initialized = false;\n  let paths = {};\n  const slugify = text => {\n    return text.toString().replace(/\\s+/g, '-').replace(/[^\\w-]+/g, '').replace(/--+/g, '-').replace(/^-+/, '').replace(/-+$/, '');\n  };\n  const getPathValues = urlOverride => {\n    const window = getWindow();\n    let location;\n    if (urlOverride) {\n      location = new URL(urlOverride);\n    } else {\n      location = window.location;\n    }\n    const pathArray = location.pathname.slice(1).split('/').filter(part => part !== '');\n    const total = pathArray.length;\n    const key = pathArray[total - 2];\n    const value = pathArray[total - 1];\n    return {\n      key,\n      value\n    };\n  };\n  const setHistory = (key, index) => {\n    const window = getWindow();\n    if (!initialized || !swiper.params.history.enabled) return;\n    let location;\n    if (swiper.params.url) {\n      location = new URL(swiper.params.url);\n    } else {\n      location = window.location;\n    }\n    const slide = swiper.slides[index];\n    let value = slugify(slide.getAttribute('data-history'));\n    if (swiper.params.history.root.length > 0) {\n      let root = swiper.params.history.root;\n      if (root[root.length - 1] === '/') root = root.slice(0, root.length - 1);\n      value = `${root}/${key ? `${key}/` : ''}${value}`;\n    } else if (!location.pathname.includes(key)) {\n      value = `${key ? `${key}/` : ''}${value}`;\n    }\n    if (swiper.params.history.keepQuery) {\n      value += location.search;\n    }\n    const currentState = window.history.state;\n    if (currentState && currentState.value === value) {\n      return;\n    }\n    if (swiper.params.history.replaceState) {\n      window.history.replaceState({\n        value\n      }, null, value);\n    } else {\n      window.history.pushState({\n        value\n      }, null, value);\n    }\n  };\n  const scrollToSlide = (speed, value, runCallbacks) => {\n    if (value) {\n      for (let i = 0, length = swiper.slides.length; i < length; i += 1) {\n        const slide = swiper.slides[i];\n        const slideHistory = slugify(slide.getAttribute('data-history'));\n        if (slideHistory === value) {\n          const index = swiper.getSlideIndex(slide);\n          swiper.slideTo(index, speed, runCallbacks);\n        }\n      }\n    } else {\n      swiper.slideTo(0, speed, runCallbacks);\n    }\n  };\n  const setHistoryPopState = () => {\n    paths = getPathValues(swiper.params.url);\n    scrollToSlide(swiper.params.speed, paths.value, false);\n  };\n  const init = () => {\n    const window = getWindow();\n    if (!swiper.params.history) return;\n    if (!window.history || !window.history.pushState) {\n      swiper.params.history.enabled = false;\n      swiper.params.hashNavigation.enabled = true;\n      return;\n    }\n    initialized = true;\n    paths = getPathValues(swiper.params.url);\n    if (!paths.key && !paths.value) {\n      if (!swiper.params.history.replaceState) {\n        window.addEventListener('popstate', setHistoryPopState);\n      }\n      return;\n    }\n    scrollToSlide(0, paths.value, swiper.params.runCallbacksOnInit);\n    if (!swiper.params.history.replaceState) {\n      window.addEventListener('popstate', setHistoryPopState);\n    }\n  };\n  const destroy = () => {\n    const window = getWindow();\n    if (!swiper.params.history.replaceState) {\n      window.removeEventListener('popstate', setHistoryPopState);\n    }\n  };\n  on('init', () => {\n    if (swiper.params.history.enabled) {\n      init();\n    }\n  });\n  on('destroy', () => {\n    if (swiper.params.history.enabled) {\n      destroy();\n    }\n  });\n  on('transitionEnd _freeModeNoMomentumRelease', () => {\n    if (initialized) {\n      setHistory(swiper.params.history.key, swiper.activeIndex);\n    }\n  });\n  on('slideChange', () => {\n    if (initialized && swiper.params.cssMode) {\n      setHistory(swiper.params.history.key, swiper.activeIndex);\n    }\n  });\n}\n\nexport { History as default };\n",
+      "start": 1756100544573,
+      "end": 1756100544598,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544598,
+      "end": 1756100544598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { a as getWindow } from \"../shared/ssr-window.esm.mjs\";\nfunction History(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on\n  } = _ref;\n  extendParams({\n    history: {\n      enabled: false,\n      root: \"\",\n      replaceState: false,\n      key: \"slides\",\n      keepQuery: false\n    }\n  });\n  let initialized = false;\n  let paths = {};\n  const slugify = (text) => {\n    return text.toString().replace(/\\s+/g, \"-\").replace(/[^\\w-]+/g, \"\").replace(/--+/g, \"-\").replace(/^-+/, \"\").replace(/-+$/, \"\");\n  };\n  const getPathValues = (urlOverride) => {\n    const window = getWindow();\n    let location;\n    if (urlOverride) {\n      location = new URL(urlOverride);\n    } else {\n      location = window.location;\n    }\n    const pathArray = location.pathname.slice(1).split(\"/\").filter((part) => part !== \"\");\n    const total = pathArray.length;\n    const key = pathArray[total - 2];\n    const value = pathArray[total - 1];\n    return {\n      key,\n      value\n    };\n  };\n  const setHistory = (key, index) => {\n    const window = getWindow();\n    if (!initialized || !swiper.params.history.enabled)\n      return;\n    let location;\n    if (swiper.params.url) {\n      location = new URL(swiper.params.url);\n    } else {\n      location = window.location;\n    }\n    const slide = swiper.slides[index];\n    let value = slugify(slide.getAttribute(\"data-history\"));\n    if (swiper.params.history.root.length > 0) {\n      let root = swiper.params.history.root;\n      if (root[root.length - 1] === \"/\")\n        root = root.slice(0, root.length - 1);\n      value = `${root}/${key ? `${key}/` : \"\"}${value}`;\n    } else if (!location.pathname.includes(key)) {\n      value = `${key ? `${key}/` : \"\"}${value}`;\n    }\n    if (swiper.params.history.keepQuery) {\n      value += location.search;\n    }\n    const currentState = window.history.state;\n    if (currentState && currentState.value === value) {\n      return;\n    }\n    if (swiper.params.history.replaceState) {\n      window.history.replaceState({\n        value\n      }, null, value);\n    } else {\n      window.history.pushState({\n        value\n      }, null, value);\n    }\n  };\n  const scrollToSlide = (speed, value, runCallbacks) => {\n    if (value) {\n      for (let i = 0, length = swiper.slides.length; i < length; i += 1) {\n        const slide = swiper.slides[i];\n        const slideHistory = slugify(slide.getAttribute(\"data-history\"));\n        if (slideHistory === value) {\n          const index = swiper.getSlideIndex(slide);\n          swiper.slideTo(index, speed, runCallbacks);\n        }\n      }\n    } else {\n      swiper.slideTo(0, speed, runCallbacks);\n    }\n  };\n  const setHistoryPopState = () => {\n    paths = getPathValues(swiper.params.url);\n    scrollToSlide(swiper.params.speed, paths.value, false);\n  };\n  const init = () => {\n    const window = getWindow();\n    if (!swiper.params.history)\n      return;\n    if (!window.history || !window.history.pushState) {\n      swiper.params.history.enabled = false;\n      swiper.params.hashNavigation.enabled = true;\n      return;\n    }\n    initialized = true;\n    paths = getPathValues(swiper.params.url);\n    if (!paths.key && !paths.value) {\n      if (!swiper.params.history.replaceState) {\n        window.addEventListener(\"popstate\", setHistoryPopState);\n      }\n      return;\n    }\n    scrollToSlide(0, paths.value, swiper.params.runCallbacksOnInit);\n    if (!swiper.params.history.replaceState) {\n      window.addEventListener(\"popstate\", setHistoryPopState);\n    }\n  };\n  const destroy = () => {\n    const window = getWindow();\n    if (!swiper.params.history.replaceState) {\n      window.removeEventListener(\"popstate\", setHistoryPopState);\n    }\n  };\n  on(\"init\", () => {\n    if (swiper.params.history.enabled) {\n      init();\n    }\n  });\n  on(\"destroy\", () => {\n    if (swiper.params.history.enabled) {\n      destroy();\n    }\n  });\n  on(\"transitionEnd _freeModeNoMomentumRelease\", () => {\n    if (initialized) {\n      setHistory(swiper.params.history.key, swiper.activeIndex);\n    }\n  });\n  on(\"slideChange\", () => {\n    if (initialized && swiper.params.cssMode) {\n      setHistory(swiper.params.history.key, swiper.activeIndex);\n    }\n  });\n}\nexport { History as default };\n",
+      "start": 1756100544598,
+      "end": 1756100544918,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/history.mjs\"],\n  \"sourcesContent\": [\"import { a as getWindow } from '../shared/ssr-window.esm.mjs';\\n\\nfunction History(_ref) {\\n  let {\\n    swiper,\\n    extendParams,\\n    on\\n  } = _ref;\\n  extendParams({\\n    history: {\\n      enabled: false,\\n      root: '',\\n      replaceState: false,\\n      key: 'slides',\\n      keepQuery: false\\n    }\\n  });\\n  let initialized = false;\\n  let paths = {};\\n  const slugify = text => {\\n    return text.toString().replace(/\\\\s+/g, '-').replace(/[^\\\\w-]+/g, '').replace(/--+/g, '-').replace(/^-+/, '').replace(/-+$/, '');\\n  };\\n  const getPathValues = urlOverride => {\\n    const window = getWindow();\\n    let location;\\n    if (urlOverride) {\\n      location = new URL(urlOverride);\\n    } else {\\n      location = window.location;\\n    }\\n    const pathArray = location.pathname.slice(1).split('/').filter(part => part !== '');\\n    const total = pathArray.length;\\n    const key = pathArray[total - 2];\\n    const value = pathArray[total - 1];\\n    return {\\n      key,\\n      value\\n    };\\n  };\\n  const setHistory = (key, index) => {\\n    const window = getWindow();\\n    if (!initialized || !swiper.params.history.enabled) return;\\n    let location;\\n    if (swiper.params.url) {\\n      location = new URL(swiper.params.url);\\n    } else {\\n      location = window.location;\\n    }\\n    const slide = swiper.slides[index];\\n    let value = slugify(slide.getAttribute('data-history'));\\n    if (swiper.params.history.root.length > 0) {\\n      let root = swiper.params.history.root;\\n      if (root[root.length - 1] === '/') root = root.slice(0, root.length - 1);\\n      value = `${root}/${key ? `${key}/` : ''}${value}`;\\n    } else if (!location.pathname.includes(key)) {\\n      value = `${key ? `${key}/` : ''}${value}`;\\n    }\\n    if (swiper.params.history.keepQuery) {\\n      value += location.search;\\n    }\\n    const currentState = window.history.state;\\n    if (currentState && currentState.value === value) {\\n      return;\\n    }\\n    if (swiper.params.history.replaceState) {\\n      window.history.replaceState({\\n        value\\n      }, null, value);\\n    } else {\\n      window.history.pushState({\\n        value\\n      }, null, value);\\n    }\\n  };\\n  const scrollToSlide = (speed, value, runCallbacks) => {\\n    if (value) {\\n      for (let i = 0, length = swiper.slides.length; i < length; i += 1) {\\n        const slide = swiper.slides[i];\\n        const slideHistory = slugify(slide.getAttribute('data-history'));\\n        if (slideHistory === value) {\\n          const index = swiper.getSlideIndex(slide);\\n          swiper.slideTo(index, speed, runCallbacks);\\n        }\\n      }\\n    } else {\\n      swiper.slideTo(0, speed, runCallbacks);\\n    }\\n  };\\n  const setHistoryPopState = () => {\\n    paths = getPathValues(swiper.params.url);\\n    scrollToSlide(swiper.params.speed, paths.value, false);\\n  };\\n  const init = () => {\\n    const window = getWindow();\\n    if (!swiper.params.history) return;\\n    if (!window.history || !window.history.pushState) {\\n      swiper.params.history.enabled = false;\\n      swiper.params.hashNavigation.enabled = true;\\n      return;\\n    }\\n    initialized = true;\\n    paths = getPathValues(swiper.params.url);\\n    if (!paths.key && !paths.value) {\\n      if (!swiper.params.history.replaceState) {\\n        window.addEventListener('popstate', setHistoryPopState);\\n      }\\n      return;\\n    }\\n    scrollToSlide(0, paths.value, swiper.params.runCallbacksOnInit);\\n    if (!swiper.params.history.replaceState) {\\n      window.addEventListener('popstate', setHistoryPopState);\\n    }\\n  };\\n  const destroy = () => {\\n    const window = getWindow();\\n    if (!swiper.params.history.replaceState) {\\n      window.removeEventListener('popstate', setHistoryPopState);\\n    }\\n  };\\n  on('init', () => {\\n    if (swiper.params.history.enabled) {\\n      init();\\n    }\\n  });\\n  on('destroy', () => {\\n    if (swiper.params.history.enabled) {\\n      destroy();\\n    }\\n  });\\n  on('transitionEnd _freeModeNoMomentumRelease', () => {\\n    if (initialized) {\\n      setHistory(swiper.params.history.key, swiper.activeIndex);\\n    }\\n  });\\n  on('slideChange', () => {\\n    if (initialized && swiper.params.cssMode) {\\n      setHistory(swiper.params.history.key, swiper.activeIndex);\\n    }\\n  });\\n}\\n\\nexport { History as default };\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544918,
+      "end": 1756100544918,
+      "order": "normal"
+    }
+  ]
+}

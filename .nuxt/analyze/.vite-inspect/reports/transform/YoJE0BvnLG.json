@@ -1,0 +1,228 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/tabbar/Tabbar.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ref, defineComponent, createVNode as _createVNode } from \"vue\";\nimport { truthProp, numericProp, getZIndexStyle, createNamespace, callInterceptor, makeNumericProp, BORDER_TOP_BOTTOM } from \"../utils/index.mjs\";\nimport { useChildren } from \"@vant/use\";\nimport { usePlaceholder } from \"../composables/use-placeholder.mjs\";\nconst [name, bem] = createNamespace(\"tabbar\");\nconst tabbarProps = {\n  route: Boolean,\n  fixed: truthProp,\n  border: truthProp,\n  zIndex: numericProp,\n  placeholder: Boolean,\n  activeColor: String,\n  beforeChange: Function,\n  inactiveColor: String,\n  modelValue: makeNumericProp(0),\n  safeAreaInsetBottom: {\n    type: Boolean,\n    default: null\n  }\n};\nconst TABBAR_KEY = Symbol(name);\nvar stdin_default = defineComponent({\n  name,\n  props: tabbarProps,\n  emits: [\"change\", \"update:modelValue\"],\n  setup(props, {\n    emit,\n    slots\n  }) {\n    const root = ref();\n    const {\n      linkChildren\n    } = useChildren(TABBAR_KEY);\n    const renderPlaceholder = usePlaceholder(root, bem);\n    const enableSafeArea = () => {\n      var _a;\n      return (_a = props.safeAreaInsetBottom) != null ? _a : props.fixed;\n    };\n    const renderTabbar = () => {\n      var _a;\n      const {\n        fixed,\n        zIndex,\n        border\n      } = props;\n      return _createVNode(\"div\", {\n        \"ref\": root,\n        \"role\": \"tablist\",\n        \"style\": getZIndexStyle(zIndex),\n        \"class\": [bem({\n          fixed\n        }), {\n          [BORDER_TOP_BOTTOM]: border,\n          \"van-safe-area-bottom\": enableSafeArea()\n        }]\n      }, [(_a = slots.default) == null ? void 0 : _a.call(slots)]);\n    };\n    const setActive = (active, afterChange) => {\n      callInterceptor(props.beforeChange, {\n        args: [active],\n        done() {\n          emit(\"update:modelValue\", active);\n          emit(\"change\", active);\n          afterChange();\n        }\n      });\n    };\n    linkChildren({\n      props,\n      setActive\n    });\n    return () => {\n      if (props.fixed && props.placeholder) {\n        return renderPlaceholder(renderTabbar);\n      }\n      return renderTabbar();\n    };\n  }\n});\nexport {\n  TABBAR_KEY,\n  stdin_default as default,\n  tabbarProps\n};\n",
+      "start": 1756100533473,
+      "end": 1756100533495,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100533495,
+      "end": 1756100533495,
+      "order": "normal"
+    }
+  ]
+}

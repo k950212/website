@@ -1,0 +1,249 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/apis/member.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export default {\n  login: (data) => {\n    return useHttp.post(\"/v1/member/login\", data);\n  },\n  logout: () => {\n    return useHttp.get(\"/v1/member/logout\");\n  },\n  register: (data) => {\n    return useHttp.post(\"/v1/member/register\", data);\n  },\n  // 再次寄送驗證碼\n  code: (member_id: any) => {\n    const data = {\n      member_id: member_id,\n    };\n    return useHttp.post(\"/v1/member/code\", data);\n  },\n  // 驗證帳號\n  check: (data: any) => {\n    return useHttp.post(\"/v1/member/check\", data);\n  },\n  // 忘記密碼\n  forgot: (account: any) => {\n    const data = {\n      account: account,\n    };\n    return useHttp.post(\"/v1/member/forgot\", data);\n  },\n  // 會員資訊\n  info: () => {\n    return useHttp.get(\"/v1/member/info\");\n  },\n  // 更新會員資訊\n  update: (data: any) => {\n    return useHttp.post(\"/v1/member/update\", data);\n  },\n};\n",
+      "start": 1756100533521,
+      "end": 1756100533554,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100533554,
+      "end": 1756100533554,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100533554,
+      "end": 1756100533554,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100533554,
+      "end": 1756100533554,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100533554,
+      "end": 1756100533554,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export default {\n  login: (data) => {\n    return useHttp.post(\"/v1/member/login\", data);\n  },\n  logout: () => {\n    return useHttp.get(\"/v1/member/logout\");\n  },\n  register: (data) => {\n    return useHttp.post(\"/v1/member/register\", data);\n  },\n  // 再次寄送驗證碼\n  code: (member_id) => {\n    const data = {\n      member_id\n    };\n    return useHttp.post(\"/v1/member/code\", data);\n  },\n  // 驗證帳號\n  check: (data) => {\n    return useHttp.post(\"/v1/member/check\", data);\n  },\n  // 忘記密碼\n  forgot: (account) => {\n    const data = {\n      account\n    };\n    return useHttp.post(\"/v1/member/forgot\", data);\n  },\n  // 會員資訊\n  info: () => {\n    return useHttp.get(\"/v1/member/info\");\n  },\n  // 更新會員資訊\n  update: (data) => {\n    return useHttp.post(\"/v1/member/update\", data);\n  }\n};\n",
+      "start": 1756100533554,
+      "end": 1756100533983,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/apis/member.ts"
+        ],
+        "sourcesContent": [
+          "export default {\n  login: (data) => {\n    return useHttp.post(\"/v1/member/login\", data);\n  },\n  logout: () => {\n    return useHttp.get(\"/v1/member/logout\");\n  },\n  register: (data) => {\n    return useHttp.post(\"/v1/member/register\", data);\n  },\n  // 再次寄送驗證碼\n  code: (member_id: any) => {\n    const data = {\n      member_id: member_id,\n    };\n    return useHttp.post(\"/v1/member/code\", data);\n  },\n  // 驗證帳號\n  check: (data: any) => {\n    return useHttp.post(\"/v1/member/check\", data);\n  },\n  // 忘記密碼\n  forgot: (account: any) => {\n    const data = {\n      account: account,\n    };\n    return useHttp.post(\"/v1/member/forgot\", data);\n  },\n  // 會員資訊\n  info: () => {\n    return useHttp.get(\"/v1/member/info\");\n  },\n  // 更新會員資訊\n  update: (data: any) => {\n    return useHttp.post(\"/v1/member/update\", data);\n  },\n};\n"
+        ],
+        "mappings": "AAAA,eAAe;AAAA,EACb,OAAO,CAAC,SAAS;AACf,WAAO,QAAQ,KAAK,oBAAoB,IAAI;AAAA,EAC9C;AAAA,EACA,QAAQ,MAAM;AACZ,WAAO,QAAQ,IAAI,mBAAmB;AAAA,EACxC;AAAA,EACA,UAAU,CAAC,SAAS;AAClB,WAAO,QAAQ,KAAK,uBAAuB,IAAI;AAAA,EACjD;AAAA;AAAA,EAEA,MAAM,CAAC,cAAmB;AACxB,UAAM,OAAO;AAAA,MACX;AAAA,IACF;AACA,WAAO,QAAQ,KAAK,mBAAmB,IAAI;AAAA,EAC7C;AAAA;AAAA,EAEA,OAAO,CAAC,SAAc;AACpB,WAAO,QAAQ,KAAK,oBAAoB,IAAI;AAAA,EAC9C;AAAA;AAAA,EAEA,QAAQ,CAAC,YAAiB;AACxB,UAAM,OAAO;AAAA,MACX;AAAA,IACF;AACA,WAAO,QAAQ,KAAK,qBAAqB,IAAI;AAAA,EAC/C;AAAA;AAAA,EAEA,MAAM,MAAM;AACV,WAAO,QAAQ,IAAI,iBAAiB;AAAA,EACtC;AAAA;AAAA,EAEA,QAAQ,CAAC,SAAc;AACrB,WAAO,QAAQ,KAAK,qBAAqB,IAAI;AAAA,EAC/C;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100533983,
+      "end": 1756100533983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100533983,
+      "end": 1756100533984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useHttp } from '/Users/yunhao/Project/website/composables/useHttp.ts';\nexport default {\n  login: (data) => {\n    return useHttp.post(\"/v1/member/login\", data);\n  },\n  logout: () => {\n    return useHttp.get(\"/v1/member/logout\");\n  },\n  register: (data) => {\n    return useHttp.post(\"/v1/member/register\", data);\n  },\n  // 再次寄送驗證碼\n  code: (member_id) => {\n    const data = {\n      member_id\n    };\n    return useHttp.post(\"/v1/member/code\", data);\n  },\n  // 驗證帳號\n  check: (data) => {\n    return useHttp.post(\"/v1/member/check\", data);\n  },\n  // 忘記密碼\n  forgot: (account) => {\n    const data = {\n      account\n    };\n    return useHttp.post(\"/v1/member/forgot\", data);\n  },\n  // 會員資訊\n  info: () => {\n    return useHttp.get(\"/v1/member/info\");\n  },\n  // 更新會員資訊\n  update: (data) => {\n    return useHttp.post(\"/v1/member/update\", data);\n  }\n};\n",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAA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"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100533984,
+      "end": 1756100533984,
+      "order": "normal"
+    }
+  ]
+}

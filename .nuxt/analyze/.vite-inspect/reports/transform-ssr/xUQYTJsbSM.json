@@ -1,0 +1,276 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/action-bar-button/ActionBarButton.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { computed, defineComponent, createVNode as _createVNode } from \"vue\";\nimport { extend, createNamespace } from \"../utils/index.mjs\";\nimport { ACTION_BAR_KEY } from \"../action-bar/ActionBar.mjs\";\nimport { useParent } from \"@vant/use\";\nimport { useExpose } from \"../composables/use-expose.mjs\";\nimport { useRoute, routeProps } from \"../composables/use-route.mjs\";\nimport { Button } from \"../button/index.mjs\";\nconst [name, bem] = createNamespace(\"action-bar-button\");\nconst actionBarButtonProps = extend({}, routeProps, {\n  type: String,\n  text: String,\n  icon: String,\n  color: String,\n  loading: Boolean,\n  disabled: Boolean\n});\nvar stdin_default = defineComponent({\n  name,\n  props: actionBarButtonProps,\n  setup(props, {\n    slots\n  }) {\n    const route = useRoute();\n    const {\n      parent,\n      index\n    } = useParent(ACTION_BAR_KEY);\n    const isFirst = computed(() => {\n      if (parent) {\n        const prev = parent.children[index.value - 1];\n        return !(prev && \"isButton\" in prev);\n      }\n    });\n    const isLast = computed(() => {\n      if (parent) {\n        const next = parent.children[index.value + 1];\n        return !(next && \"isButton\" in next);\n      }\n    });\n    useExpose({\n      isButton: true\n    });\n    return () => {\n      const {\n        type,\n        icon,\n        text,\n        color,\n        loading,\n        disabled\n      } = props;\n      return _createVNode(Button, {\n        \"class\": bem([type, {\n          last: isLast.value,\n          first: isFirst.value\n        }]),\n        \"size\": \"large\",\n        \"type\": type,\n        \"icon\": icon,\n        \"color\": color,\n        \"loading\": loading,\n        \"disabled\": disabled,\n        \"onClick\": route\n      }, {\n        default: () => [slots.default ? slots.default() : text]\n      });\n    };\n  }\n});\nexport {\n  actionBarButtonProps,\n  stdin_default as default\n};\n",
+      "start": 1756100544520,
+      "end": 1756100544541,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544541,
+      "end": 1756100544541,
+      "order": "normal"
+    }
+  ]
+}

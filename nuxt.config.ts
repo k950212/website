@@ -4,6 +4,7 @@ import { createRuntimeConfig, createViteConfig } from "./build";
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
+    baseURL: "/website/", // 替換成你的 repo 名稱
     // head
     head: {
       title: "EOPI Warranty & Service",

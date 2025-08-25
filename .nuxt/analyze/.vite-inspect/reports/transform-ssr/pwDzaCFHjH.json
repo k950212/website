@@ -1,0 +1,342 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/go-your-studio/index.vue?vue&type=style&index=0&scoped=6309ea44&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/go-your-studio/index.vue"
+        ],
+        "names": [],
+        "mappings": ";AAiDA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB",
+        "file": "/Users/yunhao/Project/website/pages/go-your-studio/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">去你的工作室 <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\">去你的工作室</div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/goYourStudio1.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">\n          本專案旨在為工作室租借公司打造一個方便瀏覽，在線上即可預覽工作室的環境，現有的設備，並可依照地圖去檢視需求的工作室地點，想實際參訪也可以，輕鬆參觀，現在下訂預約即可立即使用．\n        </div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、vue2、option Api、ElementPlus、PrimeVue、BootStrap、RWD</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/goYourStudio2.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/goYourStudio3.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/goYourStudio4.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/goYourStudio5.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://goyourstudio.com/book/?openExternalBrowser=1\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100542417,
+      "end": 1756100542417,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".navbarStack{background-color:#000;height:84px}",
+      "start": 1756100542417,
+      "end": 1756100542419,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/pages/go-your-studio/index.vue",
+        "mappings": "AACA,aAEE,qBAAuB,CADvB,WAEF",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/pages/go-your-studio/index.vue"
+        ],
+        "sourcesContent": [
+          "\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100542419,
+      "end": 1756100542419,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100542419,
+      "end": 1756100542419,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100542419,
+      "end": 1756100542419,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}",
+      "start": 1756100542420,
+      "end": 1756100542420,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/pages/go-your-studio/index.vue",
+        "mappings": "AAAA,8BAAa,qBAAqB,CAAC,WAAW",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/pages/go-your-studio/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100542420,
+      "end": 1756100542420,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100542421,
+      "end": 1756100542421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}\"",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100542422,
+      "end": 1756100542422,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}\"",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/go-your-studio/index.vue?vue&type=style&index=0&scoped=6309ea44&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}\""
+        ],
+        "names": [],
+        "mappings": "sCAAA,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,WAAW,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,IAAI,CAAC"
+      }
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}\"",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/go-your-studio/index.vue?vue&type=style&index=0&scoped=6309ea44&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".navbarStack[data-v-6309ea44]{background-color:#000;height:84px}\""
+        ],
+        "names": [],
+        "mappings": "sCAAA,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,WAAW,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,IAAI,CAAC"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100542423,
+      "end": 1756100542423,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100542424,
+      "end": 1756100542424,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100542424,
+      "end": 1756100542424,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100542424,
+      "end": 1756100542424,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100542425,
+      "end": 1756100542425,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100542425,
+      "end": 1756100542425,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100542425,
+      "end": 1756100542425,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100542425,
+      "end": 1756100542425,
+      "order": "normal"
+    }
+  ]
+}

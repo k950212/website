@@ -1,0 +1,293 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/button/index.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ":root,:host{--van-button-mini-height: 24px;--van-button-mini-padding: 0 var(--van-padding-base);--van-button-mini-font-size: var(--van-font-size-xs);--van-button-small-height: 32px;--van-button-small-padding: 0 var(--van-padding-xs);--van-button-small-font-size: var(--van-font-size-sm);--van-button-normal-padding: 0 15px;--van-button-normal-font-size: var(--van-font-size-md);--van-button-large-height: 50px;--van-button-default-height: 44px;--van-button-default-line-height: 1.2;--van-button-default-font-size: var(--van-font-size-lg);--van-button-default-color: var(--van-text-color);--van-button-default-background: var(--van-background-2);--van-button-default-border-color: var(--van-gray-4);--van-button-primary-color: var(--van-white);--van-button-primary-background: var(--van-primary-color);--van-button-primary-border-color: var(--van-primary-color);--van-button-success-color: var(--van-white);--van-button-success-background: var(--van-success-color);--van-button-success-border-color: var(--van-success-color);--van-button-danger-color: var(--van-white);--van-button-danger-background: var(--van-danger-color);--van-button-danger-border-color: var(--van-danger-color);--van-button-warning-color: var(--van-white);--van-button-warning-background: var(--van-warning-color);--van-button-warning-border-color: var(--van-warning-color);--van-button-border-width: var(--van-border-width);--van-button-radius: var(--van-radius-md);--van-button-round-radius: var(--van-radius-max);--van-button-plain-background: var(--van-white);--van-button-disabled-opacity: var(--van-disabled-opacity);--van-button-icon-size: 1.2em;--van-button-loading-icon-size: 20px}.van-theme-dark{--van-button-plain-background: transparent}.van-button{position:relative;display:inline-block;box-sizing:border-box;height:var(--van-button-default-height);margin:0;padding:0;font-size:var(--van-button-default-font-size);line-height:var(--van-button-default-line-height);text-align:center;border-radius:var(--van-button-radius);cursor:pointer;transition:opacity var(--van-duration-fast);-webkit-appearance:none;-webkit-font-smoothing:auto}.van-button:before{position:absolute;top:50%;left:50%;width:100%;height:100%;background:var(--van-black);border:inherit;border-color:var(--van-black);border-radius:inherit;transform:translate(-50%,-50%);opacity:0;content:\" \"}.van-button:active:before{opacity:.1}.van-button--loading:before,.van-button--disabled:before{display:none}.van-button--default{color:var(--van-button-default-color);background:var(--van-button-default-background);border:var(--van-button-border-width) solid var(--van-button-default-border-color)}.van-button--primary{color:var(--van-button-primary-color);background:var(--van-button-primary-background);border:var(--van-button-border-width) solid var(--van-button-primary-border-color)}.van-button--success{color:var(--van-button-success-color);background:var(--van-button-success-background);border:var(--van-button-border-width) solid var(--van-button-success-border-color)}.van-button--danger{color:var(--van-button-danger-color);background:var(--van-button-danger-background);border:var(--van-button-border-width) solid var(--van-button-danger-border-color)}.van-button--warning{color:var(--van-button-warning-color);background:var(--van-button-warning-background);border:var(--van-button-border-width) solid var(--van-button-warning-border-color)}.van-button--plain{background:var(--van-button-plain-background)}.van-button--plain.van-button--primary{color:var(--van-button-primary-background)}.van-button--plain.van-button--success{color:var(--van-button-success-background)}.van-button--plain.van-button--danger{color:var(--van-button-danger-background)}.van-button--plain.van-button--warning{color:var(--van-button-warning-background)}.van-button--large{width:100%;height:var(--van-button-large-height)}.van-button--normal{padding:var(--van-button-normal-padding);font-size:var(--van-button-normal-font-size)}.van-button--small{height:var(--van-button-small-height);padding:var(--van-button-small-padding);font-size:var(--van-button-small-font-size)}.van-button__loading{color:inherit;font-size:inherit}.van-button__loading .van-loading__spinner{color:currentColor;width:var(--van-button-loading-icon-size);height:var(--van-button-loading-icon-size)}.van-button--mini{height:var(--van-button-mini-height);padding:var(--van-button-mini-padding);font-size:var(--van-button-mini-font-size)}.van-button--mini+.van-button--mini{margin-left:var(--van-padding-base)}.van-button--block{display:block;width:100%}.van-button--disabled{cursor:not-allowed;opacity:var(--van-button-disabled-opacity)}.van-button--loading{cursor:default}.van-button--round{border-radius:var(--van-button-round-radius)}.van-button--square{border-radius:0}.van-button__content{display:flex;align-items:center;justify-content:center;height:100%}.van-button__content:before{content:\" \"}.van-button__icon{font-size:var(--van-button-icon-size);line-height:inherit}.van-button__icon+.van-button__text,.van-button__loading+.van-button__text,.van-button__text+.van-button__icon,.van-button__text+.van-button__loading{margin-left:var(--van-padding-base)}.van-button--hairline{border-width:0}.van-button--hairline:after{border-color:inherit;border-radius:calc(var(--van-button-radius) * 2)}.van-button--hairline.van-button--round:after{border-radius:var(--van-button-round-radius)}.van-button--hairline.van-button--square:after{border-radius:0}\n",
+      "start": 1756100544334,
+      "end": 1756100544403,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544403,
+      "end": 1756100544403,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ":host,:root{--van-button-mini-height:24px;--van-button-mini-padding:0 var(--van-padding-base);--van-button-mini-font-size:var(--van-font-size-xs);--van-button-small-height:32px;--van-button-small-padding:0 var(--van-padding-xs);--van-button-small-font-size:var(--van-font-size-sm);--van-button-normal-padding:0 15px;--van-button-normal-font-size:var(--van-font-size-md);--van-button-large-height:50px;--van-button-default-height:44px;--van-button-default-line-height:1.2;--van-button-default-font-size:var(--van-font-size-lg);--van-button-default-color:var(--van-text-color);--van-button-default-background:var(--van-background-2);--van-button-default-border-color:var(--van-gray-4);--van-button-primary-color:var(--van-white);--van-button-primary-background:var(--van-primary-color);--van-button-primary-border-color:var(--van-primary-color);--van-button-success-color:var(--van-white);--van-button-success-background:var(--van-success-color);--van-button-success-border-color:var(--van-success-color);--van-button-danger-color:var(--van-white);--van-button-danger-background:var(--van-danger-color);--van-button-danger-border-color:var(--van-danger-color);--van-button-warning-color:var(--van-white);--van-button-warning-background:var(--van-warning-color);--van-button-warning-border-color:var(--van-warning-color);--van-button-border-width:var(--van-border-width);--van-button-radius:var(--van-radius-md);--van-button-round-radius:var(--van-radius-max);--van-button-plain-background:var(--van-white);--van-button-disabled-opacity:var(--van-disabled-opacity);--van-button-icon-size:1.2em;--van-button-loading-icon-size:20px}.van-theme-dark{--van-button-plain-background:transparent}.van-button{-webkit-appearance:none;border-radius:var(--van-button-radius);box-sizing:border-box;cursor:pointer;display:inline-block;font-size:var(--van-button-default-font-size);height:var(--van-button-default-height);line-height:var(--van-button-default-line-height);margin:0;padding:0;position:relative;text-align:center;transition:opacity var(--van-duration-fast);-webkit-font-smoothing:auto}.van-button:before{background:var(--van-black);border:inherit;border-color:var(--van-black);border-radius:inherit;content:\" \";height:100%;left:50%;opacity:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:100%}.van-button:active:before{opacity:.1}.van-button--disabled:before,.van-button--loading:before{display:none}.van-button--default{background:var(--van-button-default-background);border:var(--van-button-border-width) solid var(--van-button-default-border-color);color:var(--van-button-default-color)}.van-button--primary{background:var(--van-button-primary-background);border:var(--van-button-border-width) solid var(--van-button-primary-border-color);color:var(--van-button-primary-color)}.van-button--success{background:var(--van-button-success-background);border:var(--van-button-border-width) solid var(--van-button-success-border-color);color:var(--van-button-success-color)}.van-button--danger{background:var(--van-button-danger-background);border:var(--van-button-border-width) solid var(--van-button-danger-border-color);color:var(--van-button-danger-color)}.van-button--warning{background:var(--van-button-warning-background);border:var(--van-button-border-width) solid var(--van-button-warning-border-color);color:var(--van-button-warning-color)}.van-button--plain{background:var(--van-button-plain-background)}.van-button--plain.van-button--primary{color:var(--van-button-primary-background)}.van-button--plain.van-button--success{color:var(--van-button-success-background)}.van-button--plain.van-button--danger{color:var(--van-button-danger-background)}.van-button--plain.van-button--warning{color:var(--van-button-warning-background)}.van-button--large{height:var(--van-button-large-height);width:100%}.van-button--normal{font-size:var(--van-button-normal-font-size);padding:var(--van-button-normal-padding)}.van-button--small{font-size:var(--van-button-small-font-size);height:var(--van-button-small-height);padding:var(--van-button-small-padding)}.van-button__loading{color:inherit;font-size:inherit}.van-button__loading .van-loading__spinner{color:currentColor;height:var(--van-button-loading-icon-size);width:var(--van-button-loading-icon-size)}.van-button--mini{font-size:var(--van-button-mini-font-size);height:var(--van-button-mini-height);padding:var(--van-button-mini-padding)}.van-button--mini+.van-button--mini{margin-left:var(--van-padding-base)}.van-button--block{display:block;width:100%}.van-button--disabled{cursor:not-allowed;opacity:var(--van-button-disabled-opacity)}.van-button--loading{cursor:default}.van-button--round{border-radius:var(--van-button-round-radius)}.van-button--square{border-radius:0}.van-button__content{align-items:center;display:flex;height:100%;justify-content:center}.van-button__content:before{content:\" \"}.van-button__icon{font-size:var(--van-button-icon-size);line-height:inherit}.van-button__icon+.van-button__text,.van-button__loading+.van-button__text,.van-button__text+.van-button__icon,.van-button__text+.van-button__loading{margin-left:var(--van-padding-base)}.van-button--hairline{border-width:0}.van-button--hairline:after{border-color:inherit;border-radius:calc(var(--van-button-radius)*2)}.van-button--hairline.van-button--round:after{border-radius:var(--van-button-round-radius)}.van-button--hairline.van-button--square:after{border-radius:0}",
+      "start": 1756100544403,
+      "end": 1756100544407,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/button/index.css",
+        "mappings": "AAAA,YAAY,6BAA8B,CAAC,mDAAoD,CAAC,mDAAoD,CAAC,8BAA+B,CAAC,kDAAmD,CAAC,oDAAqD,CAAC,kCAAmC,CAAC,qDAAsD,CAAC,8BAA+B,CAAC,gCAAiC,CAAC,oCAAqC,CAAC,sDAAuD,CAAC,gDAAiD,CAAC,uDAAwD,CAAC,mDAAoD,CAAC,2CAA4C,CAAC,wDAAyD,CAAC,0DAA2D,CAAC,2CAA4C,CAAC,wDAAyD,CAAC,0DAA2D,CAAC,0CAA2C,CAAC,sDAAuD,CAAC,wDAAyD,CAAC,2CAA4C,CAAC,wDAAyD,CAAC,0DAA2D,CAAC,iDAAkD,CAAC,wCAAyC,CAAC,+CAAgD,CAAC,8CAA+C,CAAC,yDAA0D,CAAC,4BAA6B,CAAC,mCAAoC,CAAC,gBAAgB,yCAA0C,CAAC,YAAwV,uBAAuB,CAAzH,sCAAsC,CAAzO,qBAAqB,CAAqN,cAAc,CAA7Q,oBAAoB,CAAkF,6CAA6C,CAAxG,uCAAuC,CAAkE,iDAAiD,CAAlH,QAAQ,CAAC,SAAS,CAAvH,iBAAiB,CAAuM,iBAAiB,CAAuD,2CAA2C,CAAyB,2BAA2B,CAAC,mBAA6E,2BAA2B,CAAC,cAAc,CAAC,6BAA6B,CAAC,qBAAqB,CAA0C,WAAU,CAA9J,WAAW,CAA/B,QAAQ,CAAsJ,SAAS,CAAjM,iBAAiB,CAAC,OAAO,CAAgI,8BAA8B,CAApJ,UAA0K,CAAC,0BAA0B,UAAU,CAAC,yDAAyD,YAAY,CAAC,qBAA2D,+CAA+C,CAAC,kFAAiF,CAAvK,qCAAwK,CAAC,qBAA2D,+CAA+C,CAAC,kFAAiF,CAAvK,qCAAwK,CAAC,qBAA2D,+CAA+C,CAAC,kFAAiF,CAAvK,qCAAwK,CAAC,oBAAyD,8CAA8C,CAAC,iFAAgF,CAApK,oCAAqK,CAAC,qBAA2D,+CAA+C,CAAC,kFAAiF,CAAvK,qCAAwK,CAAC,mBAAmB,6CAA6C,CAAC,uCAAuC,0CAA0C,CAAC,uCAAuC,0CAA0C,CAAC,sCAAsC,yCAAyC,CAAC,uCAAuC,0CAA0C,CAAC,mBAA8B,qCAAoC,CAA/C,UAAgD,CAAC,oBAA6D,4CAA2C,CAApF,wCAAqF,CAAC,mBAAiG,2CAA0C,CAAxH,qCAAqC,CAAC,uCAAmF,CAAC,qBAAqB,aAAa,CAAC,iBAAiB,CAAC,2CAA2C,kBAAkB,CAA2C,0CAAyC,CAAnF,yCAAoF,CAAC,kBAA8F,0CAAyC,CAArH,oCAAoC,CAAC,sCAAiF,CAAC,oCAAoC,mCAAmC,CAAC,mBAAmB,aAAa,CAAC,UAAU,CAAC,sBAAsB,kBAAkB,CAAC,0CAA0C,CAAC,qBAAqB,cAAc,CAAC,mBAAmB,4CAA4C,CAAC,oBAAoB,eAAe,CAAC,qBAAkC,kBAAkB,CAA/B,YAAY,CAA2C,WAAU,CAAjC,sBAAkC,CAAC,4BAA4B,WAAW,CAAC,kBAAkB,qCAAqC,CAAC,mBAAmB,CAAC,sJAAsJ,mCAAmC,CAAC,sBAAsB,cAAc,CAAC,4BAA4B,oBAAoB,CAAC,8CAAgD,CAAC,8CAA8C,4CAA4C,CAAC,+CAA+C,eAAe",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/button/index.css"
+        ],
+        "sourcesContent": [
+          ":root,:host{--van-button-mini-height: 24px;--van-button-mini-padding: 0 var(--van-padding-base);--van-button-mini-font-size: var(--van-font-size-xs);--van-button-small-height: 32px;--van-button-small-padding: 0 var(--van-padding-xs);--van-button-small-font-size: var(--van-font-size-sm);--van-button-normal-padding: 0 15px;--van-button-normal-font-size: var(--van-font-size-md);--van-button-large-height: 50px;--van-button-default-height: 44px;--van-button-default-line-height: 1.2;--van-button-default-font-size: var(--van-font-size-lg);--van-button-default-color: var(--van-text-color);--van-button-default-background: var(--van-background-2);--van-button-default-border-color: var(--van-gray-4);--van-button-primary-color: var(--van-white);--van-button-primary-background: var(--van-primary-color);--van-button-primary-border-color: var(--van-primary-color);--van-button-success-color: var(--van-white);--van-button-success-background: var(--van-success-color);--van-button-success-border-color: var(--van-success-color);--van-button-danger-color: var(--van-white);--van-button-danger-background: var(--van-danger-color);--van-button-danger-border-color: var(--van-danger-color);--van-button-warning-color: var(--van-white);--van-button-warning-background: var(--van-warning-color);--van-button-warning-border-color: var(--van-warning-color);--van-button-border-width: var(--van-border-width);--van-button-radius: var(--van-radius-md);--van-button-round-radius: var(--van-radius-max);--van-button-plain-background: var(--van-white);--van-button-disabled-opacity: var(--van-disabled-opacity);--van-button-icon-size: 1.2em;--van-button-loading-icon-size: 20px}.van-theme-dark{--van-button-plain-background: transparent}.van-button{position:relative;display:inline-block;box-sizing:border-box;height:var(--van-button-default-height);margin:0;padding:0;font-size:var(--van-button-default-font-size);line-height:var(--van-button-default-line-height);text-align:center;border-radius:var(--van-button-radius);cursor:pointer;transition:opacity var(--van-duration-fast);-webkit-appearance:none;-webkit-font-smoothing:auto}.van-button:before{position:absolute;top:50%;left:50%;width:100%;height:100%;background:var(--van-black);border:inherit;border-color:var(--van-black);border-radius:inherit;transform:translate(-50%,-50%);opacity:0;content:\" \"}.van-button:active:before{opacity:.1}.van-button--loading:before,.van-button--disabled:before{display:none}.van-button--default{color:var(--van-button-default-color);background:var(--van-button-default-background);border:var(--van-button-border-width) solid var(--van-button-default-border-color)}.van-button--primary{color:var(--van-button-primary-color);background:var(--van-button-primary-background);border:var(--van-button-border-width) solid var(--van-button-primary-border-color)}.van-button--success{color:var(--van-button-success-color);background:var(--van-button-success-background);border:var(--van-button-border-width) solid var(--van-button-success-border-color)}.van-button--danger{color:var(--van-button-danger-color);background:var(--van-button-danger-background);border:var(--van-button-border-width) solid var(--van-button-danger-border-color)}.van-button--warning{color:var(--van-button-warning-color);background:var(--van-button-warning-background);border:var(--van-button-border-width) solid var(--van-button-warning-border-color)}.van-button--plain{background:var(--van-button-plain-background)}.van-button--plain.van-button--primary{color:var(--van-button-primary-background)}.van-button--plain.van-button--success{color:var(--van-button-success-background)}.van-button--plain.van-button--danger{color:var(--van-button-danger-background)}.van-button--plain.van-button--warning{color:var(--van-button-warning-background)}.van-button--large{width:100%;height:var(--van-button-large-height)}.van-button--normal{padding:var(--van-button-normal-padding);font-size:var(--van-button-normal-font-size)}.van-button--small{height:var(--van-button-small-height);padding:var(--van-button-small-padding);font-size:var(--van-button-small-font-size)}.van-button__loading{color:inherit;font-size:inherit}.van-button__loading .van-loading__spinner{color:currentColor;width:var(--van-button-loading-icon-size);height:var(--van-button-loading-icon-size)}.van-button--mini{height:var(--van-button-mini-height);padding:var(--van-button-mini-padding);font-size:var(--van-button-mini-font-size)}.van-button--mini+.van-button--mini{margin-left:var(--van-padding-base)}.van-button--block{display:block;width:100%}.van-button--disabled{cursor:not-allowed;opacity:var(--van-button-disabled-opacity)}.van-button--loading{cursor:default}.van-button--round{border-radius:var(--van-button-round-radius)}.van-button--square{border-radius:0}.van-button__content{display:flex;align-items:center;justify-content:center;height:100%}.van-button__content:before{content:\" \"}.van-button__icon{font-size:var(--van-button-icon-size);line-height:inherit}.van-button__icon+.van-button__text,.van-button__loading+.van-button__text,.van-button__text+.van-button__icon,.van-button__text+.van-button__loading{margin-left:var(--van-padding-base)}.van-button--hairline{border-width:0}.van-button--hairline:after{border-color:inherit;border-radius:calc(var(--van-button-radius) * 2)}.van-button--hairline.van-button--round:after{border-radius:var(--van-button-round-radius)}.van-button--hairline.van-button--square:after{border-radius:0}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544407,
+      "end": 1756100544407,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544407,
+      "end": 1756100544408,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544408,
+      "end": 1756100544408,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544408,
+      "end": 1756100544408,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544408,
+      "end": 1756100544408,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544408,
+      "end": 1756100544408,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544408,
+      "end": 1756100544408,
+      "order": "normal"
+    }
+  ]
+}

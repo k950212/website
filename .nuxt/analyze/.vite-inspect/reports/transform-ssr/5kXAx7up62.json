@@ -1,0 +1,308 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/km5257/index.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">超群特產行 <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\"></div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/km52571.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52572.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52573.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52574.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52575.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://km5257.bremsinn.com/\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n",
+      "start": 1756100541729,
+      "end": 1756100542012,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100542012,
+      "end": 1756100542012,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import { resolveComponent as _resolveComponent } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/km52571.png'\nimport _imports_2 from '@/assets/img/km52572.png'\nimport _imports_3 from '@/assets/img/km52573.png'\nimport _imports_4 from '@/assets/img/km52574.png'\nimport _imports_5 from '@/assets/img/km52575.png'\n\n\n\nconst _sfc_main = {\n  __name: 'index',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://km5257.bremsinn.com/\");\n};\n\nreturn (_ctx, _push, _parent, _attrs) => {\n  const _component_Navbar = _resolveComponent(\"Navbar\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  _push(`<!--[-->`)\n  _push(_ssrRenderComponent(_component_Navbar, null, null, _parent))\n  _push(`<div id=\"projectPage\" data-v-07008b7e><div class=\"container\" data-v-07008b7e><div class=\"title\" data-v-07008b7e>超群特產行 <img style=\"${\n    _ssrRenderStyle({\"cursor\":\"pointer\"})\n  }\"${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" data-v-07008b7e></div><div class=\"title-m\" data-v-07008b7e></div><div class=\"d-flex justify-content-center mt-3\" data-v-07008b7e><div class=\"main-img\" data-v-07008b7e><div class=\"main-border\" data-v-07008b7e><div class=\"second-border\" data-v-07008b7e><img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-07008b7e></div></div></div></div><div class=\"background\" data-v-07008b7e><div class=\"title mt-5 mb-3\" data-v-07008b7e>專案背景</div><div class=\"content\" data-v-07008b7e>本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div></div><div class=\"skill\" data-v-07008b7e><div class=\"title\" data-v-07008b7e>技術應用</div><ul style=\"${\n    _ssrRenderStyle({\"margin-left\":\"2rem\",\"margin-top\":\"1rem\"})\n  }\" data-v-07008b7e><li data-v-07008b7e>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li></ul></div><div class=\"otherImg\" data-v-07008b7e><img${\n    _ssrRenderAttr(\"src\", _imports_2)\n  } alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${\n    _ssrRenderAttr(\"src\", _imports_3)\n  } alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${\n    _ssrRenderAttr(\"src\", _imports_4)\n  } alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${\n    _ssrRenderAttr(\"src\", _imports_5)\n  } alt=\"\" data-v-07008b7e></div></div></div>`)\n  _push(_ssrRenderComponent(_component_Footer, null, null, _parent))\n  _push(`<!--]-->`)\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"pages/km5257/index.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-07008b7e\"]])",
+      "start": 1756100542012,
+      "end": 1756100542016,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">超群特產行 <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\"></div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/km52571.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52572.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52573.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52574.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52575.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://km5257.bremsinn.com/\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;;;AAyCc;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100542016,
+      "end": 1756100542016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { resolveComponent as _resolveComponent } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\";\nimport _imports_0 from \"@/assets/img/link.png\";\nimport _imports_1 from \"@/assets/img/km52571.png\";\nimport _imports_2 from \"@/assets/img/km52572.png\";\nimport _imports_3 from \"@/assets/img/km52573.png\";\nimport _imports_4 from \"@/assets/img/km52574.png\";\nimport _imports_5 from \"@/assets/img/km52575.png\";\nconst _sfc_main = {\n  __name: \"index\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const openWeb = () => {\n      (void 0).open(\"https://km5257.bremsinn.com/\");\n    };\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_Navbar = _resolveComponent(\"Navbar\");\n      const _component_Footer = _resolveComponent(\"Footer\");\n      _push(`<!--[-->`);\n      _push(_ssrRenderComponent(_component_Navbar, null, null, _parent));\n      _push(`<div id=\"projectPage\" data-v-07008b7e><div class=\"container\" data-v-07008b7e><div class=\"title\" data-v-07008b7e>超群特產行 <img style=\"${_ssrRenderStyle({ \"cursor\": \"pointer\" })}\"${_ssrRenderAttr(\"src\", _imports_0)} alt=\"\" data-v-07008b7e></div><div class=\"title-m\" data-v-07008b7e></div><div class=\"d-flex justify-content-center mt-3\" data-v-07008b7e><div class=\"main-img\" data-v-07008b7e><div class=\"main-border\" data-v-07008b7e><div class=\"second-border\" data-v-07008b7e><img${_ssrRenderAttr(\"src\", _imports_1)} alt=\"\" data-v-07008b7e></div></div></div></div><div class=\"background\" data-v-07008b7e><div class=\"title mt-5 mb-3\" data-v-07008b7e>專案背景</div><div class=\"content\" data-v-07008b7e>本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div></div><div class=\"skill\" data-v-07008b7e><div class=\"title\" data-v-07008b7e>技術應用</div><ul style=\"${_ssrRenderStyle({ \"margin-left\": \"2rem\", \"margin-top\": \"1rem\" })}\" data-v-07008b7e><li data-v-07008b7e>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li></ul></div><div class=\"otherImg\" data-v-07008b7e><img${_ssrRenderAttr(\"src\", _imports_2)} alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${_ssrRenderAttr(\"src\", _imports_3)} alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${_ssrRenderAttr(\"src\", _imports_4)} alt=\"\" data-v-07008b7e></div><div class=\"otherImg\" data-v-07008b7e><img${_ssrRenderAttr(\"src\", _imports_5)} alt=\"\" data-v-07008b7e></div></div></div>`);\n      _push(_ssrRenderComponent(_component_Footer, null, null, _parent));\n      _push(`<!--]-->`);\n    };\n  }\n};\nimport \"/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"pages/km5257/index.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-07008b7e\"]]);\n",
+      "start": 1756100542016,
+      "end": 1756100543984,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/pages/km5257/index.vue?macro=true\"],\n  \"sourcesContent\": [\"import { resolveComponent as _resolveComponent } from \\\"vue\\\"\\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \\\"vue/server-renderer\\\"\\nimport _imports_0 from '@/assets/img/link.png'\\nimport _imports_1 from '@/assets/img/km52571.png'\\nimport _imports_2 from '@/assets/img/km52572.png'\\nimport _imports_3 from '@/assets/img/km52573.png'\\nimport _imports_4 from '@/assets/img/km52574.png'\\nimport _imports_5 from '@/assets/img/km52575.png'\\n\\n\\n\\nconst _sfc_main = {\\n  __name: 'index',\\n  __ssrInlineRender: true,\\n  setup(__props) {\\n\\nconst openWeb = () => {\\n  window.open(\\\"https://km5257.bremsinn.com/\\\");\\n};\\n\\nreturn (_ctx, _push, _parent, _attrs) => {\\n  const _component_Navbar = _resolveComponent(\\\"Navbar\\\")\\n  const _component_Footer = _resolveComponent(\\\"Footer\\\")\\n\\n  _push(`<!--[-->`)\\n  _push(_ssrRenderComponent(_component_Navbar, null, null, _parent))\\n  _push(`<div id=\\\"projectPage\\\" data-v-07008b7e><div class=\\\"container\\\" data-v-07008b7e><div class=\\\"title\\\" data-v-07008b7e>超群特產行 <img style=\\\"${\\n    _ssrRenderStyle({\\\"cursor\\\":\\\"pointer\\\"})\\n  }\\\"${\\n    _ssrRenderAttr(\\\"src\\\", _imports_0)\\n  } alt=\\\"\\\" data-v-07008b7e></div><div class=\\\"title-m\\\" data-v-07008b7e></div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-07008b7e><div class=\\\"main-img\\\" data-v-07008b7e><div class=\\\"main-border\\\" data-v-07008b7e><div class=\\\"second-border\\\" data-v-07008b7e><img${\\n    _ssrRenderAttr(\\\"src\\\", _imports_1)\\n  } alt=\\\"\\\" data-v-07008b7e></div></div></div></div><div class=\\\"background\\\" data-v-07008b7e><div class=\\\"title mt-5 mb-3\\\" data-v-07008b7e>專案背景</div><div class=\\\"content\\\" data-v-07008b7e>本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div></div><div class=\\\"skill\\\" data-v-07008b7e><div class=\\\"title\\\" data-v-07008b7e>技術應用</div><ul style=\\\"${\\n    _ssrRenderStyle({\\\"margin-left\\\":\\\"2rem\\\",\\\"margin-top\\\":\\\"1rem\\\"})\\n  }\\\" data-v-07008b7e><li data-v-07008b7e>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-07008b7e><img${\\n    _ssrRenderAttr(\\\"src\\\", _imports_2)\\n  } alt=\\\"\\\" data-v-07008b7e></div><div class=\\\"otherImg\\\" data-v-07008b7e><img${\\n    _ssrRenderAttr(\\\"src\\\", _imports_3)\\n  } alt=\\\"\\\" data-v-07008b7e></div><div class=\\\"otherImg\\\" data-v-07008b7e><img${\\n    _ssrRenderAttr(\\\"src\\\", _imports_4)\\n  } alt=\\\"\\\" data-v-07008b7e></div><div class=\\\"otherImg\\\" data-v-07008b7e><img${\\n    _ssrRenderAttr(\\\"src\\\", _imports_5)\\n  } alt=\\\"\\\" data-v-07008b7e></div></div></div>`)\\n  _push(_ssrRenderComponent(_component_Footer, null, null, _parent))\\n  _push(`<!--]-->`)\\n}\\n}\\n\\n}\\n\\n\\nimport \\\"/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css\\\"\\n\\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\\nconst _sfc_setup = _sfc_main.setup\\n_sfc_main.setup = (props, ctx) => {\\n  const ssrContext = __vite_useSSRContext()\\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\\\"pages/km5257/index.vue\\\")\\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\\n}\\nimport _export_sfc from '\\u0000plugin-vue:export-helper'\\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\\\"data-v-07008b7e\\\"]])\"],\n  \"mappings\": \"AAAA,SAAS,oBAAoB,yBAAyB;AACtD,SAAS,sBAAsB,qBAAqB,kBAAkB,iBAAiB,iBAAiB,sBAAsB;AAC9H,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AAIvB,MAAM,YAAY;AAAA,EAChB,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,MAAM,SAAS;AAEjB,UAAM,UAAU,MAAM;AACpB,eAAO,KAAK,8BAA8B;AAAA,IAC5C;AAEA,WAAO,CAAC,MAAM,OAAO,SAAS,WAAW;AACvC,YAAM,oBAAoB,kBAAkB,QAAQ;AACpD,YAAM,oBAAoB,kBAAkB,QAAQ;AAEpD,YAAM,UAAU;AAChB,YAAM,oBAAoB,mBAAmB,MAAM,MAAM,OAAO,CAAC;AACjE,YAAM,qIACJ,gBAAgB,EAAC,UAAS,UAAS,CAAC,CACtC,IACE,eAAe,OAAO,UAAU,CAClC,0QACE,eAAe,OAAO,UAAU,CAClC,4TACE,gBAAgB,EAAC,eAAc,QAAO,cAAa,OAAM,CAAC,CAC5D,+LACE,eAAe,OAAO,UAAU,CAClC,2EACE,eAAe,OAAO,UAAU,CAClC,2EACE,eAAe,OAAO,UAAU,CAClC,2EACE,eAAe,OAAO,UAAU,CAClC,4CAA4C;AAC5C,YAAM,oBAAoB,mBAAmB,MAAM,MAAM,OAAO,CAAC;AACjE,YAAM,UAAU;AAAA,IAClB;AAAA,EACA;AAEA;AAGA,OAAO;AAEP,SAAS,iBAAiB,4BAA4B;AACtD,MAAM,aAAa,UAAU;AAC7B,UAAU,QAAQ,CAAC,OAAO,QAAQ;AAChC,QAAM,aAAa,qBAAqB;AACvC,GAAC,WAAW,YAAY,WAAW,UAAU,oBAAI,IAAI,IAAI,IAAI,wBAAwB;AACtF,SAAO,aAAa,WAAW,OAAO,GAAG,IAAI;AAC/C;AACA,OAAO,iBAAiB;AACxB,eAA4B,4BAAY,WAAW,CAAC,CAAC,aAAY,iBAAiB,CAAC,CAAC;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100543984,
+      "end": 1756100543984,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100543984,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100543984,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100543985,
+      "end": 1756100543985,
+      "order": "normal"
+    }
+  ]
+}

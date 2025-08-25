@@ -1,0 +1,276 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/icon/Icon.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { inject, computed, defineComponent, createVNode as _createVNode, mergeProps as _mergeProps } from \"vue\";\nimport { addUnit, numericProp, makeStringProp, createNamespace } from \"../utils/index.mjs\";\nimport { Badge } from \"../badge/index.mjs\";\nimport { CONFIG_PROVIDER_KEY } from \"../config-provider/ConfigProvider.mjs\";\nconst [name, bem] = createNamespace(\"icon\");\nconst isImage = (name2) => name2 == null ? void 0 : name2.includes(\"/\");\nconst iconProps = {\n  dot: Boolean,\n  tag: makeStringProp(\"i\"),\n  name: String,\n  size: numericProp,\n  badge: numericProp,\n  color: String,\n  badgeProps: Object,\n  classPrefix: String\n};\nvar stdin_default = defineComponent({\n  name,\n  props: iconProps,\n  setup(props, {\n    slots\n  }) {\n    const config = inject(CONFIG_PROVIDER_KEY, null);\n    const classPrefix = computed(() => props.classPrefix || (config == null ? void 0 : config.iconPrefix) || bem());\n    return () => {\n      const {\n        tag,\n        dot,\n        name: name2,\n        size,\n        badge,\n        color\n      } = props;\n      const isImageIcon = isImage(name2);\n      return _createVNode(Badge, _mergeProps({\n        \"dot\": dot,\n        \"tag\": tag,\n        \"class\": [classPrefix.value, isImageIcon ? \"\" : `${classPrefix.value}-${name2}`],\n        \"style\": {\n          color,\n          fontSize: addUnit(size)\n        },\n        \"content\": badge\n      }, props.badgeProps), {\n        default: () => {\n          var _a;\n          return [(_a = slots.default) == null ? void 0 : _a.call(slots), isImageIcon && _createVNode(\"img\", {\n            \"class\": bem(\"image\"),\n            \"src\": name2\n          }, null)];\n        }\n      });\n    };\n  }\n});\nexport {\n  stdin_default as default,\n  iconProps\n};\n",
+      "start": 1756100544634,
+      "end": 1756100544666,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544666,
+      "end": 1756100544666,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544666,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544667,
+      "end": 1756100544667,
+      "order": "normal"
+    }
+  ]
+}

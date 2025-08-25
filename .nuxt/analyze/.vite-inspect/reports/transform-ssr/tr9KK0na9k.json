@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/primevue@3.53.0_vue@3.5.11/node_modules/primevue/scrolltop/style/scrolltopstyle.esm.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import BaseStyle from 'primevue/base/style';\n\nvar classes = {\n  root: function root(_ref) {\n    var props = _ref.props;\n    return ['p-scrolltop p-link p-component', {\n      'p-scrolltop-sticky': props.target !== 'window'\n    }];\n  },\n  icon: 'p-scrolltop-icon'\n};\nvar ScrollTopStyle = BaseStyle.extend({\n  name: 'scrolltop',\n  classes: classes\n});\n\nexport { ScrollTopStyle as default };\n",
+      "start": 1756100543715,
+      "end": 1756100543720,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100543720,
+      "end": 1756100543720,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import BaseStyle from \"primevue/base/style\";\nvar classes = {\n  root: function root(_ref) {\n    var props = _ref.props;\n    return [\"p-scrolltop p-link p-component\", {\n      \"p-scrolltop-sticky\": props.target !== \"window\"\n    }];\n  },\n  icon: \"p-scrolltop-icon\"\n};\nvar ScrollTopStyle = BaseStyle.extend({\n  name: \"scrolltop\",\n  classes\n});\nexport { ScrollTopStyle as default };\n",
+      "start": 1756100543720,
+      "end": 1756100544816,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/primevue@3.53.0_vue@3.5.11/node_modules/primevue/scrolltop/style/scrolltopstyle.esm.js\"],\n  \"sourcesContent\": [\"import BaseStyle from 'primevue/base/style';\\n\\nvar classes = {\\n  root: function root(_ref) {\\n    var props = _ref.props;\\n    return ['p-scrolltop p-link p-component', {\\n      'p-scrolltop-sticky': props.target !== 'window'\\n    }];\\n  },\\n  icon: 'p-scrolltop-icon'\\n};\\nvar ScrollTopStyle = BaseStyle.extend({\\n  name: 'scrolltop',\\n  classes: classes\\n});\\n\\nexport { ScrollTopStyle as default };\\n\"],\n  \"mappings\": \"AAAA,OAAO,eAAe;AAEtB,IAAI,UAAU;AAAA,EACZ,MAAM,SAAS,KAAK,MAAM;AACxB,QAAI,QAAQ,KAAK;AACjB,WAAO,CAAC,kCAAkC;AAAA,MACxC,sBAAsB,MAAM,WAAW;AAAA,IACzC,CAAC;AAAA,EACH;AAAA,EACA,MAAM;AACR;AACA,IAAI,iBAAiB,UAAU,OAAO;AAAA,EACpC,MAAM;AAAA,EACN;AACF,CAAC;AAED,SAAS,kBAAkB;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544816,
+      "end": 1756100544816,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544817,
+      "end": 1756100544817,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544828,
+      "end": 1756100544828,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544828,
+      "end": 1756100544828,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544828,
+      "end": 1756100544828,
+      "order": "normal"
+    }
+  ]
+}

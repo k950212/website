@@ -1,0 +1,342 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue"
+        ],
+        "names": [],
+        "mappings": ";AA+CA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB",
+        "file": "/Users/yunhao/Project/website/pages/km5257/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">超群特產行 <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\"></div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/km52571.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">本專案旨在為建立店家建立一個購物平台，用戶可以線上下單購物．</div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、nuxt-swiper、@element-plus/nuxt、BootStrap</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52572.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52573.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52574.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/km52575.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://km5257.bremsinn.com/\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544253,
+      "end": 1756100544253,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".navbarStack{background-color:#000;height:84px}",
+      "start": 1756100544253,
+      "end": 1756100544255,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/pages/km5257/index.vue",
+        "mappings": "AACA,aAEE,qBAAuB,CADvB,WAEF",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue"
+        ],
+        "sourcesContent": [
+          "\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".navbarStack[data-v-07008b7e]{background-color:#000;height:84px}",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/pages/km5257/index.vue",
+        "mappings": "AAAA,8BAAa,qBAAqB,CAAC,WAAW",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544255,
+      "end": 1756100544255,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css"
+        ],
+        "sourcesContent": [
+          ""
+        ],
+        "names": [],
+        "mappings": ""
+      }
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/km5257/index.vue?vue&type=style&index=0&scoped=07008b7e&lang.css"
+        ],
+        "sourcesContent": [
+          ""
+        ],
+        "names": [],
+        "mappings": ""
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544256,
+      "end": 1756100544256,
+      "order": "normal"
+    }
+  ]
+}

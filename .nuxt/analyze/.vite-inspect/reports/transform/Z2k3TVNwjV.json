@@ -1,0 +1,245 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/gamer-store/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">GamerStore <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\">工作前個人練習網站</div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/gamerStore1.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">本專案在工作前透過udemy線上學習後，透過六角學院使用課程付的後端最終做成成品．使用Vue開發一個電商網站，產品下單、新增刪除查詢等功能，最後付款送出訂單。</div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、JavaScript、vite、Vue2、Option API、AOS、swiper、vee-validate、BootStrap</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore2.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore3.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore4.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore5.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore6.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore7.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore8.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore9.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/gamerStore10.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://k950212.github.io/GamerStore/dist/#/\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n",
+      "start": 1756100531897,
+      "end": 1756100531980,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/gamerStore1.png'\nimport _imports_2 from '@/assets/img/gamerStore2.png'\nimport _imports_3 from '@/assets/img/gamerStore3.png'\nimport _imports_4 from '@/assets/img/gamerStore4.png'\nimport _imports_5 from '@/assets/img/gamerStore5.png'\nimport _imports_6 from '@/assets/img/gamerStore6.png'\nimport _imports_7 from '@/assets/img/gamerStore7.png'\nimport _imports_8 from '@/assets/img/gamerStore8.png'\nimport _imports_9 from '@/assets/img/gamerStore9.png'\nimport _imports_10 from '@/assets/img/gamerStore10.png'\n\n\nconst _hoisted_1 = { id: \"projectPage\" }\nconst _hoisted_2 = { class: \"container\" }\nconst _hoisted_3 = { class: \"title\" }\n\n\nconst _sfc_main = {\n  __name: 'index',\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://k950212.github.io/GamerStore/dist/#/\");\n};\n\nreturn (_ctx, _cache) => {\n  const _component_Navbar = _resolveComponent(\"Navbar\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Navbar),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _cache[1] || (_cache[1] = _createTextVNode(\"GamerStore \")),\n          _createElementVNode(\"img\", {\n            onClick: _cache[0] || (_cache[0] = $event => (openWeb())),\n            style: {\"cursor\":\"pointer\"},\n            src: _imports_0,\n            alt: \"\"\n          })\n        ]),\n        _cache[2] || (_cache[2] = _createStaticVNode(\"<div class=\\\"title-m\\\" data-v-2688d1c6>工作前個人練習網站</div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-2688d1c6><div class=\\\"main-img\\\" data-v-2688d1c6><div class=\\\"main-border\\\" data-v-2688d1c6><div class=\\\"second-border\\\" data-v-2688d1c6><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div></div></div></div><div class=\\\"background\\\" data-v-2688d1c6><div class=\\\"title mt-5 mb-3\\\" data-v-2688d1c6>專案背景</div><div class=\\\"content\\\" data-v-2688d1c6>本專案在工作前透過udemy線上學習後，透過六角學院使用課程付的後端最終做成成品．使用Vue開發一個電商網站，產品下單、新增刪除查詢等功能，最後付款送出訂單。</div></div><div class=\\\"skill\\\" data-v-2688d1c6><div class=\\\"title\\\" data-v-2688d1c6>技術應用</div><ul style=\\\"margin-left:2rem;margin-top:1rem;\\\" data-v-2688d1c6><li data-v-2688d1c6>使用：html、css、JavaScript、vite、Vue2、Option API、AOS、swiper、vee-validate、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_10 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div>\", 13))\n      ])\n    ]),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?vue&type=style&index=0&scoped=2688d1c6&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-2688d1c6\"]])",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/gamerStore1.png'\nimport _imports_2 from '@/assets/img/gamerStore2.png'\nimport _imports_3 from '@/assets/img/gamerStore3.png'\nimport _imports_4 from '@/assets/img/gamerStore4.png'\nimport _imports_5 from '@/assets/img/gamerStore5.png'\nimport _imports_6 from '@/assets/img/gamerStore6.png'\nimport _imports_7 from '@/assets/img/gamerStore7.png'\nimport _imports_8 from '@/assets/img/gamerStore8.png'\nimport _imports_9 from '@/assets/img/gamerStore9.png'\nimport _imports_10 from '@/assets/img/gamerStore10.png'\n\n\nconst _hoisted_1 = { id: \"projectPage\" }\nconst _hoisted_2 = { class: \"container\" }\nconst _hoisted_3 = { class: \"title\" }\n\n\nconst _sfc_main = {\n  __name: 'index',\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://k950212.github.io/GamerStore/dist/#/\");\n};\n\nreturn (_ctx, _cache) => {\n  const _component_Navbar = _resolveComponent(\"Navbar\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Navbar),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _cache[1] || (_cache[1] = _createTextVNode(\"GamerStore \")),\n          _createElementVNode(\"img\", {\n            onClick: _cache[0] || (_cache[0] = $event => (openWeb())),\n            style: {\"cursor\":\"pointer\"},\n            src: _imports_0,\n            alt: \"\"\n          })\n        ]),\n        _cache[2] || (_cache[2] = _createStaticVNode(\"<div class=\\\"title-m\\\" data-v-2688d1c6>工作前個人練習網站</div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-2688d1c6><div class=\\\"main-img\\\" data-v-2688d1c6><div class=\\\"main-border\\\" data-v-2688d1c6><div class=\\\"second-border\\\" data-v-2688d1c6><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div></div></div></div><div class=\\\"background\\\" data-v-2688d1c6><div class=\\\"title mt-5 mb-3\\\" data-v-2688d1c6>專案背景</div><div class=\\\"content\\\" data-v-2688d1c6>本專案在工作前透過udemy線上學習後，透過六角學院使用課程付的後端最終做成成品．使用Vue開發一個電商網站，產品下單、新增刪除查詢等功能，最後付款送出訂單。</div></div><div class=\\\"skill\\\" data-v-2688d1c6><div class=\\\"title\\\" data-v-2688d1c6>技術應用</div><ul style=\\\"margin-left:2rem;margin-top:1rem;\\\" data-v-2688d1c6><li data-v-2688d1c6>使用：html、css、JavaScript、vite、Vue2、Option API、AOS、swiper、vee-validate、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_10 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div>\", 13))\n      ])\n    ]),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?vue&type=style&index=0&scoped=2688d1c6&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-2688d1c6\"]])",
+      "start": 1756100531980,
+      "end": 1756100531980,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/gamer-store/index.vue"
+        ],
+        "sourcesContent": [
+          "import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/gamerStore1.png'\nimport _imports_2 from '@/assets/img/gamerStore2.png'\nimport _imports_3 from '@/assets/img/gamerStore3.png'\nimport _imports_4 from '@/assets/img/gamerStore4.png'\nimport _imports_5 from '@/assets/img/gamerStore5.png'\nimport _imports_6 from '@/assets/img/gamerStore6.png'\nimport _imports_7 from '@/assets/img/gamerStore7.png'\nimport _imports_8 from '@/assets/img/gamerStore8.png'\nimport _imports_9 from '@/assets/img/gamerStore9.png'\nimport _imports_10 from '@/assets/img/gamerStore10.png'\n\n\nconst _hoisted_1 = { id: \"projectPage\" }\nconst _hoisted_2 = { class: \"container\" }\nconst _hoisted_3 = { class: \"title\" }\n\n\nconst _sfc_main = {\n  __name: 'index',\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://k950212.github.io/GamerStore/dist/#/\");\n};\n\nreturn (_ctx, _cache) => {\n  const _component_Navbar = _resolveComponent(\"Navbar\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Navbar),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _cache[1] || (_cache[1] = _createTextVNode(\"GamerStore \")),\n          _createElementVNode(\"img\", {\n            onClick: _cache[0] || (_cache[0] = $event => (openWeb())),\n            style: {\"cursor\":\"pointer\"},\n            src: _imports_0,\n            alt: \"\"\n          })\n        ]),\n        _cache[2] || (_cache[2] = _createStaticVNode(\"<div class=\\\"title-m\\\" data-v-2688d1c6>工作前個人練習網站</div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-2688d1c6><div class=\\\"main-img\\\" data-v-2688d1c6><div class=\\\"main-border\\\" data-v-2688d1c6><div class=\\\"second-border\\\" data-v-2688d1c6><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div></div></div></div><div class=\\\"background\\\" data-v-2688d1c6><div class=\\\"title mt-5 mb-3\\\" data-v-2688d1c6>專案背景</div><div class=\\\"content\\\" data-v-2688d1c6>本專案在工作前透過udemy線上學習後，透過六角學院使用課程付的後端最終做成成品．使用Vue開發一個電商網站，產品下單、新增刪除查詢等功能，最後付款送出訂單。</div></div><div class=\\\"skill\\\" data-v-2688d1c6><div class=\\\"title\\\" data-v-2688d1c6>技術應用</div><ul style=\\\"margin-left:2rem;margin-top:1rem;\\\" data-v-2688d1c6><li data-v-2688d1c6>使用：html、css、JavaScript、vite、Vue2、Option API、AOS、swiper、vee-validate、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_10 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div>\", 13))\n      ])\n    ]),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?vue&type=style&index=0&scoped=2688d1c6&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-2688d1c6\"]])"
+        ],
+        "names": [],
+        "mappings": "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C,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,WAAW,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC;AAChxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,YAAY,CAAC,iBAAiB,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC;AACT,CAAC;AACD,CAAC;AACD;AACA,CAAC;AACD;AACA;AACA,MAAM,CAAC,CAAC,CAAC,KAAK,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,CAAC,KAAK,CAAC,KAAK,CAAC,KAAK,CAAC,KAAK,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,MAAM,CAAC,QAAQ,CAAC,IAAI,CAAC,GAAG,CAAC;AAClH;AACA,MAAM,CAAC,WAAW,CAAC,IAAI,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC;AACnD,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,WAAW,CAAC,SAAS,CAAC,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100531980,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/yunhao/Project/website/components/Navbar.vue\";\nimport { default as __nuxt_component_1 } from \"/Users/yunhao/Project/website/components/Footer.vue\";\n/* unplugin-vue-components disabled */import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/gamerStore1.png'\nimport _imports_2 from '@/assets/img/gamerStore2.png'\nimport _imports_3 from '@/assets/img/gamerStore3.png'\nimport _imports_4 from '@/assets/img/gamerStore4.png'\nimport _imports_5 from '@/assets/img/gamerStore5.png'\nimport _imports_6 from '@/assets/img/gamerStore6.png'\nimport _imports_7 from '@/assets/img/gamerStore7.png'\nimport _imports_8 from '@/assets/img/gamerStore8.png'\nimport _imports_9 from '@/assets/img/gamerStore9.png'\nimport _imports_10 from '@/assets/img/gamerStore10.png'\n\n\nconst _hoisted_1 = { id: \"projectPage\" }\nconst _hoisted_2 = { class: \"container\" }\nconst _hoisted_3 = { class: \"title\" }\n\n\nconst _sfc_main = {\n  __name: 'index',\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://k950212.github.io/GamerStore/dist/#/\");\n};\n\nreturn (_ctx, _cache) => {\n  const _component_Navbar = __nuxt_component_0\n  const _component_Footer = __nuxt_component_1\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Navbar),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _cache[1] || (_cache[1] = _createTextVNode(\"GamerStore \")),\n          _createElementVNode(\"img\", {\n            onClick: _cache[0] || (_cache[0] = $event => (openWeb())),\n            style: {\"cursor\":\"pointer\"},\n            src: _imports_0,\n            alt: \"\"\n          })\n        ]),\n        _cache[2] || (_cache[2] = _createStaticVNode(\"<div class=\\\"title-m\\\" data-v-2688d1c6>工作前個人練習網站</div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-2688d1c6><div class=\\\"main-img\\\" data-v-2688d1c6><div class=\\\"main-border\\\" data-v-2688d1c6><div class=\\\"second-border\\\" data-v-2688d1c6><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div></div></div></div><div class=\\\"background\\\" data-v-2688d1c6><div class=\\\"title mt-5 mb-3\\\" data-v-2688d1c6>專案背景</div><div class=\\\"content\\\" data-v-2688d1c6>本專案在工作前透過udemy線上學習後，透過六角學院使用課程付的後端最終做成成品．使用Vue開發一個電商網站，產品下單、新增刪除查詢等功能，最後付款送出訂單。</div></div><div class=\\\"skill\\\" data-v-2688d1c6><div class=\\\"title\\\" data-v-2688d1c6>技術應用</div><ul style=\\\"margin-left:2rem;margin-top:1rem;\\\" data-v-2688d1c6><li data-v-2688d1c6>使用：html、css、JavaScript、vite、Vue2、Option API、AOS、swiper、vee-validate、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_9 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div><div class=\\\"otherImg\\\" data-v-2688d1c6><img src=\\\"\" + _imports_10 + \"\\\" alt=\\\"\\\" data-v-2688d1c6></div>\", 13))\n      ])\n    ]),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?vue&type=style&index=0&scoped=2688d1c6&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-2688d1c6\"]])",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100531981,
+      "end": 1756100531981,
+      "order": "normal"
+    }
+  ]
+}

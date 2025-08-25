@@ -1,0 +1,228 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/composables/use-lock-scroll.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { watch, onBeforeUnmount, onDeactivated } from \"vue\";\nimport { getScrollParent, onMountedOrActivated } from \"@vant/use\";\nimport { useTouch } from \"./use-touch.mjs\";\nimport { preventDefault } from \"../utils/index.mjs\";\nlet totalLockCount = 0;\nconst BODY_LOCK_CLASS = \"van-overflow-hidden\";\nfunction useLockScroll(rootRef, shouldLock) {\n  const touch = useTouch();\n  const DIRECTION_UP = \"01\";\n  const DIRECTION_DOWN = \"10\";\n  const onTouchMove = (event) => {\n    touch.move(event);\n    const direction = touch.deltaY.value > 0 ? DIRECTION_DOWN : DIRECTION_UP;\n    const el = getScrollParent(\n      event.target,\n      rootRef.value\n    );\n    const { scrollHeight, offsetHeight, scrollTop } = el;\n    let status = \"11\";\n    if (scrollTop === 0) {\n      status = offsetHeight >= scrollHeight ? \"00\" : \"01\";\n    } else if (scrollTop + offsetHeight >= scrollHeight) {\n      status = \"10\";\n    }\n    if (status !== \"11\" && touch.isVertical() && !(parseInt(status, 2) & parseInt(direction, 2))) {\n      preventDefault(event, true);\n    }\n  };\n  const lock = () => {\n    document.addEventListener(\"touchstart\", touch.start);\n    document.addEventListener(\"touchmove\", onTouchMove, { passive: false });\n    if (!totalLockCount) {\n      document.body.classList.add(BODY_LOCK_CLASS);\n    }\n    totalLockCount++;\n  };\n  const unlock = () => {\n    if (totalLockCount) {\n      document.removeEventListener(\"touchstart\", touch.start);\n      document.removeEventListener(\"touchmove\", onTouchMove);\n      totalLockCount--;\n      if (!totalLockCount) {\n        document.body.classList.remove(BODY_LOCK_CLASS);\n      }\n    }\n  };\n  const init = () => shouldLock() && lock();\n  const destroy = () => shouldLock() && unlock();\n  onMountedOrActivated(init);\n  onDeactivated(destroy);\n  onBeforeUnmount(destroy);\n  watch(shouldLock, (value) => {\n    value ? lock() : unlock();\n  });\n}\nexport {\n  useLockScroll\n};\n",
+      "start": 1756100534046,
+      "end": 1756100534062,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100534062,
+      "end": 1756100534062,
+      "order": "normal"
+    }
+  ]
+}

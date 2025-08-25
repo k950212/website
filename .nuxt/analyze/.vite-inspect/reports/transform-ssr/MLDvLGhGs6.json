@@ -1,0 +1,344 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.skill {\n  background-image: url(\"@/assets/img/skill_background.png\");\n  background-size: cover;\n  min-height: 600px;\n  padding: 3rem 0rem;\n\n  .title {\n    display: flex;\n    justify-content: center;\n    font-size: 40px;\n    font-weight: 700;\n    color: white;\n    padding: 1rem 0rem;\n  }\n  .container {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr); /* 預設為 5 個格子，每列佔 1fr 空間 */\n    gap: 20px;\n    .box {\n      background-color: rgba(255, 255, 255, 0.16);\n      border-radius: 12px;\n      padding: 20px; /* 內邊距 */\n      text-align: center; /* 文字居中 */\n      .img {\n        height: 100px;\n        img {\n          height: 100%;\n        }\n      }\n      .text {\n        margin-top: 1rem;\n      }\n    }\n  }\n}\n@media (max-width: 1200px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n  }\n}\n@media (max-width: 991px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(3, 1fr);\n    }\n  }\n}\n\n@media (max-width: 767px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n}\n@media (max-width: 520px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(1, 1fr);\n    }\n  }\n}\n",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "/Users/yunhao/Project/website/components/Skill.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div class=\"skill\">\n    <div class=\"title\"><div>專業能力</div></div>\n\n    <div class=\"container\">\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_web.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>打造</div>\n          <div>專屬網站</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_mobile.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>RWD</div>\n          <div>手機裝置</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_pad.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>RWD</div>\n          <div>平板裝置</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_cms.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>後台cms</div>\n          <div>數據管理</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_seo.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>搜尋引擎</div>\n          <div>SEO/SSR</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/skill_api.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>API調用</div>\n          <div>串接應用</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_vue.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>前端框架</div>\n          <div>Vue.js</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_javascript.png\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>JavaScript</div>\n          <div>語法</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_html.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>HTML5</div>\n          <div>語義化標籤</div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"img\"><img src=\"@/assets/img/logo_css.svg\" alt=\"\" /></div>\n        <div class=\"text\">\n          <div>CSS</div>\n          <div>排版變化</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n<script setup></script>\n<style scoped>\n.skill {\n  background-image: url(\"@/assets/img/skill_background.png\");\n  background-size: cover;\n  min-height: 600px;\n  padding: 3rem 0rem;\n\n  .title {\n    display: flex;\n    justify-content: center;\n    font-size: 40px;\n    font-weight: 700;\n    color: white;\n    padding: 1rem 0rem;\n  }\n  .container {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr); /* 預設為 5 個格子，每列佔 1fr 空間 */\n    gap: 20px;\n    .box {\n      background-color: rgba(255, 255, 255, 0.16);\n      border-radius: 12px;\n      padding: 20px; /* 內邊距 */\n      text-align: center; /* 文字居中 */\n      .img {\n        height: 100px;\n        img {\n          height: 100%;\n        }\n      }\n      .text {\n        margin-top: 1rem;\n      }\n    }\n  }\n}\n@media (max-width: 1200px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n  }\n}\n@media (max-width: 991px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(3, 1fr);\n    }\n  }\n}\n\n@media (max-width: 767px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n}\n@media (max-width: 520px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(1, 1fr);\n    }\n  }\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544519,
+      "end": 1756100544519,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".skill{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0;.title{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{display:grid;gap:20px;grid-template-columns:repeat(5,1fr);.box{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center;.img{height:100px;img{height:100%}}.text{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container{grid-template-columns:repeat(1,1fr)}}}",
+      "start": 1756100544519,
+      "end": 1756100544559,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/components/Skill.vue",
+        "mappings": "AACA,OACE,8CAA0D,CAC1D,qBAAsB,CACtB,gBAAiB,CACjB,cAAkB,CAElB,OAKE,UAAY,CAJZ,YAAa,CAEb,cAAe,CACf,eAAgB,CAFhB,sBAAuB,CAIvB,cACF,CACA,WACE,YAAa,CAEb,QAAS,CADT,mCAAqC,CAErC,KACE,oCAA2C,CAC3C,kBAAmB,CACnB,YAAa,CACb,iBAAkB,CAClB,KACE,YAAa,CACb,IACE,WACF,CACF,CACA,MACE,eACF,CACF,CACF,CACF,CACA,0BACE,OACE,WACE,mCACF,CACF,CACF,CACA,yBACE,OACE,WACE,mCACF,CACF,CACF,CAEA,yBACE,OACE,WACE,mCACF,CACF,CACF,CACA,yBACE,OACE,WACE,mCACF,CACF,CACF",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue"
+        ],
+        "sourcesContent": [
+          "\n.skill {\n  background-image: url(\"@/assets/img/skill_background.png\");\n  background-size: cover;\n  min-height: 600px;\n  padding: 3rem 0rem;\n\n  .title {\n    display: flex;\n    justify-content: center;\n    font-size: 40px;\n    font-weight: 700;\n    color: white;\n    padding: 1rem 0rem;\n  }\n  .container {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr); /* 預設為 5 個格子，每列佔 1fr 空間 */\n    gap: 20px;\n    .box {\n      background-color: rgba(255, 255, 255, 0.16);\n      border-radius: 12px;\n      padding: 20px; /* 內邊距 */\n      text-align: center; /* 文字居中 */\n      .img {\n        height: 100px;\n        img {\n          height: 100%;\n        }\n      }\n      .text {\n        margin-top: 1rem;\n      }\n    }\n  }\n}\n@media (max-width: 1200px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(4, 1fr);\n    }\n  }\n}\n@media (max-width: 991px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(3, 1fr);\n    }\n  }\n}\n\n@media (max-width: 767px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n}\n@media (max-width: 520px) {\n  .skill {\n    .container {\n      grid-template-columns: repeat(1, 1fr);\n    }\n  }\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544559,
+      "end": 1756100544559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544559,
+      "end": 1756100544559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544559,
+      "end": 1756100544559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}",
+      "start": 1756100544559,
+      "end": 1756100544560,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/components/Skill.vue",
+        "mappings": "AAAA,OCAA,mBDAO,8CAA8C,CAAC,qBAAqB,CAAC,gBAAgB,CAAC,eCA7F,ADA4G,wBAAO,UAAU,CAAC,YAAY,CAAC,cAAc,CAAC,eAAe,CAAC,sBAAsB,CAAC,cAAc,CAAC,WCAhN,mBDA2N,YAAY,CAAC,QAAQ,CAAC,oCCAjP,ADAqR,KCArR,mBDA0R,oCAAoC,CAAC,kBAAkB,CAAC,YAAY,CAAC,kBCA/V,ADAiX,KCAjX,mBDAsX,aCAtX,ADAmY,qBAAI,WAAW,CAAC,CAAC,uBAAM,eAAe,CAAC,CAAC,CAAC,CAAC,0BAA0B,OAAO,4BAAW,mCAAmC,CAAC,CAAC,CAAC,yBAAyB,OAAO,4BAAW,mCAAmC,CAAC,CAAC,CAAC,yBAAyB,OAAO,4BAAW,mCAAmC,CAAC,CAAC,CAAC,yBAAyB,OAAO,4BAAW,mCAAmC,CAAC,CAAC",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue",
+          "\u0000<no source>"
+        ],
+        "sourcesContent": [
+          null,
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}\"",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544560,
+      "end": 1756100544560,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544560,
+      "end": 1756100544561,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}\"",
+      "start": 1756100544561,
+      "end": 1756100544562,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}\""
+        ],
+        "names": [],
+        "mappings": "sCAAA,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,GAAG,CAAC,wBAAwB,CAAC,CAAC,UAAU,CAAC,IAAI,CAAC,KAAK,CAAC,GAAG,CAAC,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,OAAO,CAAC,OAAO,CAAC,MAAM,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC"
+      }
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}\"",
+      "start": 1756100544561,
+      "end": 1756100544562,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Skill.vue?vue&type=style&index=0&scoped=eb9ad393&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".skill{&[data-v-eb9ad393]{background-image:url(__VITE_ASSET__CKDr9mqd__);background-size:cover;min-height:600px;padding:3rem 0}.title[data-v-eb9ad393]{color:#fff;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.container{&[data-v-eb9ad393]{display:grid;gap:20px;grid-template-columns:repeat(5,1fr)}.box{&[data-v-eb9ad393]{background-color:hsla(0,0%,100%,.16);border-radius:12px;padding:20px;text-align:center}.img{&[data-v-eb9ad393]{height:100px}img[data-v-eb9ad393]{height:100%}}.text[data-v-eb9ad393]{margin-top:1rem}}}}@media (max-width:1200px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(4,1fr)}}}@media (max-width:991px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(3,1fr)}}}@media (max-width:767px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(2,1fr)}}}@media (max-width:520px){.skill{.container[data-v-eb9ad393]{grid-template-columns:repeat(1,1fr)}}}\""
+        ],
+        "names": [],
+        "mappings": "sCAAA,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,GAAG,CAAC,wBAAwB,CAAC,CAAC,UAAU,CAAC,IAAI,CAAC,KAAK,CAAC,GAAG,CAAC,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,OAAO,CAAC,OAAO,CAAC,MAAM,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,MAAM,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544562,
+      "end": 1756100544562,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544562,
+      "end": 1756100544562,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544562,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544562,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544563,
+      "end": 1756100544563,
+      "order": "normal"
+    }
+  ]
+}

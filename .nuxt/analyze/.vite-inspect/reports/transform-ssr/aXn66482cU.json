@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/virtual.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { g as getDocument } from '../shared/ssr-window.esm.mjs';\nimport { s as setCSSProperty, e as elementChildren, c as createElement } from '../shared/utils.mjs';\n\nfunction Virtual(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on,\n    emit\n  } = _ref;\n  extendParams({\n    virtual: {\n      enabled: false,\n      slides: [],\n      cache: true,\n      renderSlide: null,\n      renderExternal: null,\n      renderExternalUpdate: true,\n      addSlidesBefore: 0,\n      addSlidesAfter: 0\n    }\n  });\n  let cssModeTimeout;\n  const document = getDocument();\n  swiper.virtual = {\n    cache: {},\n    from: undefined,\n    to: undefined,\n    slides: [],\n    offset: 0,\n    slidesGrid: []\n  };\n  const tempDOM = document.createElement('div');\n  function renderSlide(slide, index) {\n    const params = swiper.params.virtual;\n    if (params.cache && swiper.virtual.cache[index]) {\n      return swiper.virtual.cache[index];\n    }\n    // eslint-disable-next-line\n    let slideEl;\n    if (params.renderSlide) {\n      slideEl = params.renderSlide.call(swiper, slide, index);\n      if (typeof slideEl === 'string') {\n        tempDOM.innerHTML = slideEl;\n        slideEl = tempDOM.children[0];\n      }\n    } else if (swiper.isElement) {\n      slideEl = createElement('swiper-slide');\n    } else {\n      slideEl = createElement('div', swiper.params.slideClass);\n    }\n    slideEl.setAttribute('data-swiper-slide-index', index);\n    if (!params.renderSlide) {\n      slideEl.innerHTML = slide;\n    }\n    if (params.cache) {\n      swiper.virtual.cache[index] = slideEl;\n    }\n    return slideEl;\n  }\n  function update(force) {\n    const {\n      slidesPerView,\n      slidesPerGroup,\n      centeredSlides,\n      loop: isLoop\n    } = swiper.params;\n    const {\n      addSlidesBefore,\n      addSlidesAfter\n    } = swiper.params.virtual;\n    const {\n      from: previousFrom,\n      to: previousTo,\n      slides,\n      slidesGrid: previousSlidesGrid,\n      offset: previousOffset\n    } = swiper.virtual;\n    if (!swiper.params.cssMode) {\n      swiper.updateActiveIndex();\n    }\n    const activeIndex = swiper.activeIndex || 0;\n    let offsetProp;\n    if (swiper.rtlTranslate) offsetProp = 'right';else offsetProp = swiper.isHorizontal() ? 'left' : 'top';\n    let slidesAfter;\n    let slidesBefore;\n    if (centeredSlides) {\n      slidesAfter = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesAfter;\n      slidesBefore = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesBefore;\n    } else {\n      slidesAfter = slidesPerView + (slidesPerGroup - 1) + addSlidesAfter;\n      slidesBefore = (isLoop ? slidesPerView : slidesPerGroup) + addSlidesBefore;\n    }\n    let from = activeIndex - slidesBefore;\n    let to = activeIndex + slidesAfter;\n    if (!isLoop) {\n      from = Math.max(from, 0);\n      to = Math.min(to, slides.length - 1);\n    }\n    let offset = (swiper.slidesGrid[from] || 0) - (swiper.slidesGrid[0] || 0);\n    if (isLoop && activeIndex >= slidesBefore) {\n      from -= slidesBefore;\n      if (!centeredSlides) offset += swiper.slidesGrid[0];\n    } else if (isLoop && activeIndex < slidesBefore) {\n      from = -slidesBefore;\n      if (centeredSlides) offset += swiper.slidesGrid[0];\n    }\n    Object.assign(swiper.virtual, {\n      from,\n      to,\n      offset,\n      slidesGrid: swiper.slidesGrid,\n      slidesBefore,\n      slidesAfter\n    });\n    function onRendered() {\n      swiper.updateSlides();\n      swiper.updateProgress();\n      swiper.updateSlidesClasses();\n      emit('virtualUpdate');\n    }\n    if (previousFrom === from && previousTo === to && !force) {\n      if (swiper.slidesGrid !== previousSlidesGrid && offset !== previousOffset) {\n        swiper.slides.forEach(slideEl => {\n          slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\n        });\n      }\n      swiper.updateProgress();\n      emit('virtualUpdate');\n      return;\n    }\n    if (swiper.params.virtual.renderExternal) {\n      swiper.params.virtual.renderExternal.call(swiper, {\n        offset,\n        from,\n        to,\n        slides: function getSlides() {\n          const slidesToRender = [];\n          for (let i = from; i <= to; i += 1) {\n            slidesToRender.push(slides[i]);\n          }\n          return slidesToRender;\n        }()\n      });\n      if (swiper.params.virtual.renderExternalUpdate) {\n        onRendered();\n      } else {\n        emit('virtualUpdate');\n      }\n      return;\n    }\n    const prependIndexes = [];\n    const appendIndexes = [];\n    const getSlideIndex = index => {\n      let slideIndex = index;\n      if (index < 0) {\n        slideIndex = slides.length + index;\n      } else if (slideIndex >= slides.length) {\n        // eslint-disable-next-line\n        slideIndex = slideIndex - slides.length;\n      }\n      return slideIndex;\n    };\n    if (force) {\n      swiper.slides.filter(el => el.matches(`.${swiper.params.slideClass}, swiper-slide`)).forEach(slideEl => {\n        slideEl.remove();\n      });\n    } else {\n      for (let i = previousFrom; i <= previousTo; i += 1) {\n        if (i < from || i > to) {\n          const slideIndex = getSlideIndex(i);\n          swiper.slides.filter(el => el.matches(`.${swiper.params.slideClass}[data-swiper-slide-index=\"${slideIndex}\"], swiper-slide[data-swiper-slide-index=\"${slideIndex}\"]`)).forEach(slideEl => {\n            slideEl.remove();\n          });\n        }\n      }\n    }\n    const loopFrom = isLoop ? -slides.length : 0;\n    const loopTo = isLoop ? slides.length * 2 : slides.length;\n    for (let i = loopFrom; i < loopTo; i += 1) {\n      if (i >= from && i <= to) {\n        const slideIndex = getSlideIndex(i);\n        if (typeof previousTo === 'undefined' || force) {\n          appendIndexes.push(slideIndex);\n        } else {\n          if (i > previousTo) appendIndexes.push(slideIndex);\n          if (i < previousFrom) prependIndexes.push(slideIndex);\n        }\n      }\n    }\n    appendIndexes.forEach(index => {\n      swiper.slidesEl.append(renderSlide(slides[index], index));\n    });\n    if (isLoop) {\n      for (let i = prependIndexes.length - 1; i >= 0; i -= 1) {\n        const index = prependIndexes[i];\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\n      }\n    } else {\n      prependIndexes.sort((a, b) => b - a);\n      prependIndexes.forEach(index => {\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\n      });\n    }\n    elementChildren(swiper.slidesEl, '.swiper-slide, swiper-slide').forEach(slideEl => {\n      slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\n    });\n    onRendered();\n  }\n  function appendSlide(slides) {\n    if (typeof slides === 'object' && 'length' in slides) {\n      for (let i = 0; i < slides.length; i += 1) {\n        if (slides[i]) swiper.virtual.slides.push(slides[i]);\n      }\n    } else {\n      swiper.virtual.slides.push(slides);\n    }\n    update(true);\n  }\n  function prependSlide(slides) {\n    const activeIndex = swiper.activeIndex;\n    let newActiveIndex = activeIndex + 1;\n    let numberOfNewSlides = 1;\n    if (Array.isArray(slides)) {\n      for (let i = 0; i < slides.length; i += 1) {\n        if (slides[i]) swiper.virtual.slides.unshift(slides[i]);\n      }\n      newActiveIndex = activeIndex + slides.length;\n      numberOfNewSlides = slides.length;\n    } else {\n      swiper.virtual.slides.unshift(slides);\n    }\n    if (swiper.params.virtual.cache) {\n      const cache = swiper.virtual.cache;\n      const newCache = {};\n      Object.keys(cache).forEach(cachedIndex => {\n        const cachedEl = cache[cachedIndex];\n        const cachedElIndex = cachedEl.getAttribute('data-swiper-slide-index');\n        if (cachedElIndex) {\n          cachedEl.setAttribute('data-swiper-slide-index', parseInt(cachedElIndex, 10) + numberOfNewSlides);\n        }\n        newCache[parseInt(cachedIndex, 10) + numberOfNewSlides] = cachedEl;\n      });\n      swiper.virtual.cache = newCache;\n    }\n    update(true);\n    swiper.slideTo(newActiveIndex, 0);\n  }\n  function removeSlide(slidesIndexes) {\n    if (typeof slidesIndexes === 'undefined' || slidesIndexes === null) return;\n    let activeIndex = swiper.activeIndex;\n    if (Array.isArray(slidesIndexes)) {\n      for (let i = slidesIndexes.length - 1; i >= 0; i -= 1) {\n        if (swiper.params.virtual.cache) {\n          delete swiper.virtual.cache[slidesIndexes[i]];\n          // shift cache indexes\n          Object.keys(swiper.virtual.cache).forEach(key => {\n            if (key > slidesIndexes) {\n              swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\n              swiper.virtual.cache[key - 1].setAttribute('data-swiper-slide-index', key - 1);\n              delete swiper.virtual.cache[key];\n            }\n          });\n        }\n        swiper.virtual.slides.splice(slidesIndexes[i], 1);\n        if (slidesIndexes[i] < activeIndex) activeIndex -= 1;\n        activeIndex = Math.max(activeIndex, 0);\n      }\n    } else {\n      if (swiper.params.virtual.cache) {\n        delete swiper.virtual.cache[slidesIndexes];\n        // shift cache indexes\n        Object.keys(swiper.virtual.cache).forEach(key => {\n          if (key > slidesIndexes) {\n            swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\n            swiper.virtual.cache[key - 1].setAttribute('data-swiper-slide-index', key - 1);\n            delete swiper.virtual.cache[key];\n          }\n        });\n      }\n      swiper.virtual.slides.splice(slidesIndexes, 1);\n      if (slidesIndexes < activeIndex) activeIndex -= 1;\n      activeIndex = Math.max(activeIndex, 0);\n    }\n    update(true);\n    swiper.slideTo(activeIndex, 0);\n  }\n  function removeAllSlides() {\n    swiper.virtual.slides = [];\n    if (swiper.params.virtual.cache) {\n      swiper.virtual.cache = {};\n    }\n    update(true);\n    swiper.slideTo(0, 0);\n  }\n  on('beforeInit', () => {\n    if (!swiper.params.virtual.enabled) return;\n    let domSlidesAssigned;\n    if (typeof swiper.passedParams.virtual.slides === 'undefined') {\n      const slides = [...swiper.slidesEl.children].filter(el => el.matches(`.${swiper.params.slideClass}, swiper-slide`));\n      if (slides && slides.length) {\n        swiper.virtual.slides = [...slides];\n        domSlidesAssigned = true;\n        slides.forEach((slideEl, slideIndex) => {\n          slideEl.setAttribute('data-swiper-slide-index', slideIndex);\n          swiper.virtual.cache[slideIndex] = slideEl;\n          slideEl.remove();\n        });\n      }\n    }\n    if (!domSlidesAssigned) {\n      swiper.virtual.slides = swiper.params.virtual.slides;\n    }\n    swiper.classNames.push(`${swiper.params.containerModifierClass}virtual`);\n    swiper.params.watchSlidesProgress = true;\n    swiper.originalParams.watchSlidesProgress = true;\n    update();\n  });\n  on('setTranslate', () => {\n    if (!swiper.params.virtual.enabled) return;\n    if (swiper.params.cssMode && !swiper._immediateVirtual) {\n      clearTimeout(cssModeTimeout);\n      cssModeTimeout = setTimeout(() => {\n        update();\n      }, 100);\n    } else {\n      update();\n    }\n  });\n  on('init update resize', () => {\n    if (!swiper.params.virtual.enabled) return;\n    if (swiper.params.cssMode) {\n      setCSSProperty(swiper.wrapperEl, '--swiper-virtual-size', `${swiper.virtualSize}px`);\n    }\n  });\n  Object.assign(swiper.virtual, {\n    appendSlide,\n    prependSlide,\n    removeSlide,\n    removeAllSlides,\n    update\n  });\n}\n\nexport { Virtual as default };\n",
+      "start": 1756100544540,
+      "end": 1756100544582,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544582,
+      "end": 1756100544582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { g as getDocument } from \"../shared/ssr-window.esm.mjs\";\nimport { s as setCSSProperty, e as elementChildren, c as createElement } from \"../shared/utils.mjs\";\nfunction Virtual(_ref) {\n  let {\n    swiper,\n    extendParams,\n    on,\n    emit\n  } = _ref;\n  extendParams({\n    virtual: {\n      enabled: false,\n      slides: [],\n      cache: true,\n      renderSlide: null,\n      renderExternal: null,\n      renderExternalUpdate: true,\n      addSlidesBefore: 0,\n      addSlidesAfter: 0\n    }\n  });\n  let cssModeTimeout;\n  const document = getDocument();\n  swiper.virtual = {\n    cache: {},\n    from: void 0,\n    to: void 0,\n    slides: [],\n    offset: 0,\n    slidesGrid: []\n  };\n  const tempDOM = document.createElement(\"div\");\n  function renderSlide(slide, index) {\n    const params = swiper.params.virtual;\n    if (params.cache && swiper.virtual.cache[index]) {\n      return swiper.virtual.cache[index];\n    }\n    let slideEl;\n    if (params.renderSlide) {\n      slideEl = params.renderSlide.call(swiper, slide, index);\n      if (typeof slideEl === \"string\") {\n        tempDOM.innerHTML = slideEl;\n        slideEl = tempDOM.children[0];\n      }\n    } else if (swiper.isElement) {\n      slideEl = createElement(\"swiper-slide\");\n    } else {\n      slideEl = createElement(\"div\", swiper.params.slideClass);\n    }\n    slideEl.setAttribute(\"data-swiper-slide-index\", index);\n    if (!params.renderSlide) {\n      slideEl.innerHTML = slide;\n    }\n    if (params.cache) {\n      swiper.virtual.cache[index] = slideEl;\n    }\n    return slideEl;\n  }\n  function update(force) {\n    const {\n      slidesPerView,\n      slidesPerGroup,\n      centeredSlides,\n      loop: isLoop\n    } = swiper.params;\n    const {\n      addSlidesBefore,\n      addSlidesAfter\n    } = swiper.params.virtual;\n    const {\n      from: previousFrom,\n      to: previousTo,\n      slides,\n      slidesGrid: previousSlidesGrid,\n      offset: previousOffset\n    } = swiper.virtual;\n    if (!swiper.params.cssMode) {\n      swiper.updateActiveIndex();\n    }\n    const activeIndex = swiper.activeIndex || 0;\n    let offsetProp;\n    if (swiper.rtlTranslate)\n      offsetProp = \"right\";\n    else\n      offsetProp = swiper.isHorizontal() ? \"left\" : \"top\";\n    let slidesAfter;\n    let slidesBefore;\n    if (centeredSlides) {\n      slidesAfter = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesAfter;\n      slidesBefore = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesBefore;\n    } else {\n      slidesAfter = slidesPerView + (slidesPerGroup - 1) + addSlidesAfter;\n      slidesBefore = (isLoop ? slidesPerView : slidesPerGroup) + addSlidesBefore;\n    }\n    let from = activeIndex - slidesBefore;\n    let to = activeIndex + slidesAfter;\n    if (!isLoop) {\n      from = Math.max(from, 0);\n      to = Math.min(to, slides.length - 1);\n    }\n    let offset = (swiper.slidesGrid[from] || 0) - (swiper.slidesGrid[0] || 0);\n    if (isLoop && activeIndex >= slidesBefore) {\n      from -= slidesBefore;\n      if (!centeredSlides)\n        offset += swiper.slidesGrid[0];\n    } else if (isLoop && activeIndex < slidesBefore) {\n      from = -slidesBefore;\n      if (centeredSlides)\n        offset += swiper.slidesGrid[0];\n    }\n    Object.assign(swiper.virtual, {\n      from,\n      to,\n      offset,\n      slidesGrid: swiper.slidesGrid,\n      slidesBefore,\n      slidesAfter\n    });\n    function onRendered() {\n      swiper.updateSlides();\n      swiper.updateProgress();\n      swiper.updateSlidesClasses();\n      emit(\"virtualUpdate\");\n    }\n    if (previousFrom === from && previousTo === to && !force) {\n      if (swiper.slidesGrid !== previousSlidesGrid && offset !== previousOffset) {\n        swiper.slides.forEach((slideEl) => {\n          slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\n        });\n      }\n      swiper.updateProgress();\n      emit(\"virtualUpdate\");\n      return;\n    }\n    if (swiper.params.virtual.renderExternal) {\n      swiper.params.virtual.renderExternal.call(swiper, {\n        offset,\n        from,\n        to,\n        slides: function getSlides() {\n          const slidesToRender = [];\n          for (let i = from; i <= to; i += 1) {\n            slidesToRender.push(slides[i]);\n          }\n          return slidesToRender;\n        }()\n      });\n      if (swiper.params.virtual.renderExternalUpdate) {\n        onRendered();\n      } else {\n        emit(\"virtualUpdate\");\n      }\n      return;\n    }\n    const prependIndexes = [];\n    const appendIndexes = [];\n    const getSlideIndex = (index) => {\n      let slideIndex = index;\n      if (index < 0) {\n        slideIndex = slides.length + index;\n      } else if (slideIndex >= slides.length) {\n        slideIndex = slideIndex - slides.length;\n      }\n      return slideIndex;\n    };\n    if (force) {\n      swiper.slides.filter((el) => el.matches(`.${swiper.params.slideClass}, swiper-slide`)).forEach((slideEl) => {\n        slideEl.remove();\n      });\n    } else {\n      for (let i = previousFrom; i <= previousTo; i += 1) {\n        if (i < from || i > to) {\n          const slideIndex = getSlideIndex(i);\n          swiper.slides.filter((el) => el.matches(`.${swiper.params.slideClass}[data-swiper-slide-index=\"${slideIndex}\"], swiper-slide[data-swiper-slide-index=\"${slideIndex}\"]`)).forEach((slideEl) => {\n            slideEl.remove();\n          });\n        }\n      }\n    }\n    const loopFrom = isLoop ? -slides.length : 0;\n    const loopTo = isLoop ? slides.length * 2 : slides.length;\n    for (let i = loopFrom; i < loopTo; i += 1) {\n      if (i >= from && i <= to) {\n        const slideIndex = getSlideIndex(i);\n        if (typeof previousTo === \"undefined\" || force) {\n          appendIndexes.push(slideIndex);\n        } else {\n          if (i > previousTo)\n            appendIndexes.push(slideIndex);\n          if (i < previousFrom)\n            prependIndexes.push(slideIndex);\n        }\n      }\n    }\n    appendIndexes.forEach((index) => {\n      swiper.slidesEl.append(renderSlide(slides[index], index));\n    });\n    if (isLoop) {\n      for (let i = prependIndexes.length - 1; i >= 0; i -= 1) {\n        const index = prependIndexes[i];\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\n      }\n    } else {\n      prependIndexes.sort((a, b) => b - a);\n      prependIndexes.forEach((index) => {\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\n      });\n    }\n    elementChildren(swiper.slidesEl, \".swiper-slide, swiper-slide\").forEach((slideEl) => {\n      slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\n    });\n    onRendered();\n  }\n  function appendSlide(slides) {\n    if (typeof slides === \"object\" && \"length\" in slides) {\n      for (let i = 0; i < slides.length; i += 1) {\n        if (slides[i])\n          swiper.virtual.slides.push(slides[i]);\n      }\n    } else {\n      swiper.virtual.slides.push(slides);\n    }\n    update(true);\n  }\n  function prependSlide(slides) {\n    const activeIndex = swiper.activeIndex;\n    let newActiveIndex = activeIndex + 1;\n    let numberOfNewSlides = 1;\n    if (Array.isArray(slides)) {\n      for (let i = 0; i < slides.length; i += 1) {\n        if (slides[i])\n          swiper.virtual.slides.unshift(slides[i]);\n      }\n      newActiveIndex = activeIndex + slides.length;\n      numberOfNewSlides = slides.length;\n    } else {\n      swiper.virtual.slides.unshift(slides);\n    }\n    if (swiper.params.virtual.cache) {\n      const cache = swiper.virtual.cache;\n      const newCache = {};\n      Object.keys(cache).forEach((cachedIndex) => {\n        const cachedEl = cache[cachedIndex];\n        const cachedElIndex = cachedEl.getAttribute(\"data-swiper-slide-index\");\n        if (cachedElIndex) {\n          cachedEl.setAttribute(\"data-swiper-slide-index\", parseInt(cachedElIndex, 10) + numberOfNewSlides);\n        }\n        newCache[parseInt(cachedIndex, 10) + numberOfNewSlides] = cachedEl;\n      });\n      swiper.virtual.cache = newCache;\n    }\n    update(true);\n    swiper.slideTo(newActiveIndex, 0);\n  }\n  function removeSlide(slidesIndexes) {\n    if (typeof slidesIndexes === \"undefined\" || slidesIndexes === null)\n      return;\n    let activeIndex = swiper.activeIndex;\n    if (Array.isArray(slidesIndexes)) {\n      for (let i = slidesIndexes.length - 1; i >= 0; i -= 1) {\n        if (swiper.params.virtual.cache) {\n          delete swiper.virtual.cache[slidesIndexes[i]];\n          Object.keys(swiper.virtual.cache).forEach((key) => {\n            if (key > slidesIndexes) {\n              swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\n              swiper.virtual.cache[key - 1].setAttribute(\"data-swiper-slide-index\", key - 1);\n              delete swiper.virtual.cache[key];\n            }\n          });\n        }\n        swiper.virtual.slides.splice(slidesIndexes[i], 1);\n        if (slidesIndexes[i] < activeIndex)\n          activeIndex -= 1;\n        activeIndex = Math.max(activeIndex, 0);\n      }\n    } else {\n      if (swiper.params.virtual.cache) {\n        delete swiper.virtual.cache[slidesIndexes];\n        Object.keys(swiper.virtual.cache).forEach((key) => {\n          if (key > slidesIndexes) {\n            swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\n            swiper.virtual.cache[key - 1].setAttribute(\"data-swiper-slide-index\", key - 1);\n            delete swiper.virtual.cache[key];\n          }\n        });\n      }\n      swiper.virtual.slides.splice(slidesIndexes, 1);\n      if (slidesIndexes < activeIndex)\n        activeIndex -= 1;\n      activeIndex = Math.max(activeIndex, 0);\n    }\n    update(true);\n    swiper.slideTo(activeIndex, 0);\n  }\n  function removeAllSlides() {\n    swiper.virtual.slides = [];\n    if (swiper.params.virtual.cache) {\n      swiper.virtual.cache = {};\n    }\n    update(true);\n    swiper.slideTo(0, 0);\n  }\n  on(\"beforeInit\", () => {\n    if (!swiper.params.virtual.enabled)\n      return;\n    let domSlidesAssigned;\n    if (typeof swiper.passedParams.virtual.slides === \"undefined\") {\n      const slides = [...swiper.slidesEl.children].filter((el) => el.matches(`.${swiper.params.slideClass}, swiper-slide`));\n      if (slides && slides.length) {\n        swiper.virtual.slides = [...slides];\n        domSlidesAssigned = true;\n        slides.forEach((slideEl, slideIndex) => {\n          slideEl.setAttribute(\"data-swiper-slide-index\", slideIndex);\n          swiper.virtual.cache[slideIndex] = slideEl;\n          slideEl.remove();\n        });\n      }\n    }\n    if (!domSlidesAssigned) {\n      swiper.virtual.slides = swiper.params.virtual.slides;\n    }\n    swiper.classNames.push(`${swiper.params.containerModifierClass}virtual`);\n    swiper.params.watchSlidesProgress = true;\n    swiper.originalParams.watchSlidesProgress = true;\n    update();\n  });\n  on(\"setTranslate\", () => {\n    if (!swiper.params.virtual.enabled)\n      return;\n    if (swiper.params.cssMode && !swiper._immediateVirtual) {\n      clearTimeout(cssModeTimeout);\n      cssModeTimeout = setTimeout(() => {\n        update();\n      }, 100);\n    } else {\n      update();\n    }\n  });\n  on(\"init update resize\", () => {\n    if (!swiper.params.virtual.enabled)\n      return;\n    if (swiper.params.cssMode) {\n      setCSSProperty(swiper.wrapperEl, \"--swiper-virtual-size\", `${swiper.virtualSize}px`);\n    }\n  });\n  Object.assign(swiper.virtual, {\n    appendSlide,\n    prependSlide,\n    removeSlide,\n    removeAllSlides,\n    update\n  });\n}\nexport { Virtual as default };\n",
+      "start": 1756100544582,
+      "end": 1756100544897,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/swiper@10.3.1/node_modules/swiper/modules/virtual.mjs\"],\n  \"sourcesContent\": [\"import { g as getDocument } from '../shared/ssr-window.esm.mjs';\\nimport { s as setCSSProperty, e as elementChildren, c as createElement } from '../shared/utils.mjs';\\n\\nfunction Virtual(_ref) {\\n  let {\\n    swiper,\\n    extendParams,\\n    on,\\n    emit\\n  } = _ref;\\n  extendParams({\\n    virtual: {\\n      enabled: false,\\n      slides: [],\\n      cache: true,\\n      renderSlide: null,\\n      renderExternal: null,\\n      renderExternalUpdate: true,\\n      addSlidesBefore: 0,\\n      addSlidesAfter: 0\\n    }\\n  });\\n  let cssModeTimeout;\\n  const document = getDocument();\\n  swiper.virtual = {\\n    cache: {},\\n    from: undefined,\\n    to: undefined,\\n    slides: [],\\n    offset: 0,\\n    slidesGrid: []\\n  };\\n  const tempDOM = document.createElement('div');\\n  function renderSlide(slide, index) {\\n    const params = swiper.params.virtual;\\n    if (params.cache && swiper.virtual.cache[index]) {\\n      return swiper.virtual.cache[index];\\n    }\\n    // eslint-disable-next-line\\n    let slideEl;\\n    if (params.renderSlide) {\\n      slideEl = params.renderSlide.call(swiper, slide, index);\\n      if (typeof slideEl === 'string') {\\n        tempDOM.innerHTML = slideEl;\\n        slideEl = tempDOM.children[0];\\n      }\\n    } else if (swiper.isElement) {\\n      slideEl = createElement('swiper-slide');\\n    } else {\\n      slideEl = createElement('div', swiper.params.slideClass);\\n    }\\n    slideEl.setAttribute('data-swiper-slide-index', index);\\n    if (!params.renderSlide) {\\n      slideEl.innerHTML = slide;\\n    }\\n    if (params.cache) {\\n      swiper.virtual.cache[index] = slideEl;\\n    }\\n    return slideEl;\\n  }\\n  function update(force) {\\n    const {\\n      slidesPerView,\\n      slidesPerGroup,\\n      centeredSlides,\\n      loop: isLoop\\n    } = swiper.params;\\n    const {\\n      addSlidesBefore,\\n      addSlidesAfter\\n    } = swiper.params.virtual;\\n    const {\\n      from: previousFrom,\\n      to: previousTo,\\n      slides,\\n      slidesGrid: previousSlidesGrid,\\n      offset: previousOffset\\n    } = swiper.virtual;\\n    if (!swiper.params.cssMode) {\\n      swiper.updateActiveIndex();\\n    }\\n    const activeIndex = swiper.activeIndex || 0;\\n    let offsetProp;\\n    if (swiper.rtlTranslate) offsetProp = 'right';else offsetProp = swiper.isHorizontal() ? 'left' : 'top';\\n    let slidesAfter;\\n    let slidesBefore;\\n    if (centeredSlides) {\\n      slidesAfter = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesAfter;\\n      slidesBefore = Math.floor(slidesPerView / 2) + slidesPerGroup + addSlidesBefore;\\n    } else {\\n      slidesAfter = slidesPerView + (slidesPerGroup - 1) + addSlidesAfter;\\n      slidesBefore = (isLoop ? slidesPerView : slidesPerGroup) + addSlidesBefore;\\n    }\\n    let from = activeIndex - slidesBefore;\\n    let to = activeIndex + slidesAfter;\\n    if (!isLoop) {\\n      from = Math.max(from, 0);\\n      to = Math.min(to, slides.length - 1);\\n    }\\n    let offset = (swiper.slidesGrid[from] || 0) - (swiper.slidesGrid[0] || 0);\\n    if (isLoop && activeIndex >= slidesBefore) {\\n      from -= slidesBefore;\\n      if (!centeredSlides) offset += swiper.slidesGrid[0];\\n    } else if (isLoop && activeIndex < slidesBefore) {\\n      from = -slidesBefore;\\n      if (centeredSlides) offset += swiper.slidesGrid[0];\\n    }\\n    Object.assign(swiper.virtual, {\\n      from,\\n      to,\\n      offset,\\n      slidesGrid: swiper.slidesGrid,\\n      slidesBefore,\\n      slidesAfter\\n    });\\n    function onRendered() {\\n      swiper.updateSlides();\\n      swiper.updateProgress();\\n      swiper.updateSlidesClasses();\\n      emit('virtualUpdate');\\n    }\\n    if (previousFrom === from && previousTo === to && !force) {\\n      if (swiper.slidesGrid !== previousSlidesGrid && offset !== previousOffset) {\\n        swiper.slides.forEach(slideEl => {\\n          slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\\n        });\\n      }\\n      swiper.updateProgress();\\n      emit('virtualUpdate');\\n      return;\\n    }\\n    if (swiper.params.virtual.renderExternal) {\\n      swiper.params.virtual.renderExternal.call(swiper, {\\n        offset,\\n        from,\\n        to,\\n        slides: function getSlides() {\\n          const slidesToRender = [];\\n          for (let i = from; i <= to; i += 1) {\\n            slidesToRender.push(slides[i]);\\n          }\\n          return slidesToRender;\\n        }()\\n      });\\n      if (swiper.params.virtual.renderExternalUpdate) {\\n        onRendered();\\n      } else {\\n        emit('virtualUpdate');\\n      }\\n      return;\\n    }\\n    const prependIndexes = [];\\n    const appendIndexes = [];\\n    const getSlideIndex = index => {\\n      let slideIndex = index;\\n      if (index < 0) {\\n        slideIndex = slides.length + index;\\n      } else if (slideIndex >= slides.length) {\\n        // eslint-disable-next-line\\n        slideIndex = slideIndex - slides.length;\\n      }\\n      return slideIndex;\\n    };\\n    if (force) {\\n      swiper.slides.filter(el => el.matches(`.${swiper.params.slideClass}, swiper-slide`)).forEach(slideEl => {\\n        slideEl.remove();\\n      });\\n    } else {\\n      for (let i = previousFrom; i <= previousTo; i += 1) {\\n        if (i < from || i > to) {\\n          const slideIndex = getSlideIndex(i);\\n          swiper.slides.filter(el => el.matches(`.${swiper.params.slideClass}[data-swiper-slide-index=\\\"${slideIndex}\\\"], swiper-slide[data-swiper-slide-index=\\\"${slideIndex}\\\"]`)).forEach(slideEl => {\\n            slideEl.remove();\\n          });\\n        }\\n      }\\n    }\\n    const loopFrom = isLoop ? -slides.length : 0;\\n    const loopTo = isLoop ? slides.length * 2 : slides.length;\\n    for (let i = loopFrom; i < loopTo; i += 1) {\\n      if (i >= from && i <= to) {\\n        const slideIndex = getSlideIndex(i);\\n        if (typeof previousTo === 'undefined' || force) {\\n          appendIndexes.push(slideIndex);\\n        } else {\\n          if (i > previousTo) appendIndexes.push(slideIndex);\\n          if (i < previousFrom) prependIndexes.push(slideIndex);\\n        }\\n      }\\n    }\\n    appendIndexes.forEach(index => {\\n      swiper.slidesEl.append(renderSlide(slides[index], index));\\n    });\\n    if (isLoop) {\\n      for (let i = prependIndexes.length - 1; i >= 0; i -= 1) {\\n        const index = prependIndexes[i];\\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\\n      }\\n    } else {\\n      prependIndexes.sort((a, b) => b - a);\\n      prependIndexes.forEach(index => {\\n        swiper.slidesEl.prepend(renderSlide(slides[index], index));\\n      });\\n    }\\n    elementChildren(swiper.slidesEl, '.swiper-slide, swiper-slide').forEach(slideEl => {\\n      slideEl.style[offsetProp] = `${offset - Math.abs(swiper.cssOverflowAdjustment())}px`;\\n    });\\n    onRendered();\\n  }\\n  function appendSlide(slides) {\\n    if (typeof slides === 'object' && 'length' in slides) {\\n      for (let i = 0; i < slides.length; i += 1) {\\n        if (slides[i]) swiper.virtual.slides.push(slides[i]);\\n      }\\n    } else {\\n      swiper.virtual.slides.push(slides);\\n    }\\n    update(true);\\n  }\\n  function prependSlide(slides) {\\n    const activeIndex = swiper.activeIndex;\\n    let newActiveIndex = activeIndex + 1;\\n    let numberOfNewSlides = 1;\\n    if (Array.isArray(slides)) {\\n      for (let i = 0; i < slides.length; i += 1) {\\n        if (slides[i]) swiper.virtual.slides.unshift(slides[i]);\\n      }\\n      newActiveIndex = activeIndex + slides.length;\\n      numberOfNewSlides = slides.length;\\n    } else {\\n      swiper.virtual.slides.unshift(slides);\\n    }\\n    if (swiper.params.virtual.cache) {\\n      const cache = swiper.virtual.cache;\\n      const newCache = {};\\n      Object.keys(cache).forEach(cachedIndex => {\\n        const cachedEl = cache[cachedIndex];\\n        const cachedElIndex = cachedEl.getAttribute('data-swiper-slide-index');\\n        if (cachedElIndex) {\\n          cachedEl.setAttribute('data-swiper-slide-index', parseInt(cachedElIndex, 10) + numberOfNewSlides);\\n        }\\n        newCache[parseInt(cachedIndex, 10) + numberOfNewSlides] = cachedEl;\\n      });\\n      swiper.virtual.cache = newCache;\\n    }\\n    update(true);\\n    swiper.slideTo(newActiveIndex, 0);\\n  }\\n  function removeSlide(slidesIndexes) {\\n    if (typeof slidesIndexes === 'undefined' || slidesIndexes === null) return;\\n    let activeIndex = swiper.activeIndex;\\n    if (Array.isArray(slidesIndexes)) {\\n      for (let i = slidesIndexes.length - 1; i >= 0; i -= 1) {\\n        if (swiper.params.virtual.cache) {\\n          delete swiper.virtual.cache[slidesIndexes[i]];\\n          // shift cache indexes\\n          Object.keys(swiper.virtual.cache).forEach(key => {\\n            if (key > slidesIndexes) {\\n              swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\\n              swiper.virtual.cache[key - 1].setAttribute('data-swiper-slide-index', key - 1);\\n              delete swiper.virtual.cache[key];\\n            }\\n          });\\n        }\\n        swiper.virtual.slides.splice(slidesIndexes[i], 1);\\n        if (slidesIndexes[i] < activeIndex) activeIndex -= 1;\\n        activeIndex = Math.max(activeIndex, 0);\\n      }\\n    } else {\\n      if (swiper.params.virtual.cache) {\\n        delete swiper.virtual.cache[slidesIndexes];\\n        // shift cache indexes\\n        Object.keys(swiper.virtual.cache).forEach(key => {\\n          if (key > slidesIndexes) {\\n            swiper.virtual.cache[key - 1] = swiper.virtual.cache[key];\\n            swiper.virtual.cache[key - 1].setAttribute('data-swiper-slide-index', key - 1);\\n            delete swiper.virtual.cache[key];\\n          }\\n        });\\n      }\\n      swiper.virtual.slides.splice(slidesIndexes, 1);\\n      if (slidesIndexes < activeIndex) activeIndex -= 1;\\n      activeIndex = Math.max(activeIndex, 0);\\n    }\\n    update(true);\\n    swiper.slideTo(activeIndex, 0);\\n  }\\n  function removeAllSlides() {\\n    swiper.virtual.slides = [];\\n    if (swiper.params.virtual.cache) {\\n      swiper.virtual.cache = {};\\n    }\\n    update(true);\\n    swiper.slideTo(0, 0);\\n  }\\n  on('beforeInit', () => {\\n    if (!swiper.params.virtual.enabled) return;\\n    let domSlidesAssigned;\\n    if (typeof swiper.passedParams.virtual.slides === 'undefined') {\\n      const slides = [...swiper.slidesEl.children].filter(el => el.matches(`.${swiper.params.slideClass}, swiper-slide`));\\n      if (slides && slides.length) {\\n        swiper.virtual.slides = [...slides];\\n        domSlidesAssigned = true;\\n        slides.forEach((slideEl, slideIndex) => {\\n          slideEl.setAttribute('data-swiper-slide-index', slideIndex);\\n          swiper.virtual.cache[slideIndex] = slideEl;\\n          slideEl.remove();\\n        });\\n      }\\n    }\\n    if (!domSlidesAssigned) {\\n      swiper.virtual.slides = swiper.params.virtual.slides;\\n    }\\n    swiper.classNames.push(`${swiper.params.containerModifierClass}virtual`);\\n    swiper.params.watchSlidesProgress = true;\\n    swiper.originalParams.watchSlidesProgress = true;\\n    update();\\n  });\\n  on('setTranslate', () => {\\n    if (!swiper.params.virtual.enabled) return;\\n    if (swiper.params.cssMode && !swiper._immediateVirtual) {\\n      clearTimeout(cssModeTimeout);\\n      cssModeTimeout = setTimeout(() => {\\n        update();\\n      }, 100);\\n    } else {\\n      update();\\n    }\\n  });\\n  on('init update resize', () => {\\n    if (!swiper.params.virtual.enabled) return;\\n    if (swiper.params.cssMode) {\\n      setCSSProperty(swiper.wrapperEl, '--swiper-virtual-size', `${swiper.virtualSize}px`);\\n    }\\n  });\\n  Object.assign(swiper.virtual, {\\n    appendSlide,\\n    prependSlide,\\n    removeSlide,\\n    removeAllSlides,\\n    update\\n  });\\n}\\n\\nexport { Virtual as default };\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544897,
+      "end": 1756100544897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544897,
+      "end": 1756100544898,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544898,
+      "end": 1756100544898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544898,
+      "end": 1756100544898,
+      "order": "normal"
+    }
+  ]
+}

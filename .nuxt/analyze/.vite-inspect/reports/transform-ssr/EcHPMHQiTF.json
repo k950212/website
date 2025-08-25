@@ -1,0 +1,312 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/components/Footer.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"footer-stack\"></div>\n  <div class=\"footer\">\n    <div class=\"content container\">\n      <!-- <div class=\"item\"><img src=\"@/assets/img/LOGO_udigit_2.png\" alt=\"\" /></div> -->\n      <div class=\"item\">\n        <div class=\"title\">重點專案</div>\n        <div class=\"link\">全家記帳本</div>\n        <div class=\"link\">去你的工作室</div>\n        <div class=\"link\">電商網站(工作前)</div>\n        <div class=\"link\">個人網站(工作前)</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">工作經歷</div>\n        <div class=\"link\">慎行科技 23.12-25.08</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">關於我</div>\n        <div class=\"link\">個人簡介</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">聯絡資訊</div>\n        <div class=\"link\">地址：<span style=\"font-weight: bold\">台北市信義區XXX</span></div>\n        <div class=\"link\">電話：<span style=\"font-weight: bold\">09 0978 6383</span></div>\n      </div>\n      <div class=\"item item-desk\">\n        <div class=\"title\">社群平台</div>\n        <div><img src=\"@/assets/img/facebook.png\" alt=\"\" style=\"margin-right: 1rem\" /> <img src=\"@/assets/img/linkedin.png\" alt=\"\" /></div>\n      </div>\n    </div>\n    <div class=\"footer-text py-2\">\n      <div>此為個人練習作品 無商業用途</div>\n      <div>2025.09</div>\n    </div>\n  </div>\n</template>\n<style scoped>\n.footer-stack {\n  /* height: 380px; */\n}\n.footer {\n  z-index: 20000;\n  bottom: 0;\n  /* position: fixed; */\n  width: 100%;\n  height: auto;\n  background-color: #0c1829;\n  .content {\n    display: flex;\n    border-bottom: 1px solid #c1c7cd;\n    .item {\n      margin: 2rem;\n      color: #ffffff;\n      font-weight: lighter;\n      .title {\n        font-weight: bold;\n        color: white;\n        font-size: 18px;\n        margin-bottom: 1rem;\n      }\n      .link {\n        margin: 4px 0px;\n      }\n    }\n  }\n  .footer-text {\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  }\n}\n@media (max-width: 991px) {\n  .footer {\n    .content {\n      display: flex;\n      flex-direction: column;\n      .item {\n        margin: 0.5rem 1rem 0.5rem 1rem;\n        border-bottom: 1px solid white;\n        .link {\n          margin-bottom: 1rem;\n        }\n      }\n      .item-desk {\n        border-bottom: 0px solid white !important;\n      }\n    }\n  }\n}\n</style>\n",
+      "start": 1756100544006,
+      "end": 1756100544047,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/facebook.png'\nimport _imports_1 from '@/assets/img/linkedin.png'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  _push(`<!--[--><div class=\"footer-stack\" data-v-62d380ff></div><div class=\"footer\" data-v-62d380ff><div class=\"content container\" data-v-62d380ff><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>重點專案</div><div class=\"link\" data-v-62d380ff>全家記帳本</div><div class=\"link\" data-v-62d380ff>去你的工作室</div><div class=\"link\" data-v-62d380ff>電商網站(工作前)</div><div class=\"link\" data-v-62d380ff>個人網站(工作前)</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>工作經歷</div><div class=\"link\" data-v-62d380ff>慎行科技 23.12-25.08</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>關於我</div><div class=\"link\" data-v-62d380ff>個人簡介</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>聯絡資訊</div><div class=\"link\" data-v-62d380ff>地址：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>台北市信義區XXX</span></div><div class=\"link\" data-v-62d380ff>電話：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>09 0978 6383</span></div></div><div class=\"item item-desk\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>社群平台</div><div data-v-62d380ff><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" style=\"${\n    _ssrRenderStyle({\"margin-right\":\"1rem\"})\n  }\" data-v-62d380ff> <img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-62d380ff></div></div></div><div class=\"footer-text py-2\" data-v-62d380ff><div data-v-62d380ff>此為個人練習作品 無商業用途</div><div data-v-62d380ff>2025.09</div></div></div><!--]-->`)\n}\n\nimport \"/Users/yunhao/Project/website/components/Footer.vue?vue&type=style&index=0&scoped=62d380ff&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-62d380ff\"]])",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Footer.vue"
+        ],
+        "names": [],
+        "mappings": ";OA2BkB,UAA+B;OAA2C,UAA+B;;;;EA3B3H;IAAA,gBAsBmC,sBAAyB;;IAtB5D,gBAuBmC,sBAAyB;;IAvB5D,eA2BkB,KAA+B,EAA/B,UAA+B;;IA3BjD,gBA2ByD,uBAA0B;;IA3BnF,eA2B4F,KAA+B,EAA/B,UAA+B",
+        "sourcesContent": [
+          "<template>\n  <div class=\"footer-stack\"></div>\n  <div class=\"footer\">\n    <div class=\"content container\">\n      <!-- <div class=\"item\"><img src=\"@/assets/img/LOGO_udigit_2.png\" alt=\"\" /></div> -->\n      <div class=\"item\">\n        <div class=\"title\">重點專案</div>\n        <div class=\"link\">全家記帳本</div>\n        <div class=\"link\">去你的工作室</div>\n        <div class=\"link\">電商網站(工作前)</div>\n        <div class=\"link\">個人網站(工作前)</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">工作經歷</div>\n        <div class=\"link\">慎行科技 23.12-25.08</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">關於我</div>\n        <div class=\"link\">個人簡介</div>\n      </div>\n      <div class=\"item\">\n        <div class=\"title\">聯絡資訊</div>\n        <div class=\"link\">地址：<span style=\"font-weight: bold\">台北市信義區XXX</span></div>\n        <div class=\"link\">電話：<span style=\"font-weight: bold\">09 0978 6383</span></div>\n      </div>\n      <div class=\"item item-desk\">\n        <div class=\"title\">社群平台</div>\n        <div><img src=\"@/assets/img/facebook.png\" alt=\"\" style=\"margin-right: 1rem\" /> <img src=\"@/assets/img/linkedin.png\" alt=\"\" /></div>\n      </div>\n    </div>\n    <div class=\"footer-text py-2\">\n      <div>此為個人練習作品 無商業用途</div>\n      <div>2025.09</div>\n    </div>\n  </div>\n</template>\n<style scoped>\n.footer-stack {\n  /* height: 380px; */\n}\n.footer {\n  z-index: 20000;\n  bottom: 0;\n  /* position: fixed; */\n  width: 100%;\n  height: auto;\n  background-color: #0c1829;\n  .content {\n    display: flex;\n    border-bottom: 1px solid #c1c7cd;\n    .item {\n      margin: 2rem;\n      color: #ffffff;\n      font-weight: lighter;\n      .title {\n        font-weight: bold;\n        color: white;\n        font-size: 18px;\n        margin-bottom: 1rem;\n      }\n      .link {\n        margin: 4px 0px;\n      }\n    }\n  }\n  .footer-text {\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  }\n}\n@media (max-width: 991px) {\n  .footer {\n    .content {\n      display: flex;\n      flex-direction: column;\n      .item {\n        margin: 0.5rem 1rem 0.5rem 1rem;\n        border-bottom: 1px solid white;\n        .link {\n          margin-bottom: 1rem;\n        }\n      }\n      .item-desk {\n        border-bottom: 0px solid white !important;\n      }\n    }\n  }\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544047,
+      "end": 1756100544047,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544048,
+      "end": 1756100544048,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544048,
+      "end": 1756100544048,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544048,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */const _sfc_main = {}\nimport { ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/facebook.png'\nimport _imports_1 from '@/assets/img/linkedin.png'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  _push(`<!--[--><div class=\"footer-stack\" data-v-62d380ff></div><div class=\"footer\" data-v-62d380ff><div class=\"content container\" data-v-62d380ff><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>重點專案</div><div class=\"link\" data-v-62d380ff>全家記帳本</div><div class=\"link\" data-v-62d380ff>去你的工作室</div><div class=\"link\" data-v-62d380ff>電商網站(工作前)</div><div class=\"link\" data-v-62d380ff>個人網站(工作前)</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>工作經歷</div><div class=\"link\" data-v-62d380ff>慎行科技 23.12-25.08</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>關於我</div><div class=\"link\" data-v-62d380ff>個人簡介</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>聯絡資訊</div><div class=\"link\" data-v-62d380ff>地址：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>台北市信義區XXX</span></div><div class=\"link\" data-v-62d380ff>電話：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>09 0978 6383</span></div></div><div class=\"item item-desk\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>社群平台</div><div data-v-62d380ff><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" style=\"${\n    _ssrRenderStyle({\"margin-right\":\"1rem\"})\n  }\" data-v-62d380ff> <img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-62d380ff></div></div></div><div class=\"footer-text py-2\" data-v-62d380ff><div data-v-62d380ff>此為個人練習作品 無商業用途</div><div data-v-62d380ff>2025.09</div></div></div><!--]-->`)\n}\n\nimport \"/Users/yunhao/Project/website/components/Footer.vue?vue&type=style&index=0&scoped=62d380ff&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-62d380ff\"]])",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Footer.vue"
+        ],
+        "sourcesContent": [
+          "const _sfc_main = {}\nimport { ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/facebook.png'\nimport _imports_1 from '@/assets/img/linkedin.png'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  _push(`<!--[--><div class=\"footer-stack\" data-v-62d380ff></div><div class=\"footer\" data-v-62d380ff><div class=\"content container\" data-v-62d380ff><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>重點專案</div><div class=\"link\" data-v-62d380ff>全家記帳本</div><div class=\"link\" data-v-62d380ff>去你的工作室</div><div class=\"link\" data-v-62d380ff>電商網站(工作前)</div><div class=\"link\" data-v-62d380ff>個人網站(工作前)</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>工作經歷</div><div class=\"link\" data-v-62d380ff>慎行科技 23.12-25.08</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>關於我</div><div class=\"link\" data-v-62d380ff>個人簡介</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>聯絡資訊</div><div class=\"link\" data-v-62d380ff>地址：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>台北市信義區XXX</span></div><div class=\"link\" data-v-62d380ff>電話：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>09 0978 6383</span></div></div><div class=\"item item-desk\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>社群平台</div><div data-v-62d380ff><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" style=\"${\n    _ssrRenderStyle({\"margin-right\":\"1rem\"})\n  }\" data-v-62d380ff> <img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-62d380ff></div></div></div><div class=\"footer-text py-2\" data-v-62d380ff><div data-v-62d380ff>此為個人練習作品 無商業用途</div><div data-v-62d380ff>2025.09</div></div></div><!--]-->`)\n}\n\nimport \"/Users/yunhao/Project/website/components/Footer.vue?vue&type=style&index=0&scoped=62d380ff&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-62d380ff\"]])"
+        ],
+        "names": [],
+        "mappings": "sCAAA,KAAK,CAAC,SAAS,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,MAAM,CAAC,CAAC,CAAC,cAAc,CAAC,EAAE,CAAC,eAAe,CAAC,CAAC,aAAa,CAAC,EAAE,CAAC,cAAc,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,QAAQ,CAAC;AACxG,MAAM,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,GAAG,CAAC;AAClD,MAAM,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,GAAG,CAAC;AAClD;AACA;AACA,QAAQ,CAAC,cAAc,CAAC,IAAI,CAAC,CAAC,KAAK,CAAC,CAAC,OAAO,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,OAAO,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC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"
+      }
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */const _sfc_main = {}\nimport { ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/facebook.png'\nimport _imports_1 from '@/assets/img/linkedin.png'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  _push(`<!--[--><div class=\"footer-stack\" data-v-62d380ff></div><div class=\"footer\" data-v-62d380ff><div class=\"content container\" data-v-62d380ff><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>重點專案</div><div class=\"link\" data-v-62d380ff>全家記帳本</div><div class=\"link\" data-v-62d380ff>去你的工作室</div><div class=\"link\" data-v-62d380ff>電商網站(工作前)</div><div class=\"link\" data-v-62d380ff>個人網站(工作前)</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>工作經歷</div><div class=\"link\" data-v-62d380ff>慎行科技 23.12-25.08</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>關於我</div><div class=\"link\" data-v-62d380ff>個人簡介</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>聯絡資訊</div><div class=\"link\" data-v-62d380ff>地址：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>台北市信義區XXX</span></div><div class=\"link\" data-v-62d380ff>電話：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>09 0978 6383</span></div></div><div class=\"item item-desk\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>社群平台</div><div data-v-62d380ff><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" style=\"${\n    _ssrRenderStyle({\"margin-right\":\"1rem\"})\n  }\" data-v-62d380ff> <img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-62d380ff></div></div></div><div class=\"footer-text py-2\" data-v-62d380ff><div data-v-62d380ff>此為個人練習作品 無商業用途</div><div data-v-62d380ff>2025.09</div></div></div><!--]-->`)\n}\n\nimport \"/Users/yunhao/Project/website/components/Footer.vue?vue&type=style&index=0&scoped=62d380ff&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-62d380ff\"]])",
+      "start": 1756100544049,
+      "end": 1756100544049,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Footer.vue"
+        ],
+        "sourcesContent": [
+          "const _sfc_main = {}\nimport { ssrRenderStyle as _ssrRenderStyle, ssrRenderAttr as _ssrRenderAttr } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/img/facebook.png'\nimport _imports_1 from '@/assets/img/linkedin.png'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  _push(`<!--[--><div class=\"footer-stack\" data-v-62d380ff></div><div class=\"footer\" data-v-62d380ff><div class=\"content container\" data-v-62d380ff><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>重點專案</div><div class=\"link\" data-v-62d380ff>全家記帳本</div><div class=\"link\" data-v-62d380ff>去你的工作室</div><div class=\"link\" data-v-62d380ff>電商網站(工作前)</div><div class=\"link\" data-v-62d380ff>個人網站(工作前)</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>工作經歷</div><div class=\"link\" data-v-62d380ff>慎行科技 23.12-25.08</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>關於我</div><div class=\"link\" data-v-62d380ff>個人簡介</div></div><div class=\"item\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>聯絡資訊</div><div class=\"link\" data-v-62d380ff>地址：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>台北市信義區XXX</span></div><div class=\"link\" data-v-62d380ff>電話：<span style=\"${\n    _ssrRenderStyle({\"font-weight\":\"bold\"})\n  }\" data-v-62d380ff>09 0978 6383</span></div></div><div class=\"item item-desk\" data-v-62d380ff><div class=\"title\" data-v-62d380ff>社群平台</div><div data-v-62d380ff><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" style=\"${\n    _ssrRenderStyle({\"margin-right\":\"1rem\"})\n  }\" data-v-62d380ff> <img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } alt=\"\" data-v-62d380ff></div></div></div><div class=\"footer-text py-2\" data-v-62d380ff><div data-v-62d380ff>此為個人練習作品 無商業用途</div><div data-v-62d380ff>2025.09</div></div></div><!--]-->`)\n}\n\nimport \"/Users/yunhao/Project/website/components/Footer.vue?vue&type=style&index=0&scoped=62d380ff&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/Footer.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-62d380ff\"]])"
+        ],
+        "names": [],
+        "mappings": "sCAAA,KAAK,CAAC,SAAS,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,MAAM,CAAC,CAAC,CAAC,cAAc,CAAC,EAAE,CAAC,eAAe,CAAC,CAAC,aAAa,CAAC,EAAE,CAAC,cAAc,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,QAAQ,CAAC;AACxG,MAAM,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,GAAG,CAAC;AAClD,MAAM,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,GAAG,CAAC;AAClD;AACA;AACA,QAAQ,CAAC,cAAc,CAAC,IAAI,CAAC,CAAC,KAAK,CAAC,CAAC,OAAO,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,OAAO,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC,CAAC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"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544049,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544049,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544050,
+      "end": 1756100544050,
+      "order": "normal"
+    }
+  ]
+}

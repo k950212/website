@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/index.vue?vue&type=style&index=0&scoped=7f8a8002&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.section1 {\n  height: 100px;\n  position: relative;\n  top: 50px;\n  z-index: 1000;\n  background-color: white;\n  border-bottom: 2px solid #6192d38f;\n  border-radius: 0px 0px 40% 40%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  .title {\n    margin-top: 0rem;\n    font-size: 48px;\n    font-weight: 600;\n    color: #3966a2;\n  }\n}\n.section2 {\n  height: 100px;\n  position: relative;\n  top: -50px;\n  z-index: 1000;\n  background-color: #ffffff;\n  border-top: 2px solid #6192d38f;\n  border-radius: 40% 40% 0px 0px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  .title {\n    margin-top: 0rem;\n    font-size: 48px;\n    font-weight: 600;\n    color: #3966a2;\n  }\n}\n.swiper-boxs {\n  position: relative;\n  z-index: 10;\n  .box {\n    height: 400px;\n    img {\n      width: 100%;\n      height: 100%;\n    }\n  }\n}\n.section3 {\n  position: relative;\n  padding-top: 60px;\n  min-height: 600px;\n  z-index: 1000;\n  background-image: url(\"@/assets/img/背景@1x.png\");\n  background-size: cover;\n  .content_left {\n    border-radius: 20px;\n    min-height: 500px;\n    background-color: #6192d38f;\n    transform: rotate(-10deg);\n  }\n  .content_right {\n    border-radius: 20px;\n    min-height: 400px;\n  }\n}\n.skill-circle {\n  .title-main {\n    display: flex;\n    justify-content: center;\n    font-size: 40px;\n    font-weight: 700;\n    color: #3966a2;\n    padding: 1rem 0rem;\n  }\n  .skill-circle-box {\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    border-radius: 8px;\n    padding: 1rem;\n    margin-bottom: 1rem;\n    display: flex;\n    .rate {\n      width: 30%;\n      /* border: 1px solid red; */\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    .content {\n      width: 70%;\n      /* border: 1px solid blue; */\n      font-size: 16px;\n      .title {\n        font-size: 20px;\n        font-weight: 500;\n        margin-bottom: 4px;\n      }\n    }\n  }\n}\n.experience {\n  .title {\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n  }\n  .company {\n    display: flex;\n    text-align: center;\n    justify-content: center;\n    margin: 1rem 0rem;\n    font-weight: bold;\n  }\n}\n.project {\n  .title {\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n  }\n  .box {\n    position: relative;\n    padding: 1rem;\n    border-radius: 8px;\n    background-color: #6192d38f;\n    cursor: pointer;\n    color: white;\n    text-align: center;\n    .fancy-text {\n      font-weight: bold;\n      background: linear-gradient(90deg, #ffffff, #00c8ff);\n      background-size: 200% auto;\n      background-clip: text;\n      -webkit-background-clip: text;\n      color: transparent;\n      transition: background-position 1s ease;\n    }\n    img {\n      position: absolute;\n      height: 50px;\n      left: -20px;\n      top: -30px;\n      transform: rotate(-10deg);\n    }\n  }\n  .box-wrapper {\n    /* display: inline-block; */\n    &:hover {\n      border-radius: 9px;\n      background: linear-gradient(to bottom right, #6192d38f, rgb(0, 157, 255));\n      /* box-shadow: 0px 0px 10px 0px rgba(255, 158, 69, 0.5); */\n    }\n  }\n}\n.home-bottom {\n  width: 100%;\n  background-image: url(\"@/assets/img/home-banner.png\");\n  background-size: contain;\n  padding: 4rem;\n  display: flex;\n  align-items: center;\n  min-height: 300px;\n  img {\n    width: 100%;\n    height: 300px;\n  }\n  .content {\n    padding: 1rem 1rem;\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    button {\n      background-color: rgba(97, 146, 211, 1);\n      padding: 16px;\n      border-radius: 6px;\n      color: white;\n    }\n  }\n}\n.popupBg {\n  background-color: rgba(0, 0, 0, 0.5) !important;\n}\n@media (max-width: 500px) {\n  .home-bottom {\n    .content {\n      flex-direction: column;\n    }\n  }\n}\n.dialogContact {\n  padding: 1rem;\n}\n",
+      "start": 1756100532801,
+      "end": 1756100532801
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100532801,
+      "end": 1756100532801,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100532801,
+      "end": 1756100532801,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100532801,
+      "end": 1756100532801,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".section1{align-items:center;background-color:#fff;border-bottom:2px solid #6192d38f;border-radius:0 0 40% 40%;display:flex;flex-direction:column;height:100px;justify-content:center;position:relative;top:50px;z-index:1000;.title{color:#3966a2;font-size:48px;font-weight:600;margin-top:0}}.section2{align-items:center;background-color:#fff;border-radius:40% 40% 0 0;border-top:2px solid #6192d38f;display:flex;flex-direction:column;height:100px;justify-content:center;position:relative;top:-50px;z-index:1000;.title{color:#3966a2;font-size:48px;font-weight:600;margin-top:0}}.swiper-boxs{position:relative;z-index:10;.box{height:400px;img{height:100%;width:100%}}}.section3{background-image:url(__VITE_ASSET__CHzrq0r___);background-size:cover;min-height:600px;padding-top:60px;position:relative;z-index:1000;.content_left{background-color:#6192d38f;border-radius:20px;min-height:500px;transform:rotate(-10deg)}.content_right{border-radius:20px;min-height:400px}}.skill-circle{.title-main{color:#3966a2;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.skill-circle-box{border-radius:8px;box-shadow:0 3px 8px rgba(0,0,0,.24);display:flex;margin-bottom:1rem;padding:1rem;.rate{align-items:center;display:flex;justify-content:center;width:30%}.content{font-size:16px;width:70%;.title{font-size:20px;font-weight:500;margin-bottom:4px}}}}.experience{.company,.title{display:flex;font-weight:700;justify-content:center}.company{margin:1rem 0;text-align:center}}.project{.title{display:flex;font-weight:700;justify-content:center}.box{background-color:#6192d38f;border-radius:8px;color:#fff;cursor:pointer;padding:1rem;position:relative;text-align:center;.fancy-text{background:linear-gradient(90deg,#fff,#00c8ff);background-clip:text;-webkit-background-clip:text;background-size:200% auto;color:transparent;font-weight:700;transition:background-position 1s ease}img{height:50px;left:-20px;position:absolute;top:-30px;transform:rotate(-10deg)}}.box-wrapper{&:hover{background:linear-gradient(to bottom right,#6192d38f,#009dff);border-radius:9px}}}.home-bottom{align-items:center;background-image:url(__VITE_ASSET__Dsj9eX_n__);background-size:contain;display:flex;min-height:300px;padding:4rem;width:100%;img{height:300px;width:100%}.content{display:flex;justify-content:space-between;padding:1rem;width:100%;button{background-color:#6192d3;border-radius:6px;color:#fff;padding:16px}}}.popupBg{background-color:rgba(0,0,0,.5)!important}@media (max-width:500px){.home-bottom{.content{flex-direction:column}}}.dialogContact{padding:1rem}",
+      "start": 1756100532801,
+      "end": 1756100532895,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100532895,
+      "end": 1756100532895,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100532895,
+      "end": 1756100532895,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100532895,
+      "end": 1756100532895,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".section1{&[data-v-7f8a8002]{align-items:center;background-color:#fff;border-bottom:2px solid #6192d38f;border-radius:0 0 40% 40%;display:flex;flex-direction:column;height:100px;justify-content:center;position:relative;top:50px;z-index:1000}.title[data-v-7f8a8002]{color:#3966a2;font-size:48px;font-weight:600;margin-top:0}}.section2{&[data-v-7f8a8002]{align-items:center;background-color:#fff;border-radius:40% 40% 0 0;border-top:2px solid #6192d38f;display:flex;flex-direction:column;height:100px;justify-content:center;position:relative;top:-50px;z-index:1000}.title[data-v-7f8a8002]{color:#3966a2;font-size:48px;font-weight:600;margin-top:0}}.swiper-boxs{&[data-v-7f8a8002]{position:relative;z-index:10}.box{&[data-v-7f8a8002]{height:400px}img[data-v-7f8a8002]{height:100%;width:100%}}}.section3{&[data-v-7f8a8002]{background-image:url(__VITE_ASSET__CHzrq0r___);background-size:cover;min-height:600px;padding-top:60px;position:relative;z-index:1000}.content_left[data-v-7f8a8002]{background-color:#6192d38f;border-radius:20px;min-height:500px;transform:rotate(-10deg)}.content_right[data-v-7f8a8002]{border-radius:20px;min-height:400px}}.skill-circle{.title-main[data-v-7f8a8002]{color:#3966a2;display:flex;font-size:40px;font-weight:700;justify-content:center;padding:1rem 0}.skill-circle-box{&[data-v-7f8a8002]{border-radius:8px;box-shadow:0 3px 8px rgba(0,0,0,.24);display:flex;margin-bottom:1rem;padding:1rem}.rate[data-v-7f8a8002]{align-items:center;display:flex;justify-content:center;width:30%}.content{&[data-v-7f8a8002]{font-size:16px;width:70%}.title[data-v-7f8a8002]{font-size:20px;font-weight:500;margin-bottom:4px}}}}.experience{.company[data-v-7f8a8002],.title[data-v-7f8a8002]{display:flex;font-weight:700;justify-content:center}.company[data-v-7f8a8002]{margin:1rem 0;text-align:center}}.project{.title[data-v-7f8a8002]{display:flex;font-weight:700;justify-content:center}.box{&[data-v-7f8a8002]{background-color:#6192d38f;border-radius:8px;color:#fff;cursor:pointer;padding:1rem;position:relative;text-align:center}.fancy-text[data-v-7f8a8002]{background:linear-gradient(90deg,#fff,#00c8ff);background-clip:text;-webkit-background-clip:text;background-size:200% auto;color:transparent;font-weight:700;transition:background-position 1s ease}img[data-v-7f8a8002]{height:50px;left:-20px;position:absolute;top:-30px;transform:rotate(-10deg)}}.box-wrapper{&[data-v-7f8a8002]:hover{background:linear-gradient(to bottom right,#6192d38f,#009dff);border-radius:9px}}}.home-bottom{&[data-v-7f8a8002]{align-items:center;background-image:url(__VITE_ASSET__Dsj9eX_n__);background-size:contain;display:flex;min-height:300px;padding:4rem;width:100%}img[data-v-7f8a8002]{height:300px;width:100%}.content{&[data-v-7f8a8002]{display:flex;justify-content:space-between;padding:1rem;width:100%}button[data-v-7f8a8002]{background-color:#6192d3;border-radius:6px;color:#fff;padding:16px}}}.popupBg[data-v-7f8a8002]{background-color:rgba(0,0,0,.5)!important}@media (max-width:500px){.home-bottom{.content[data-v-7f8a8002]{flex-direction:column}}}.dialogContact[data-v-7f8a8002]{padding:1rem}",
+      "start": 1756100532895,
+      "end": 1756100532897,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/pages/index.vue?vue&type=style&index=0&scoped=7f8a8002&lang.css"
+        ],
+        "sourcesContent": [
+          ""
+        ],
+        "names": [],
+        "mappings": ""
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100532897,
+      "end": 1756100532897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100532898,
+      "end": 1756100532898,
+      "order": "normal"
+    }
+  ]
+}

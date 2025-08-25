@@ -1,0 +1,239 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/@vueuse+nuxt@10.9.0_nuxt@3.11.2_vue@3.5.11/node_modules/@vueuse/nuxt/ssr-plugin.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { setSSRHandler } from '@vueuse/core'\nimport { defineNuxtPlugin, useCookie, useHead } from '#imports'\n\nsetSSRHandler('getDefaultStorage', () => {\n  const cookieMap = new Map()\n  const get = (key) => {\n    if (!cookieMap.get(key))\n      cookieMap.set(key, useCookie(key, { maxAge: 2147483646 }))\n    return cookieMap.get(key)\n  }\n  return {\n    getItem: key => get(key).value,\n    setItem: (key, value) => get(key).value = value,\n    removeItem: key => get(key).value = undefined,\n  }\n})\n\nif (process.server) {\n  setSSRHandler('updateHTMLAttrs', (selector, attr, value) => {\n    if (selector === 'html') {\n      useHead({\n        htmlAttrs: {\n          [attr]: value,\n        },\n      })\n    }\n    else if (selector === 'body') {\n      useHead({\n        bodyAttrs: {\n          [attr]: value,\n        },\n      })\n    }\n    else {\n      throw new Error(`Unsupported meta selector \"${selector}\" in SSR`)\n    }\n  })\n}\n\nexport default defineNuxtPlugin(() => { })\n",
+      "start": 1756100529241,
+      "end": 1756100529352,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100529352,
+      "end": 1756100529352,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100529352,
+      "end": 1756100529353,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100529353,
+      "end": 1756100529353,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100529353,
+      "end": 1756100529353,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100529353,
+      "end": 1756100529353,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { setSSRHandler } from \"@vueuse/core\";\nimport { defineNuxtPlugin, useCookie, useHead } from \"#imports\";\nsetSSRHandler(\"getDefaultStorage\", () => {\n  const cookieMap = /* @__PURE__ */ new Map();\n  const get = (key) => {\n    if (!cookieMap.get(key))\n      cookieMap.set(key, useCookie(key, { maxAge: 2147483646 }));\n    return cookieMap.get(key);\n  };\n  return {\n    getItem: (key) => get(key).value,\n    setItem: (key, value) => get(key).value = value,\n    removeItem: (key) => get(key).value = void 0\n  };\n});\nif (false) {\n  setSSRHandler(\"updateHTMLAttrs\", (selector, attr, value) => {\n    if (selector === \"html\") {\n      useHead({\n        htmlAttrs: {\n          [attr]: value\n        }\n      });\n    } else if (selector === \"body\") {\n      useHead({\n        bodyAttrs: {\n          [attr]: value\n        }\n      });\n    } else {\n      throw new Error(`Unsupported meta selector \"${selector}\" in SSR`);\n    }\n  });\n}\nexport default defineNuxtPlugin(() => {\n});\n",
+      "start": 1756100529353,
+      "end": 1756100529435,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100529435,
+      "end": 1756100529435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100529435,
+      "end": 1756100529435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100529435,
+      "end": 1756100529435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100529435,
+      "end": 1756100529435,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100529436,
+      "end": 1756100529436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100529436,
+      "end": 1756100529436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100529436,
+      "end": 1756100529436,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100529436,
+      "end": 1756100529436,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100529436,
+      "end": 1756100529436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport { useCookie } from '#app/composables/cookie';\nimport { useHead } from '@unhead/vue';\nimport { setSSRHandler } from \"@vueuse/core\";\nsetSSRHandler(\"getDefaultStorage\", () => {\n  const cookieMap = /* @__PURE__ */ new Map();\n  const get = (key) => {\n    if (!cookieMap.get(key))\n      cookieMap.set(key, useCookie(key, { maxAge: 2147483646 }));\n    return cookieMap.get(key);\n  };\n  return {\n    getItem: (key) => get(key).value,\n    setItem: (key, value) => get(key).value = value,\n    removeItem: (key) => get(key).value = void 0\n  };\n});\nif (false) {\n  setSSRHandler(\"updateHTMLAttrs\", (selector, attr, value) => {\n    if (selector === \"html\") {\n      useHead({\n        htmlAttrs: {\n          [attr]: value\n        }\n      });\n    } else if (selector === \"body\") {\n      useHead({\n        bodyAttrs: {\n          [attr]: value\n        }\n      });\n    } else {\n      throw new Error(`Unsupported meta selector \"${selector}\" in SSR`);\n    }\n  });\n}\nexport default defineNuxtPlugin(() => {\n});\n",
+      "start": 1756100529436,
+      "end": 1756100529437,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";;;AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAE7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100529437,
+      "end": 1756100529437,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100529438,
+      "end": 1756100529438,
+      "order": "normal"
+    }
+  ]
+}

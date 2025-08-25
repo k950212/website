@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/lazyload/vue-lazyload/lazy-image.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useRect } from \"@vant/use\";\nimport { loadImageAsync } from \"./util.mjs\";\nimport { noop } from \"../../utils/index.mjs\";\nimport { h } from \"vue\";\nvar stdin_default = (lazyManager) => ({\n  props: {\n    src: [String, Object],\n    tag: {\n      type: String,\n      default: \"img\"\n    }\n  },\n  render() {\n    var _a, _b;\n    return h(\n      this.tag,\n      {\n        src: this.renderSrc\n      },\n      (_b = (_a = this.$slots).default) == null ? void 0 : _b.call(_a)\n    );\n  },\n  data() {\n    return {\n      el: null,\n      options: {\n        src: \"\",\n        error: \"\",\n        loading: \"\",\n        attempt: lazyManager.options.attempt\n      },\n      state: {\n        loaded: false,\n        error: false,\n        attempt: 0\n      },\n      renderSrc: \"\"\n    };\n  },\n  watch: {\n    src() {\n      this.init();\n      lazyManager.addLazyBox(this);\n      lazyManager.lazyLoadHandler();\n    }\n  },\n  created() {\n    this.init();\n  },\n  mounted() {\n    this.el = this.$el;\n    lazyManager.addLazyBox(this);\n    lazyManager.lazyLoadHandler();\n  },\n  beforeUnmount() {\n    lazyManager.removeComponent(this);\n  },\n  methods: {\n    init() {\n      const { src, loading, error } = lazyManager.valueFormatter(this.src);\n      this.state.loaded = false;\n      this.options.src = src;\n      this.options.error = error;\n      this.options.loading = loading;\n      this.renderSrc = this.options.loading;\n    },\n    checkInView() {\n      const rect = useRect(this.$el);\n      return rect.top < window.innerHeight * lazyManager.options.preLoad && rect.bottom > 0 && rect.left < window.innerWidth * lazyManager.options.preLoad && rect.right > 0;\n    },\n    load(onFinish = noop) {\n      if (this.state.attempt > this.options.attempt - 1 && this.state.error) {\n        if (process.env.NODE_ENV !== \"production\" && !lazyManager.options.silent) {\n          console.log(\n            `[@vant/lazyload] ${this.options.src} tried too more than ${this.options.attempt} times`\n          );\n        }\n        onFinish();\n        return;\n      }\n      const { src } = this.options;\n      loadImageAsync(\n        { src },\n        ({ src: src2 }) => {\n          this.renderSrc = src2;\n          this.state.loaded = true;\n        },\n        () => {\n          this.state.attempt++;\n          this.renderSrc = this.options.error;\n          this.state.error = true;\n        }\n      );\n    }\n  }\n});\nexport {\n  stdin_default as default\n};\n",
+      "start": 1756100544765,
+      "end": 1756100544779,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { useRect } from \"@vant/use\";\nimport { loadImageAsync } from \"./util.mjs\";\nimport { noop } from \"../../utils/index.mjs\";\nimport { h } from \"vue\";\nvar stdin_default = (lazyManager) => ({\n  props: {\n    src: [String, Object],\n    tag: {\n      type: String,\n      default: \"img\"\n    }\n  },\n  render() {\n    var _a, _b;\n    return h(\n      this.tag,\n      {\n        src: this.renderSrc\n      },\n      (_b = (_a = this.$slots).default) == null ? void 0 : _b.call(_a)\n    );\n  },\n  data() {\n    return {\n      el: null,\n      options: {\n        src: \"\",\n        error: \"\",\n        loading: \"\",\n        attempt: lazyManager.options.attempt\n      },\n      state: {\n        loaded: false,\n        error: false,\n        attempt: 0\n      },\n      renderSrc: \"\"\n    };\n  },\n  watch: {\n    src() {\n      this.init();\n      lazyManager.addLazyBox(this);\n      lazyManager.lazyLoadHandler();\n    }\n  },\n  created() {\n    this.init();\n  },\n  mounted() {\n    this.el = this.$el;\n    lazyManager.addLazyBox(this);\n    lazyManager.lazyLoadHandler();\n  },\n  beforeUnmount() {\n    lazyManager.removeComponent(this);\n  },\n  methods: {\n    init() {\n      const { src, loading, error } = lazyManager.valueFormatter(this.src);\n      this.state.loaded = false;\n      this.options.src = src;\n      this.options.error = error;\n      this.options.loading = loading;\n      this.renderSrc = this.options.loading;\n    },\n    checkInView() {\n      const rect = useRect(this.$el);\n      return rect.top < (void 0).innerHeight * lazyManager.options.preLoad && rect.bottom > 0 && rect.left < (void 0).innerWidth * lazyManager.options.preLoad && rect.right > 0;\n    },\n    load(onFinish = noop) {\n      if (this.state.attempt > this.options.attempt - 1 && this.state.error) {\n        if (process.env.NODE_ENV !== \"production\" && !lazyManager.options.silent) {\n          console.log(\n            `[@vant/lazyload] ${this.options.src} tried too more than ${this.options.attempt} times`\n          );\n        }\n        onFinish();\n        return;\n      }\n      const { src } = this.options;\n      loadImageAsync(\n        { src },\n        ({ src: src2 }) => {\n          this.renderSrc = src2;\n          this.state.loaded = true;\n        },\n        () => {\n          this.state.attempt++;\n          this.renderSrc = this.options.error;\n          this.state.error = true;\n        }\n      );\n    }\n  }\n});\nexport {\n  stdin_default as default\n};\n",
+      "start": 1756100544779,
+      "end": 1756100544982,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/lazyload/vue-lazyload/lazy-image.mjs\"],\n  \"sourcesContent\": [\"import { useRect } from \\\"@vant/use\\\";\\nimport { loadImageAsync } from \\\"./util.mjs\\\";\\nimport { noop } from \\\"../../utils/index.mjs\\\";\\nimport { h } from \\\"vue\\\";\\nvar stdin_default = (lazyManager) => ({\\n  props: {\\n    src: [String, Object],\\n    tag: {\\n      type: String,\\n      default: \\\"img\\\"\\n    }\\n  },\\n  render() {\\n    var _a, _b;\\n    return h(\\n      this.tag,\\n      {\\n        src: this.renderSrc\\n      },\\n      (_b = (_a = this.$slots).default) == null ? void 0 : _b.call(_a)\\n    );\\n  },\\n  data() {\\n    return {\\n      el: null,\\n      options: {\\n        src: \\\"\\\",\\n        error: \\\"\\\",\\n        loading: \\\"\\\",\\n        attempt: lazyManager.options.attempt\\n      },\\n      state: {\\n        loaded: false,\\n        error: false,\\n        attempt: 0\\n      },\\n      renderSrc: \\\"\\\"\\n    };\\n  },\\n  watch: {\\n    src() {\\n      this.init();\\n      lazyManager.addLazyBox(this);\\n      lazyManager.lazyLoadHandler();\\n    }\\n  },\\n  created() {\\n    this.init();\\n  },\\n  mounted() {\\n    this.el = this.$el;\\n    lazyManager.addLazyBox(this);\\n    lazyManager.lazyLoadHandler();\\n  },\\n  beforeUnmount() {\\n    lazyManager.removeComponent(this);\\n  },\\n  methods: {\\n    init() {\\n      const { src, loading, error } = lazyManager.valueFormatter(this.src);\\n      this.state.loaded = false;\\n      this.options.src = src;\\n      this.options.error = error;\\n      this.options.loading = loading;\\n      this.renderSrc = this.options.loading;\\n    },\\n    checkInView() {\\n      const rect = useRect(this.$el);\\n      return rect.top < window.innerHeight * lazyManager.options.preLoad && rect.bottom > 0 && rect.left < window.innerWidth * lazyManager.options.preLoad && rect.right > 0;\\n    },\\n    load(onFinish = noop) {\\n      if (this.state.attempt > this.options.attempt - 1 && this.state.error) {\\n        if (process.env.NODE_ENV !== \\\"production\\\" && !lazyManager.options.silent) {\\n          console.log(\\n            `[@vant/lazyload] ${this.options.src} tried too more than ${this.options.attempt} times`\\n          );\\n        }\\n        onFinish();\\n        return;\\n      }\\n      const { src } = this.options;\\n      loadImageAsync(\\n        { src },\\n        ({ src: src2 }) => {\\n          this.renderSrc = src2;\\n          this.state.loaded = true;\\n        },\\n        () => {\\n          this.state.attempt++;\\n          this.renderSrc = this.options.error;\\n          this.state.error = true;\\n        }\\n      );\\n    }\\n  }\\n});\\nexport {\\n  stdin_default as default\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,YAAY;AACrB,SAAS,SAAS;AAClB,IAAI,gBAAgB,CAAC,iBAAiB;AAAA,EACpC,OAAO;AAAA,IACL,KAAK,CAAC,QAAQ,MAAM;AAAA,IACpB,KAAK;AAAA,MACH,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACA,SAAS;AACP,QAAI,IAAI;AACR,WAAO;AAAA,MACL,KAAK;AAAA,MACL;AAAA,QACE,KAAK,KAAK;AAAA,MACZ;AAAA,OACC,MAAM,KAAK,KAAK,QAAQ,YAAY,OAAO,SAAS,GAAG,KAAK,EAAE;AAAA,IACjE;AAAA,EACF;AAAA,EACA,OAAO;AACL,WAAO;AAAA,MACL,IAAI;AAAA,MACJ,SAAS;AAAA,QACP,KAAK;AAAA,QACL,OAAO;AAAA,QACP,SAAS;AAAA,QACT,SAAS,YAAY,QAAQ;AAAA,MAC/B;AAAA,MACA,OAAO;AAAA,QACL,QAAQ;AAAA,QACR,OAAO;AAAA,QACP,SAAS;AAAA,MACX;AAAA,MACA,WAAW;AAAA,IACb;AAAA,EACF;AAAA,EACA,OAAO;AAAA,IACL,MAAM;AACJ,WAAK,KAAK;AACV,kBAAY,WAAW,IAAI;AAC3B,kBAAY,gBAAgB;AAAA,IAC9B;AAAA,EACF;AAAA,EACA,UAAU;AACR,SAAK,KAAK;AAAA,EACZ;AAAA,EACA,UAAU;AACR,SAAK,KAAK,KAAK;AACf,gBAAY,WAAW,IAAI;AAC3B,gBAAY,gBAAgB;AAAA,EAC9B;AAAA,EACA,gBAAgB;AACd,gBAAY,gBAAgB,IAAI;AAAA,EAClC;AAAA,EACA,SAAS;AAAA,IACP,OAAO;AACL,YAAM,EAAE,KAAK,SAAS,MAAM,IAAI,YAAY,eAAe,KAAK,GAAG;AACnE,WAAK,MAAM,SAAS;AACpB,WAAK,QAAQ,MAAM;AACnB,WAAK,QAAQ,QAAQ;AACrB,WAAK,QAAQ,UAAU;AACvB,WAAK,YAAY,KAAK,QAAQ;AAAA,IAChC;AAAA,IACA,cAAc;AACZ,YAAM,OAAO,QAAQ,KAAK,GAAG;AAC7B,aAAO,KAAK,MAAM,SAAO,cAAc,YAAY,QAAQ,WAAW,KAAK,SAAS,KAAK,KAAK,OAAO,SAAO,aAAa,YAAY,QAAQ,WAAW,KAAK,QAAQ;AAAA,IACvK;AAAA,IACA,KAAK,WAAW,MAAM;AACpB,UAAI,KAAK,MAAM,UAAU,KAAK,QAAQ,UAAU,KAAK,KAAK,MAAM,OAAO;AACrE,YAAI,QAAQ,IAAI,aAAa,gBAAgB,CAAC,YAAY,QAAQ,QAAQ;AACxE,kBAAQ;AAAA,YACN,oBAAoB,KAAK,QAAQ,GAAG,wBAAwB,KAAK,QAAQ,OAAO;AAAA,UAClF;AAAA,QACF;AACA,iBAAS;AACT;AAAA,MACF;AACA,YAAM,EAAE,IAAI,IAAI,KAAK;AACrB;AAAA,QACE,EAAE,IAAI;AAAA,QACN,CAAC,EAAE,KAAK,KAAK,MAAM;AACjB,eAAK,YAAY;AACjB,eAAK,MAAM,SAAS;AAAA,QACtB;AAAA,QACA,MAAM;AACJ,eAAK,MAAM;AACX,eAAK,YAAY,KAAK,QAAQ;AAC9B,eAAK,MAAM,QAAQ;AAAA,QACrB;AAAA,MACF;AAAA,IACF;AAAA,EACF;AACF;AACA;AAAA,EACE,iBAAiB;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    }
+  ]
+}

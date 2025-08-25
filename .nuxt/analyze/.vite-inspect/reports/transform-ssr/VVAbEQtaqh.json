@@ -1,0 +1,287 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/composables/use-height.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useRect } from \"@vant/use\";\nimport { ref, onMounted, nextTick, watch } from \"vue\";\nimport { windowHeight, windowWidth } from \"../utils/index.mjs\";\nimport { onPopupReopen } from \"./on-popup-reopen.mjs\";\nconst useHeight = (element, withSafeArea) => {\n  const height = ref();\n  const setHeight = () => {\n    height.value = useRect(element).height;\n  };\n  onMounted(() => {\n    nextTick(setHeight);\n    if (withSafeArea) {\n      for (let i = 1; i <= 3; i++) {\n        setTimeout(setHeight, 100 * i);\n      }\n    }\n  });\n  onPopupReopen(() => nextTick(setHeight));\n  watch([windowWidth, windowHeight], setHeight);\n  return height;\n};\nexport {\n  useHeight\n};\n",
+      "start": 1756100544766,
+      "end": 1756100544779,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544779,
+      "end": 1756100544779,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { useRect } from \"@vant/use\";\nimport { ref, onMounted, nextTick, watch } from \"vue\";\nimport { windowHeight, windowWidth } from \"../utils/index.mjs\";\nimport { onPopupReopen } from \"./on-popup-reopen.mjs\";\nconst useHeight = (element, withSafeArea) => {\n  const height = ref();\n  const setHeight = () => {\n    height.value = useRect(element).height;\n  };\n  onMounted(() => {\n    nextTick(setHeight);\n    if (withSafeArea) {\n      for (let i = 1; i <= 3; i++) {\n        setTimeout(setHeight, 100 * i);\n      }\n    }\n  });\n  onPopupReopen(() => nextTick(setHeight));\n  watch([windowWidth, windowHeight], setHeight);\n  return height;\n};\nexport {\n  useHeight\n};\n",
+      "start": 1756100544779,
+      "end": 1756100544982,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/composables/use-height.mjs\"],\n  \"sourcesContent\": [\"import { useRect } from \\\"@vant/use\\\";\\nimport { ref, onMounted, nextTick, watch } from \\\"vue\\\";\\nimport { windowHeight, windowWidth } from \\\"../utils/index.mjs\\\";\\nimport { onPopupReopen } from \\\"./on-popup-reopen.mjs\\\";\\nconst useHeight = (element, withSafeArea) => {\\n  const height = ref();\\n  const setHeight = () => {\\n    height.value = useRect(element).height;\\n  };\\n  onMounted(() => {\\n    nextTick(setHeight);\\n    if (withSafeArea) {\\n      for (let i = 1; i <= 3; i++) {\\n        setTimeout(setHeight, 100 * i);\\n      }\\n    }\\n  });\\n  onPopupReopen(() => nextTick(setHeight));\\n  watch([windowWidth, windowHeight], setHeight);\\n  return height;\\n};\\nexport {\\n  useHeight\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,eAAe;AACxB,SAAS,KAAK,WAAW,UAAU,aAAa;AAChD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,qBAAqB;AAC9B,MAAM,YAAY,CAAC,SAAS,iBAAiB;AAC3C,QAAM,SAAS,IAAI;AACnB,QAAM,YAAY,MAAM;AACtB,WAAO,QAAQ,QAAQ,OAAO,EAAE;AAAA,EAClC;AACA,YAAU,MAAM;AACd,aAAS,SAAS;AAClB,QAAI,cAAc;AAChB,eAAS,IAAI,GAAG,KAAK,GAAG,KAAK;AAC3B,mBAAW,WAAW,MAAM,CAAC;AAAA,MAC/B;AAAA,IACF;AAAA,EACF,CAAC;AACD,gBAAc,MAAM,SAAS,SAAS,CAAC;AACvC,QAAM,CAAC,aAAa,YAAY,GAAG,SAAS;AAC5C,SAAO;AACT;AACA;AAAA,EACE;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "result": "import { useRect } from \"@vant/use\";\nimport { ref, onMounted, nextTick, watch } from \"vue\";\nimport { windowHeight, windowWidth } from \"../utils/index.mjs\";\nimport { onPopupReopen } from \"./on-popup-reopen.mjs\";\nconst useHeight = (element, withSafeArea) => {\n  const height = ref();\n  const setHeight = () => {\n    height.value = useRect(element).height;\n  };\n   false && /*@__PURE__*/ onMounted(() => {\n    nextTick(setHeight);\n    if (withSafeArea) {\n      for (let i = 1; i <= 3; i++) {\n        setTimeout(setHeight, 100 * i);\n      }\n    }\n  });\n  onPopupReopen(() => nextTick(setHeight));\n  watch([windowWidth, windowHeight], setHeight);\n  return height;\n};\nexport {\n  useHeight\n};\n",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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"
+      }
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544982,
+      "end": 1756100544982,
+      "order": "normal"
+    }
+  ]
+}

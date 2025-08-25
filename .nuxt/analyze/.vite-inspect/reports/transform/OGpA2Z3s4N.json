@@ -1,0 +1,230 @@
+{
+  "resolvedId": "virtual:nuxt:/Users/yunhao/Project/website/.nuxt/routes.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "import { default as index3gFaLPv5ZWMeta } from \"/Users/yunhao/Project/website/pages/about/index.vue?macro=true\";\nimport { default as indexwca4BFXg7ZMeta } from \"/Users/yunhao/Project/website/pages/bremsinn-web/index.vue?macro=true\";\nimport { default as indexxniUYjZMd8Meta } from \"/Users/yunhao/Project/website/pages/charming-web/index.vue?macro=true\";\nimport { default as indexbxxjUTiy6iMeta } from \"/Users/yunhao/Project/website/pages/crest-rma-web/index.vue?macro=true\";\nimport { default as indexvWvGuJ8yEuMeta } from \"/Users/yunhao/Project/website/pages/family-mart/index.vue?macro=true\";\nimport { default as indexZ2k3TVNwjVMeta } from \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?macro=true\";\nimport { default as index7wJyyHrmhOMeta } from \"/Users/yunhao/Project/website/pages/gaocheung-web/index.vue?macro=true\";\nimport { default as indexSlejcFREGCMeta } from \"/Users/yunhao/Project/website/pages/go-your-studio/index.vue?macro=true\";\nimport { default as indexBJ46QomyXeMeta } from \"/Users/yunhao/Project/website/pages/index.vue?macro=true\";\nimport { default as indextHOyBg0aSPMeta } from \"/Users/yunhao/Project/website/pages/km5257/index.vue?macro=true\";\nimport { default as indexQMSLnBg0JIMeta } from \"/Users/yunhao/Project/website/pages/personal-web/index.vue?macro=true\";\nimport { default as indexwWBOfjq6u7Meta } from \"/Users/yunhao/Project/website/pages/sinnigtool/index.vue?macro=true\";\nimport { default as indexiu4fmsolhkMeta } from \"/Users/yunhao/Project/website/pages/tongxin-xili-web/index.vue?macro=true\";\nimport { default as indexSMCbcEZz9FMeta } from \"/Users/yunhao/Project/website/pages/wintech-web/index.vue?macro=true\";\nexport default [\n  {\n    name: index3gFaLPv5ZWMeta?.name ?? \"about\",\n    path: index3gFaLPv5ZWMeta?.path ?? \"/about\",\n    meta: index3gFaLPv5ZWMeta || {},\n    alias: index3gFaLPv5ZWMeta?.alias || [],\n    redirect: index3gFaLPv5ZWMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/about/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexwca4BFXg7ZMeta?.name ?? \"bremsinn-web\",\n    path: indexwca4BFXg7ZMeta?.path ?? \"/bremsinn-web\",\n    meta: indexwca4BFXg7ZMeta || {},\n    alias: indexwca4BFXg7ZMeta?.alias || [],\n    redirect: indexwca4BFXg7ZMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/bremsinn-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexxniUYjZMd8Meta?.name ?? \"charming-web\",\n    path: indexxniUYjZMd8Meta?.path ?? \"/charming-web\",\n    meta: indexxniUYjZMd8Meta || {},\n    alias: indexxniUYjZMd8Meta?.alias || [],\n    redirect: indexxniUYjZMd8Meta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/charming-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexbxxjUTiy6iMeta?.name ?? \"crest-rma-web\",\n    path: indexbxxjUTiy6iMeta?.path ?? \"/crest-rma-web\",\n    meta: indexbxxjUTiy6iMeta || {},\n    alias: indexbxxjUTiy6iMeta?.alias || [],\n    redirect: indexbxxjUTiy6iMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/crest-rma-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexvWvGuJ8yEuMeta?.name ?? \"family-mart\",\n    path: indexvWvGuJ8yEuMeta?.path ?? \"/family-mart\",\n    meta: indexvWvGuJ8yEuMeta || {},\n    alias: indexvWvGuJ8yEuMeta?.alias || [],\n    redirect: indexvWvGuJ8yEuMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/family-mart/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexZ2k3TVNwjVMeta?.name ?? \"gamer-store\",\n    path: indexZ2k3TVNwjVMeta?.path ?? \"/gamer-store\",\n    meta: indexZ2k3TVNwjVMeta || {},\n    alias: indexZ2k3TVNwjVMeta?.alias || [],\n    redirect: indexZ2k3TVNwjVMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/gamer-store/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: index7wJyyHrmhOMeta?.name ?? \"gaocheung-web\",\n    path: index7wJyyHrmhOMeta?.path ?? \"/gaocheung-web\",\n    meta: index7wJyyHrmhOMeta || {},\n    alias: index7wJyyHrmhOMeta?.alias || [],\n    redirect: index7wJyyHrmhOMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/gaocheung-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexSlejcFREGCMeta?.name ?? \"go-your-studio\",\n    path: indexSlejcFREGCMeta?.path ?? \"/go-your-studio\",\n    meta: indexSlejcFREGCMeta || {},\n    alias: indexSlejcFREGCMeta?.alias || [],\n    redirect: indexSlejcFREGCMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/go-your-studio/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexBJ46QomyXeMeta?.name ?? \"index\",\n    path: indexBJ46QomyXeMeta?.path ?? \"/\",\n    meta: indexBJ46QomyXeMeta || {},\n    alias: indexBJ46QomyXeMeta?.alias || [],\n    redirect: indexBJ46QomyXeMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indextHOyBg0aSPMeta?.name ?? \"km5257\",\n    path: indextHOyBg0aSPMeta?.path ?? \"/km5257\",\n    meta: indextHOyBg0aSPMeta || {},\n    alias: indextHOyBg0aSPMeta?.alias || [],\n    redirect: indextHOyBg0aSPMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/km5257/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexQMSLnBg0JIMeta?.name ?? \"personal-web\",\n    path: indexQMSLnBg0JIMeta?.path ?? \"/personal-web\",\n    meta: indexQMSLnBg0JIMeta || {},\n    alias: indexQMSLnBg0JIMeta?.alias || [],\n    redirect: indexQMSLnBg0JIMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/personal-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexwWBOfjq6u7Meta?.name ?? \"sinnigtool\",\n    path: indexwWBOfjq6u7Meta?.path ?? \"/sinnigtool\",\n    meta: indexwWBOfjq6u7Meta || {},\n    alias: indexwWBOfjq6u7Meta?.alias || [],\n    redirect: indexwWBOfjq6u7Meta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/sinnigtool/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexiu4fmsolhkMeta?.name ?? \"tongxin-xili-web\",\n    path: indexiu4fmsolhkMeta?.path ?? \"/tongxin-xili-web\",\n    meta: indexiu4fmsolhkMeta || {},\n    alias: indexiu4fmsolhkMeta?.alias || [],\n    redirect: indexiu4fmsolhkMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/tongxin-xili-web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexSMCbcEZz9FMeta?.name ?? \"wintech-web\",\n    path: indexSMCbcEZz9FMeta?.path ?? \"/wintech-web\",\n    meta: indexSMCbcEZz9FMeta || {},\n    alias: indexSMCbcEZz9FMeta?.alias || [],\n    redirect: indexSMCbcEZz9FMeta?.redirect,\n    component: () => import(\"/Users/yunhao/Project/website/pages/wintech-web/index.vue\").then(m => m.default || m)\n  }\n]",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100531206,
+      "end": 1756100531206,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100531207,
+      "end": 1756100531207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100531208,
+      "end": 1756100531208,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100531208,
+      "end": 1756100531208,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100531208,
+      "end": 1756100531208,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100531208,
+      "end": 1756100531208,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100531208,
+      "end": 1756100531208,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100531208,
+      "end": 1756100531209,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100531209,
+      "end": 1756100531209,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100531209,
+      "end": 1756100531209,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100531209,
+      "end": 1756100531209,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100531209,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper.js\";import { default as index3gFaLPv5ZWMeta } from \"/Users/yunhao/Project/website/pages/about/index.vue?macro=true\";\nimport { default as indexwca4BFXg7ZMeta } from \"/Users/yunhao/Project/website/pages/bremsinn-web/index.vue?macro=true\";\nimport { default as indexxniUYjZMd8Meta } from \"/Users/yunhao/Project/website/pages/charming-web/index.vue?macro=true\";\nimport { default as indexbxxjUTiy6iMeta } from \"/Users/yunhao/Project/website/pages/crest-rma-web/index.vue?macro=true\";\nimport { default as indexvWvGuJ8yEuMeta } from \"/Users/yunhao/Project/website/pages/family-mart/index.vue?macro=true\";\nimport { default as indexZ2k3TVNwjVMeta } from \"/Users/yunhao/Project/website/pages/gamer-store/index.vue?macro=true\";\nimport { default as index7wJyyHrmhOMeta } from \"/Users/yunhao/Project/website/pages/gaocheung-web/index.vue?macro=true\";\nimport { default as indexSlejcFREGCMeta } from \"/Users/yunhao/Project/website/pages/go-your-studio/index.vue?macro=true\";\nimport { default as indexBJ46QomyXeMeta } from \"/Users/yunhao/Project/website/pages/index.vue?macro=true\";\nimport { default as indextHOyBg0aSPMeta } from \"/Users/yunhao/Project/website/pages/km5257/index.vue?macro=true\";\nimport { default as indexQMSLnBg0JIMeta } from \"/Users/yunhao/Project/website/pages/personal-web/index.vue?macro=true\";\nimport { default as indexwWBOfjq6u7Meta } from \"/Users/yunhao/Project/website/pages/sinnigtool/index.vue?macro=true\";\nimport { default as indexiu4fmsolhkMeta } from \"/Users/yunhao/Project/website/pages/tongxin-xili-web/index.vue?macro=true\";\nimport { default as indexSMCbcEZz9FMeta } from \"/Users/yunhao/Project/website/pages/wintech-web/index.vue?macro=true\";\nexport default [\n  {\n    name: index3gFaLPv5ZWMeta?.name ?? \"about\",\n    path: index3gFaLPv5ZWMeta?.path ?? \"/about\",\n    meta: index3gFaLPv5ZWMeta || {},\n    alias: index3gFaLPv5ZWMeta?.alias || [],\n    redirect: index3gFaLPv5ZWMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/about/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexwca4BFXg7ZMeta?.name ?? \"bremsinn-web\",\n    path: indexwca4BFXg7ZMeta?.path ?? \"/bremsinn-web\",\n    meta: indexwca4BFXg7ZMeta || {},\n    alias: indexwca4BFXg7ZMeta?.alias || [],\n    redirect: indexwca4BFXg7ZMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/bremsinn-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexxniUYjZMd8Meta?.name ?? \"charming-web\",\n    path: indexxniUYjZMd8Meta?.path ?? \"/charming-web\",\n    meta: indexxniUYjZMd8Meta || {},\n    alias: indexxniUYjZMd8Meta?.alias || [],\n    redirect: indexxniUYjZMd8Meta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/charming-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexbxxjUTiy6iMeta?.name ?? \"crest-rma-web\",\n    path: indexbxxjUTiy6iMeta?.path ?? \"/crest-rma-web\",\n    meta: indexbxxjUTiy6iMeta || {},\n    alias: indexbxxjUTiy6iMeta?.alias || [],\n    redirect: indexbxxjUTiy6iMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/crest-rma-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexvWvGuJ8yEuMeta?.name ?? \"family-mart\",\n    path: indexvWvGuJ8yEuMeta?.path ?? \"/family-mart\",\n    meta: indexvWvGuJ8yEuMeta || {},\n    alias: indexvWvGuJ8yEuMeta?.alias || [],\n    redirect: indexvWvGuJ8yEuMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/family-mart/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexZ2k3TVNwjVMeta?.name ?? \"gamer-store\",\n    path: indexZ2k3TVNwjVMeta?.path ?? \"/gamer-store\",\n    meta: indexZ2k3TVNwjVMeta || {},\n    alias: indexZ2k3TVNwjVMeta?.alias || [],\n    redirect: indexZ2k3TVNwjVMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/gamer-store/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: index7wJyyHrmhOMeta?.name ?? \"gaocheung-web\",\n    path: index7wJyyHrmhOMeta?.path ?? \"/gaocheung-web\",\n    meta: index7wJyyHrmhOMeta || {},\n    alias: index7wJyyHrmhOMeta?.alias || [],\n    redirect: index7wJyyHrmhOMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/gaocheung-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexSlejcFREGCMeta?.name ?? \"go-your-studio\",\n    path: indexSlejcFREGCMeta?.path ?? \"/go-your-studio\",\n    meta: indexSlejcFREGCMeta || {},\n    alias: indexSlejcFREGCMeta?.alias || [],\n    redirect: indexSlejcFREGCMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/go-your-studio/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexBJ46QomyXeMeta?.name ?? \"index\",\n    path: indexBJ46QomyXeMeta?.path ?? \"/\",\n    meta: indexBJ46QomyXeMeta || {},\n    alias: indexBJ46QomyXeMeta?.alias || [],\n    redirect: indexBJ46QomyXeMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indextHOyBg0aSPMeta?.name ?? \"km5257\",\n    path: indextHOyBg0aSPMeta?.path ?? \"/km5257\",\n    meta: indextHOyBg0aSPMeta || {},\n    alias: indextHOyBg0aSPMeta?.alias || [],\n    redirect: indextHOyBg0aSPMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/km5257/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexQMSLnBg0JIMeta?.name ?? \"personal-web\",\n    path: indexQMSLnBg0JIMeta?.path ?? \"/personal-web\",\n    meta: indexQMSLnBg0JIMeta || {},\n    alias: indexQMSLnBg0JIMeta?.alias || [],\n    redirect: indexQMSLnBg0JIMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/personal-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexwWBOfjq6u7Meta?.name ?? \"sinnigtool\",\n    path: indexwWBOfjq6u7Meta?.path ?? \"/sinnigtool\",\n    meta: indexwWBOfjq6u7Meta || {},\n    alias: indexwWBOfjq6u7Meta?.alias || [],\n    redirect: indexwWBOfjq6u7Meta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/sinnigtool/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexiu4fmsolhkMeta?.name ?? \"tongxin-xili-web\",\n    path: indexiu4fmsolhkMeta?.path ?? \"/tongxin-xili-web\",\n    meta: indexiu4fmsolhkMeta || {},\n    alias: indexiu4fmsolhkMeta?.alias || [],\n    redirect: indexiu4fmsolhkMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/tongxin-xili-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexSMCbcEZz9FMeta?.name ?? \"wintech-web\",\n    path: indexSMCbcEZz9FMeta?.path ?? \"/wintech-web\",\n    meta: indexSMCbcEZz9FMeta || {},\n    alias: indexSMCbcEZz9FMeta?.alias || [],\n    redirect: indexSMCbcEZz9FMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/yunhao/Project/website/pages/wintech-web/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100531212,
+      "end": 1756100531212,
+      "order": "normal"
+    }
+  ]
+}

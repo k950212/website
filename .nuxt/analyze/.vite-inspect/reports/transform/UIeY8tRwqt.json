@@ -1,0 +1,241 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/pages/bremsinn-web/index.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <Navbar />\n  <div id=\"projectPage\">\n    <div class=\"container\">\n      <div class=\"title\">慎行科技官方網站 <img @click=\"openWeb()\" style=\"cursor: pointer\" src=\"@/assets/img/link.png\" alt=\"\" /></div>\n      <div class=\"title-m\">慎行科技有限公司</div>\n      <div class=\"d-flex justify-content-center mt-3\">\n        <div class=\"main-img\">\n          <div class=\"main-border\">\n            <div class=\"second-border\">\n              <img src=\"@/assets/img/bremsinnNew1.png\" alt=\"\" />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"background\">\n        <div class=\"title mt-5 mb-3\">專案背景</div>\n        <div class=\"content\">本專案旨在為慎行科技有限公司打造一個形象網站．有新版(黑底)與舊版(白底)，新版未上線．</div>\n      </div>\n      <div class=\"skill\">\n        <div class=\"title\">技術應用</div>\n        <ul style=\"margin-left: 2rem; margin-top: 1rem\">\n          <li>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、vue3-recaptcha2、AOS、nuxt-primevue、BootStrap</li>\n        </ul>\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinnNew2.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinnNew3.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinnNew4.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinnNew5.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinn1.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinn2.png\" alt=\"\" />\n      </div>\n      <div class=\"otherImg\">\n        <img src=\"@/assets/img/bremsinn3.png\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <Footer />\n</template>\n<script setup>\nconst openWeb = () => {\n  window.open(\"https://www.bremsinn.com/\");\n};\n</script>\n<style scoped>\n.navbarStack {\n  height: 84px;\n  background-color: black;\n}\n</style>\n",
+      "start": 1756100531841,
+      "end": 1756100531899,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100531899,
+      "end": 1756100531899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/img/link.png'\nimport _imports_1 from '@/assets/img/bremsinnNew1.png'\nimport _imports_2 from '@/assets/img/bremsinnNew2.png'\nimport _imports_3 from '@/assets/img/bremsinnNew3.png'\nimport _imports_4 from '@/assets/img/bremsinnNew4.png'\nimport _imports_5 from '@/assets/img/bremsinnNew5.png'\nimport _imports_6 from '@/assets/img/bremsinn1.png'\nimport _imports_7 from '@/assets/img/bremsinn2.png'\nimport _imports_8 from '@/assets/img/bremsinn3.png'\n\n\nconst _hoisted_1 = { id: \"projectPage\" }\nconst _hoisted_2 = { class: \"container\" }\nconst _hoisted_3 = { class: \"title\" }\n\n\nconst _sfc_main = {\n  __name: 'index',\n  setup(__props) {\n\nconst openWeb = () => {\n  window.open(\"https://www.bremsinn.com/\");\n};\n\nreturn (_ctx, _cache) => {\n  const _component_Navbar = _resolveComponent(\"Navbar\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Navbar),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _cache[1] || (_cache[1] = _createTextVNode(\"慎行科技官方網站 \")),\n          _createElementVNode(\"img\", {\n            onClick: _cache[0] || (_cache[0] = $event => (openWeb())),\n            style: {\"cursor\":\"pointer\"},\n            src: _imports_0,\n            alt: \"\"\n          })\n        ]),\n        _cache[2] || (_cache[2] = _createStaticVNode(\"<div class=\\\"title-m\\\" data-v-0d8b525f>慎行科技有限公司</div><div class=\\\"d-flex justify-content-center mt-3\\\" data-v-0d8b525f><div class=\\\"main-img\\\" data-v-0d8b525f><div class=\\\"main-border\\\" data-v-0d8b525f><div class=\\\"second-border\\\" data-v-0d8b525f><img src=\\\"\" + _imports_1 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div></div></div></div><div class=\\\"background\\\" data-v-0d8b525f><div class=\\\"title mt-5 mb-3\\\" data-v-0d8b525f>專案背景</div><div class=\\\"content\\\" data-v-0d8b525f>本專案旨在為慎行科技有限公司打造一個形象網站．有新版(黑底)與舊版(白底)，新版未上線．</div></div><div class=\\\"skill\\\" data-v-0d8b525f><div class=\\\"title\\\" data-v-0d8b525f>技術應用</div><ul style=\\\"margin-left:2rem;margin-top:1rem;\\\" data-v-0d8b525f><li data-v-0d8b525f>使用：html、css、JavaScript、Vue3、Composition API、Nuxt.js、vue3-recaptcha2、AOS、nuxt-primevue、BootStrap</li></ul></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_2 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_3 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_4 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_5 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_6 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_7 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div><div class=\\\"otherImg\\\" data-v-0d8b525f><img src=\\\"\" + _imports_8 + \"\\\" alt=\\\"\\\" data-v-0d8b525f></div>\", 11))\n      ])\n    ]),\n    _createVNode(_component_Footer)\n  ], 64))\n}\n}\n\n}\n\n\nimport \"/Users/yunhao/Project/website/pages/bremsinn-web/index.vue?vue&type=style&index=0&scoped=0d8b525f&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['__scopeId',\"data-v-0d8b525f\"]])",
+      "start": 1756100531899,
+      "end": 1756100531903,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100531903,
+      "end": 1756100531903,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100531903,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100531904,
+      "end": 1756100531904,
+      "order": "normal"
+    }
+  ]
+}

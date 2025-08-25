@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/address-edit/AddressEditDetail.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ref, defineComponent, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nimport { createNamespace, numericProp } from \"../utils/index.mjs\";\nimport { Cell } from \"../cell/index.mjs\";\nimport { Field } from \"../field/index.mjs\";\nconst [name, bem] = createNamespace(\"address-edit-detail\");\nconst t = createNamespace(\"address-edit\")[2];\nvar stdin_default = defineComponent({\n  name,\n  props: {\n    show: Boolean,\n    rows: numericProp,\n    value: String,\n    rules: Array,\n    focused: Boolean,\n    maxlength: numericProp,\n    searchResult: Array,\n    showSearchResult: Boolean\n  },\n  emits: [\"blur\", \"focus\", \"input\", \"selectSearch\"],\n  setup(props, {\n    emit\n  }) {\n    const field = ref();\n    const showSearchResult = () => props.focused && props.searchResult && props.showSearchResult;\n    const onSelect = (express) => {\n      emit(\"selectSearch\", express);\n      emit(\"input\", `${express.address || \"\"} ${express.name || \"\"}`.trim());\n    };\n    const renderSearchResult = () => {\n      if (!showSearchResult()) {\n        return;\n      }\n      const {\n        searchResult\n      } = props;\n      return searchResult.map((express) => _createVNode(Cell, {\n        \"clickable\": true,\n        \"key\": (express.name || \"\") + (express.address || \"\"),\n        \"icon\": \"location-o\",\n        \"title\": express.name,\n        \"label\": express.address,\n        \"class\": bem(\"search-item\"),\n        \"border\": false,\n        \"onClick\": () => onSelect(express)\n      }, null));\n    };\n    const onBlur = (event) => emit(\"blur\", event);\n    const onFocus = (event) => emit(\"focus\", event);\n    const onInput = (value) => emit(\"input\", value);\n    return () => {\n      if (props.show) {\n        return _createVNode(_Fragment, null, [_createVNode(Field, {\n          \"autosize\": true,\n          \"clearable\": true,\n          \"ref\": field,\n          \"class\": bem(),\n          \"rows\": props.rows,\n          \"type\": \"textarea\",\n          \"rules\": props.rules,\n          \"label\": t(\"addressDetail\"),\n          \"border\": !showSearchResult(),\n          \"maxlength\": props.maxlength,\n          \"modelValue\": props.value,\n          \"placeholder\": t(\"addressDetail\"),\n          \"onBlur\": onBlur,\n          \"onFocus\": onFocus,\n          \"onUpdate:modelValue\": onInput\n        }, null), renderSearchResult()]);\n      }\n    };\n  }\n});\nexport {\n  stdin_default as default\n};\n",
+      "start": 1756100544736,
+      "end": 1756100544753,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544753,
+      "end": 1756100544753,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { ref, defineComponent, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nimport { createNamespace, numericProp } from \"../utils/index.mjs\";\nimport { Cell } from \"../cell/index.mjs\";\nimport { Field } from \"../field/index.mjs\";\nconst [name, bem] = createNamespace(\"address-edit-detail\");\nconst t = createNamespace(\"address-edit\")[2];\nvar stdin_default = defineComponent({\n  name,\n  props: {\n    show: Boolean,\n    rows: numericProp,\n    value: String,\n    rules: Array,\n    focused: Boolean,\n    maxlength: numericProp,\n    searchResult: Array,\n    showSearchResult: Boolean\n  },\n  emits: [\"blur\", \"focus\", \"input\", \"selectSearch\"],\n  setup(props, {\n    emit\n  }) {\n    const field = ref();\n    const showSearchResult = () => props.focused && props.searchResult && props.showSearchResult;\n    const onSelect = (express) => {\n      emit(\"selectSearch\", express);\n      emit(\"input\", `${express.address || \"\"} ${express.name || \"\"}`.trim());\n    };\n    const renderSearchResult = () => {\n      if (!showSearchResult()) {\n        return;\n      }\n      const {\n        searchResult\n      } = props;\n      return searchResult.map((express) => _createVNode(Cell, {\n        \"clickable\": true,\n        \"key\": (express.name || \"\") + (express.address || \"\"),\n        \"icon\": \"location-o\",\n        \"title\": express.name,\n        \"label\": express.address,\n        \"class\": bem(\"search-item\"),\n        \"border\": false,\n        \"onClick\": () => onSelect(express)\n      }, null));\n    };\n    const onBlur = (event) => emit(\"blur\", event);\n    const onFocus = (event) => emit(\"focus\", event);\n    const onInput = (value) => emit(\"input\", value);\n    return () => {\n      if (props.show) {\n        return _createVNode(_Fragment, null, [_createVNode(Field, {\n          \"autosize\": true,\n          \"clearable\": true,\n          \"ref\": field,\n          \"class\": bem(),\n          \"rows\": props.rows,\n          \"type\": \"textarea\",\n          \"rules\": props.rules,\n          \"label\": t(\"addressDetail\"),\n          \"border\": !showSearchResult(),\n          \"maxlength\": props.maxlength,\n          \"modelValue\": props.value,\n          \"placeholder\": t(\"addressDetail\"),\n          \"onBlur\": onBlur,\n          \"onFocus\": onFocus,\n          \"onUpdate:modelValue\": onInput\n        }, null), renderSearchResult()]);\n      }\n    };\n  }\n});\nexport {\n  stdin_default as default\n};\n",
+      "start": 1756100544753,
+      "end": 1756100544950,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/address-edit/AddressEditDetail.mjs\"],\n  \"sourcesContent\": [\"import { ref, defineComponent, createVNode as _createVNode, Fragment as _Fragment } from \\\"vue\\\";\\nimport { createNamespace, numericProp } from \\\"../utils/index.mjs\\\";\\nimport { Cell } from \\\"../cell/index.mjs\\\";\\nimport { Field } from \\\"../field/index.mjs\\\";\\nconst [name, bem] = createNamespace(\\\"address-edit-detail\\\");\\nconst t = createNamespace(\\\"address-edit\\\")[2];\\nvar stdin_default = defineComponent({\\n  name,\\n  props: {\\n    show: Boolean,\\n    rows: numericProp,\\n    value: String,\\n    rules: Array,\\n    focused: Boolean,\\n    maxlength: numericProp,\\n    searchResult: Array,\\n    showSearchResult: Boolean\\n  },\\n  emits: [\\\"blur\\\", \\\"focus\\\", \\\"input\\\", \\\"selectSearch\\\"],\\n  setup(props, {\\n    emit\\n  }) {\\n    const field = ref();\\n    const showSearchResult = () => props.focused && props.searchResult && props.showSearchResult;\\n    const onSelect = (express) => {\\n      emit(\\\"selectSearch\\\", express);\\n      emit(\\\"input\\\", `${express.address || \\\"\\\"} ${express.name || \\\"\\\"}`.trim());\\n    };\\n    const renderSearchResult = () => {\\n      if (!showSearchResult()) {\\n        return;\\n      }\\n      const {\\n        searchResult\\n      } = props;\\n      return searchResult.map((express) => _createVNode(Cell, {\\n        \\\"clickable\\\": true,\\n        \\\"key\\\": (express.name || \\\"\\\") + (express.address || \\\"\\\"),\\n        \\\"icon\\\": \\\"location-o\\\",\\n        \\\"title\\\": express.name,\\n        \\\"label\\\": express.address,\\n        \\\"class\\\": bem(\\\"search-item\\\"),\\n        \\\"border\\\": false,\\n        \\\"onClick\\\": () => onSelect(express)\\n      }, null));\\n    };\\n    const onBlur = (event) => emit(\\\"blur\\\", event);\\n    const onFocus = (event) => emit(\\\"focus\\\", event);\\n    const onInput = (value) => emit(\\\"input\\\", value);\\n    return () => {\\n      if (props.show) {\\n        return _createVNode(_Fragment, null, [_createVNode(Field, {\\n          \\\"autosize\\\": true,\\n          \\\"clearable\\\": true,\\n          \\\"ref\\\": field,\\n          \\\"class\\\": bem(),\\n          \\\"rows\\\": props.rows,\\n          \\\"type\\\": \\\"textarea\\\",\\n          \\\"rules\\\": props.rules,\\n          \\\"label\\\": t(\\\"addressDetail\\\"),\\n          \\\"border\\\": !showSearchResult(),\\n          \\\"maxlength\\\": props.maxlength,\\n          \\\"modelValue\\\": props.value,\\n          \\\"placeholder\\\": t(\\\"addressDetail\\\"),\\n          \\\"onBlur\\\": onBlur,\\n          \\\"onFocus\\\": onFocus,\\n          \\\"onUpdate:modelValue\\\": onInput\\n        }, null), renderSearchResult()]);\\n      }\\n    };\\n  }\\n});\\nexport {\\n  stdin_default as default\\n};\\n\"],\n  \"mappings\": \"AAAA,SAAS,KAAK,iBAAiB,eAAe,cAAc,YAAY,iBAAiB;AACzF,SAAS,iBAAiB,mBAAmB;AAC7C,SAAS,YAAY;AACrB,SAAS,aAAa;AACtB,MAAM,CAAC,MAAM,GAAG,IAAI,gBAAgB,qBAAqB;AACzD,MAAM,IAAI,gBAAgB,cAAc,EAAE,CAAC;AAC3C,IAAI,gBAAgB,gBAAgB;AAAA,EAClC;AAAA,EACA,OAAO;AAAA,IACL,MAAM;AAAA,IACN,MAAM;AAAA,IACN,OAAO;AAAA,IACP,OAAO;AAAA,IACP,SAAS;AAAA,IACT,WAAW;AAAA,IACX,cAAc;AAAA,IACd,kBAAkB;AAAA,EACpB;AAAA,EACA,OAAO,CAAC,QAAQ,SAAS,SAAS,cAAc;AAAA,EAChD,MAAM,OAAO;AAAA,IACX;AAAA,EACF,GAAG;AACD,UAAM,QAAQ,IAAI;AAClB,UAAM,mBAAmB,MAAM,MAAM,WAAW,MAAM,gBAAgB,MAAM;AAC5E,UAAM,WAAW,CAAC,YAAY;AAC5B,WAAK,gBAAgB,OAAO;AAC5B,WAAK,SAAS,GAAG,QAAQ,WAAW,EAAE,IAAI,QAAQ,QAAQ,EAAE,GAAG,KAAK,CAAC;AAAA,IACvE;AACA,UAAM,qBAAqB,MAAM;AAC/B,UAAI,CAAC,iBAAiB,GAAG;AACvB;AAAA,MACF;AACA,YAAM;AAAA,QACJ;AAAA,MACF,IAAI;AACJ,aAAO,aAAa,IAAI,CAAC,YAAY,aAAa,MAAM;AAAA,QACtD,aAAa;AAAA,QACb,QAAQ,QAAQ,QAAQ,OAAO,QAAQ,WAAW;AAAA,QAClD,QAAQ;AAAA,QACR,SAAS,QAAQ;AAAA,QACjB,SAAS,QAAQ;AAAA,QACjB,SAAS,IAAI,aAAa;AAAA,QAC1B,UAAU;AAAA,QACV,WAAW,MAAM,SAAS,OAAO;AAAA,MACnC,GAAG,IAAI,CAAC;AAAA,IACV;AACA,UAAM,SAAS,CAAC,UAAU,KAAK,QAAQ,KAAK;AAC5C,UAAM,UAAU,CAAC,UAAU,KAAK,SAAS,KAAK;AAC9C,UAAM,UAAU,CAAC,UAAU,KAAK,SAAS,KAAK;AAC9C,WAAO,MAAM;AACX,UAAI,MAAM,MAAM;AACd,eAAO,aAAa,WAAW,MAAM,CAAC,aAAa,OAAO;AAAA,UACxD,YAAY;AAAA,UACZ,aAAa;AAAA,UACb,OAAO;AAAA,UACP,SAAS,IAAI;AAAA,UACb,QAAQ,MAAM;AAAA,UACd,QAAQ;AAAA,UACR,SAAS,MAAM;AAAA,UACf,SAAS,EAAE,eAAe;AAAA,UAC1B,UAAU,CAAC,iBAAiB;AAAA,UAC5B,aAAa,MAAM;AAAA,UACnB,cAAc,MAAM;AAAA,UACpB,eAAe,EAAE,eAAe;AAAA,UAChC,UAAU;AAAA,UACV,WAAW;AAAA,UACX,uBAAuB;AAAA,QACzB,GAAG,IAAI,GAAG,mBAAmB,CAAC,CAAC;AAAA,MACjC;AAAA,IACF;AAAA,EACF;AACF,CAAC;AACD;AAAA,EACE,iBAAiB;AAAA;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544950,
+      "end": 1756100544950,
+      "order": "normal"
+    }
+  ]
+}

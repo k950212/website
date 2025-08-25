@@ -1,0 +1,344 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/components/Navbar.vue?vue&type=style&index=0&scoped=df7b2633&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.navbar-stack {\n  height: 80px;\n}\n.navbar-basic {\n  top: 0;\n  position: fixed;\n  height: 80px;\n  width: 100%;\n  background-color: white;\n  border-bottom: 1px solid #dde1e6;\n  .nav {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n    padding: 0rem 6rem;\n    .navLink {\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      cursor: pointer;\n      .link {\n        margin: 0rem 24px;\n        display: flex;\n        align-items: center;\n      }\n      button {\n        padding: 16px 12px;\n        background-color: #6192d3;\n        color: white;\n        border-radius: 6px;\n        width: 122px;\n        display: inline-flex;\n        justify-content: center;\n        align-items: center;\n      }\n      .link-dropdown {\n        top: 80px;\n        position: absolute;\n        z-index: 100010 !important;\n        box-shadow: 2px 3px 20px 0px #00000014;\n        background-color: white;\n        min-height: 200px;\n        width: 260px;\n        padding: 16px 20px;\n        border-radius: 6px;\n        .link-dropdown-item {\n          display: flex;\n          padding: 8px;\n          &:hover {\n            color: #6192d3;\n            font-weight: bold;\n          }\n          img {\n            margin-right: 4px;\n          }\n        }\n      }\n    }\n  }\n  .title {\n    color: black;\n    display: flex;\n    align-items: center;\n    font-size: 20px;\n  }\n}\n\n.navMenu {\n  position: relative;\n  display: none;\n  .phoneMenu {\n    position: absolute;\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n    background-color: white;\n    top: 80px;\n    right: 0;\n    width: 260px;\n    min-height: 200px;\n    padding: 8px 16px;\n    border-radius: 6px;\n    .link {\n      padding: 8px;\n      cursor: pointer;\n      &:hover {\n        color: #6192d3;\n        font-weight: bold;\n      }\n    }\n  }\n}\n\n.fullScreen {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: 5000;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.active {\n  color: #6192d3;\n  font-weight: bold;\n}\n\n@media screen and (max-width: 991px) {\n  .navbar-basic {\n    .nav {\n      padding: 0rem 2rem;\n    }\n  }\n\n  .navMenu {\n    display: block;\n  }\n  .navLink {\n    display: none !important;\n  }\n}\n.dialogContact {\n  padding: 1rem;\n}\n",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Navbar.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "/Users/yunhao/Project/website/components/Navbar.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div class=\"navbar-stack\"></div>\n  <div class=\"navbar-basic\" style=\"z-index: 10000\">\n    <div class=\"container-fiuld\" style=\"height: 100%\">\n      <div class=\"nav\" style=\"height: 100%\">\n        <div class=\"title pointer\" @click=\"goHome\">個人網站</div>\n        <div class=\"navLink\">\n          <div class=\"link\" @click=\"openMask\">\n            專案介紹 <img class=\"px-1\" src=\"@/assets/img/chevron-down.png\" alt=\"\" />\n            <div class=\"link-dropdown\" v-if=\"dropdown\">\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('familyMart')\" :class=\"{ active: routerPath == 'family-mart' }\">\n                <div>全家記帳本(WebView)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('goYourStudio')\" :class=\"{ active: routerPath == 'go-your-studio' }\">\n                <div>去你的工作室(租借場地)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('crestRma')\" :class=\"{ active: routerPath == 'crest-rma-web' }\">\n                <div>八洋RMA(送修平台)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('charming')\" :class=\"{ active: routerPath == 'charming-web' }\">\n                <div>碩美牙醫(形象官網)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('tongxin')\" :class=\"{ active: routerPath == 'tongxin-xili-web' }\">\n                <div>協力國際(形象官網)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('bremsinn')\" :class=\"{ active: routerPath == 'bremsinn-web' }\">\n                <div>慎行科技(形象官網)</div>\n              </div>\n              <div class=\"link-dropdown-item mb-2\" @click=\"goTo('gaocheung')\" :class=\"{ active: routerPath == 'gaocheung-web' }\">\n                <div>高強建設(形象官網)</div>\n              </div>\n              <div class=\"link-dropdown-item\" @click=\"goTo('sinnigtool')\" :class=\"{ active: routerPath == 'sinnigtool' }\">\n                <div>網路小工具(小工具)</div>\n              </div>\n              <div class=\"link-dropdown-item\" @click=\"goTo('wintechWeb')\" :class=\"{ active: routerPath == 'wintech-web' }\">\n                <div>成浩管理平台(監測平台)</div>\n              </div>\n              <div class=\"link-dropdown-item\" @click=\"goTo('km5257')\" :class=\"{ active: routerPath == 'km5257' }\">\n                <div>超群特產行(購物平台)</div>\n              </div>\n              <div class=\"link-dropdown-item\" @click=\"goTo('gamerStore')\" :class=\"{ active: routerPath == 'gamer-store' }\">\n                <div>GamerStore(購物平台)</div>\n              </div>\n              <div class=\"link-dropdown-item\" @click=\"goTo('personalWeb')\" :class=\"{ active: routerPath == 'personal-web' }\">\n                <div>個人網站</div>\n              </div>\n            </div>\n          </div>\n          <div class=\"link\" @click=\"goAbout\">關於我</div>\n          <button class=\"btn link\" @click=\"contactDialog\">聯絡資訊</button>\n        </div>\n        <div class=\"navMenu\">\n          <img src=\"@/assets/img/user.svg\" alt=\"\" style=\"width: 35px; height: 35px; margin-right: 1rem\" @click=\"goAbout()\" />\n          <img src=\"@/assets/img/phone.svg\" alt=\"\" style=\"width: 35px; height: 35px; margin-right: 1rem\" @click=\"contactDialog()\" />\n          <img src=\"@/assets/img/menu_icons.png\" alt=\"\" style=\"width: 40px; height: 50px\" @click=\"openMenu()\" />\n          <div v-if=\"phoneMenu\" class=\"phoneMenu\">\n            <div class=\"link\" @click=\"goTo('familyMart')\" :class=\"{ active: routerPath == 'family-mart' }\">全家記帳本(WebView)</div>\n            <div class=\"link\" @click=\"goTo('goYourStudio')\" :class=\"{ active: routerPath == 'go-your-studio' }\">去你的工作室(租借場地)</div>\n            <div class=\"link\" @click=\"goTo('crestRma')\" :class=\"{ active: routerPath == 'crest-rma-web' }\">八洋RMA(送修平台)</div>\n            <div class=\"link\" @click=\"goTo('charming')\" :class=\"{ active: routerPath == 'charming-web' }\">碩美牙醫(形象官網)</div>\n            <div class=\"link\" @click=\"goTo('tongxin')\" :class=\"{ active: routerPath == 'tongxin-xili-web' }\">協力國際(形象官網)</div>\n            <div class=\"link\" @click=\"goTo('bremsinn')\" :class=\"{ active: routerPath == 'bremsinn-web' }\">慎行科技(形象官網)</div>\n            <div class=\"link\" @click=\"goTo('gaocheung')\" :class=\"{ active: routerPath == 'gaocheung-web' }\">高強建設(形象官網)</div>\n            <div class=\"link\" @click=\"goTo('sinnigtool')\" :class=\"{ active: routerPath == 'sinnigtool' }\">網路小工具(小工具)</div>\n            <div class=\"link\" @click=\"goTo('wintechWeb')\" :class=\"{ active: routerPath == 'wintech-web' }\">成浩管理平台(監測平台)</div>\n            <div class=\"link\" @click=\"goTo('km5257')\" :class=\"{ active: routerPath == 'km5257' }\">超群特產行(購物平台)</div>\n            <div class=\"link\" @click=\"goTo('gamerStore')\" :class=\"{ active: routerPath == 'gamer-store' }\">GamerStore(購物平台)</div>\n            <div class=\"link\" @click=\"goTo('personalWeb')\" :class=\"{ active: routerPath == 'personal-web' }\">個人網站</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"fullScreen\" v-if=\"settingDisplay\" @click=\"setting\"></div>\n  <van-dialog v-model:show=\"dialogShow\" title=\"聯絡資訊\">\n    <div class=\"dialogContact\">\n      <div>姓名：張允豪</div>\n      <div>電話：0909786383</div>\n      <div>Email：k950212@gmail.com</div>\n    </div>\n  </van-dialog>\n</template>\n<script setup>\nimport { onMounted } from \"vue\";\nimport { showDialog } from \"vant\";\nimport apiMember from \"@/apis/member\";\nimport { commonFun } from \"@/mixin/commonFun\";\nconst { loginStatusCheck, loginStatus } = commonFun();\n\nconst route = useRoute();\nconst router = useRouter();\nconst props = defineProps([\"login\"]);\nconst routerPath = ref(\"\");\nonMounted(() => {\n  loginStatusCheck();\n  routerPath.value = route.name;\n});\nconst settingDisplay = ref(false);\nconst dialogShow = ref(false);\nconst setting = () => {\n  settingDisplay.value = !settingDisplay.value;\n  dropdown.value = false;\n  phoneMenu.value = false;\n};\nconst contactDialog = () => {\n  dialogShow.value = true;\n};\nconst goHome = () => {\n  router.push(\"/\");\n};\nconst goAbout = () => {\n  router.push(\"/about\");\n};\nconst goTo = (text) => {\n  if (text == \"familyMart\") {\n    router.push(\"/family-mart\");\n  } else if (text == \"goYourStudio\") {\n    router.push(\"/go-your-studio\");\n  } else if (text == \"crestRma\") {\n    router.push(\"/crest-rma-web\");\n  } else if (text == \"charming\") {\n    router.push(\"/charming-web\");\n  } else if (text == \"tongxin\") {\n    router.push(\"/tongxin-xili-web\");\n  } else if (text == \"bremsinn\") {\n    router.push(\"/bremsinn-web\");\n  } else if (text == \"gaocheung\") {\n    router.push(\"/gaocheung-web\");\n  } else if (text == \"sinnigtool\") {\n    router.push(\"sinnigtool\");\n  } else if (text == \"wintechWeb\") {\n    router.push(\"wintech-web\");\n  } else if (text == \"km5257\") {\n    router.push(\"km5257\");\n  } else if (text == \"gamerStore\") {\n    router.push(\"gamer-store\");\n  } else if (text == \"personalWeb\") {\n    router.push(\"personal-web\");\n  }\n};\nconst dropdown = ref(false);\nconst openMask = () => {\n  dropdown.value = !dropdown.value;\n  settingDisplay.value = !settingDisplay.value;\n};\nconst phoneMenu = ref(false);\nconst openMenu = () => {\n  phoneMenu.value = !phoneMenu.value;\n  settingDisplay.value = !settingDisplay.value;\n};\n</script>\n<style scoped>\n.navbar-stack {\n  height: 80px;\n}\n.navbar-basic {\n  top: 0;\n  position: fixed;\n  height: 80px;\n  width: 100%;\n  background-color: white;\n  border-bottom: 1px solid #dde1e6;\n  .nav {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n    padding: 0rem 6rem;\n    .navLink {\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      cursor: pointer;\n      .link {\n        margin: 0rem 24px;\n        display: flex;\n        align-items: center;\n      }\n      button {\n        padding: 16px 12px;\n        background-color: #6192d3;\n        color: white;\n        border-radius: 6px;\n        width: 122px;\n        display: inline-flex;\n        justify-content: center;\n        align-items: center;\n      }\n      .link-dropdown {\n        top: 80px;\n        position: absolute;\n        z-index: 100010 !important;\n        box-shadow: 2px 3px 20px 0px #00000014;\n        background-color: white;\n        min-height: 200px;\n        width: 260px;\n        padding: 16px 20px;\n        border-radius: 6px;\n        .link-dropdown-item {\n          display: flex;\n          padding: 8px;\n          &:hover {\n            color: #6192d3;\n            font-weight: bold;\n          }\n          img {\n            margin-right: 4px;\n          }\n        }\n      }\n    }\n  }\n  .title {\n    color: black;\n    display: flex;\n    align-items: center;\n    font-size: 20px;\n  }\n}\n\n.navMenu {\n  position: relative;\n  display: none;\n  .phoneMenu {\n    position: absolute;\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n    background-color: white;\n    top: 80px;\n    right: 0;\n    width: 260px;\n    min-height: 200px;\n    padding: 8px 16px;\n    border-radius: 6px;\n    .link {\n      padding: 8px;\n      cursor: pointer;\n      &:hover {\n        color: #6192d3;\n        font-weight: bold;\n      }\n    }\n  }\n}\n\n.fullScreen {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: 5000;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.active {\n  color: #6192d3;\n  font-weight: bold;\n}\n\n@media screen and (max-width: 991px) {\n  .navbar-basic {\n    .nav {\n      padding: 0rem 2rem;\n    }\n  }\n\n  .navMenu {\n    display: block;\n  }\n  .navLink {\n    display: none !important;\n  }\n}\n.dialogContact {\n  padding: 1rem;\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544072,
+      "end": 1756100544072,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".navbar-stack{height:80px}.navbar-basic{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%;.nav{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%;.navLink{cursor:pointer;display:flex;flex-direction:row;position:relative;.link{display:flex;margin:0 24px}.link,button{align-items:center}button{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important;.link-dropdown-item{display:flex;padding:8px;&:hover{color:#6192d3;font-weight:700}img{margin-right:4px}}}}}.title{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{display:none;position:relative;.phoneMenu{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px;.link{cursor:pointer;padding:8px;&:hover{color:#6192d3;font-weight:700}}}}.fullScreen{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav{padding:0 2rem}}.navMenu{display:block}.navLink{display:none!important}}.dialogContact{padding:1rem}",
+      "start": 1756100544072,
+      "end": 1756100544076,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/components/Navbar.vue",
+        "mappings": "AACA,cACE,WACF,CACA,cAKE,qBAAuB,CACvB,+BAAgC,CAHhC,WAAY,CADZ,cAAe,CADf,KAAM,CAGN,UAAW,CAGX,KAGE,kBAAmB,CAFnB,YAAa,CACb,6BAA8B,CAG9B,cAAkB,CADlB,UAAW,CAEX,SAIE,cAAe,CAFf,YAAa,CACb,kBAAmB,CAFnB,iBAAkB,CAIlB,MAEE,YAAa,CADb,aAGF,CACA,aAFE,kBAWF,CATA,OAEE,wBAAyB,CAEzB,iBAAkB,CADlB,UAAY,CAGZ,mBAAoB,CACpB,sBAAuB,CANvB,iBAAkB,CAIlB,WAIF,CACA,eAKE,qBAAuB,CAIvB,iBAAkB,CALlB,mCAAsC,CAEtC,gBAAiB,CAEjB,iBAAkB,CANlB,iBAAkB,CADlB,QAAS,CAMT,WAAY,CAJZ,wBAA0B,CAO1B,oBACE,YAAa,CACb,WAAY,CACZ,QACE,aAAc,CACd,eACF,CACA,IACE,gBACF,CACF,CACF,CACF,CACF,CACA,OAGE,kBAAmB,CAFnB,UAAY,CACZ,YAAa,CAEb,cACF,CACF,CAEA,SAEE,YAAa,CADb,iBAAkB,CAElB,WAGE,qBAAuB,CAMvB,iBAAkB,CAPlB,2CAAqD,CAKrD,gBAAiB,CACjB,gBAAiB,CAPjB,iBAAkB,CAIlB,OAAQ,CADR,QAAS,CAET,WAAY,CAIZ,MAEE,cAAe,CADf,WAAY,CAEZ,QACE,aAAc,CACd,eACF,CACF,CACF,CACF,CAEA,YAKE,+BAAoC,CAHpC,YAAa,CACb,cAAe,CAFf,WAAY,CAGZ,YAEF,CACA,QACE,aAAc,CACd,eACF,CAEA,oCACE,cACE,KACE,cACF,CACF,CAEA,SACE,aACF,CACA,SACE,sBACF,CACF,CACA,eACE,YACF",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/components/Navbar.vue"
+        ],
+        "sourcesContent": [
+          "\n.navbar-stack {\n  height: 80px;\n}\n.navbar-basic {\n  top: 0;\n  position: fixed;\n  height: 80px;\n  width: 100%;\n  background-color: white;\n  border-bottom: 1px solid #dde1e6;\n  .nav {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n    padding: 0rem 6rem;\n    .navLink {\n      position: relative;\n      display: flex;\n      flex-direction: row;\n      cursor: pointer;\n      .link {\n        margin: 0rem 24px;\n        display: flex;\n        align-items: center;\n      }\n      button {\n        padding: 16px 12px;\n        background-color: #6192d3;\n        color: white;\n        border-radius: 6px;\n        width: 122px;\n        display: inline-flex;\n        justify-content: center;\n        align-items: center;\n      }\n      .link-dropdown {\n        top: 80px;\n        position: absolute;\n        z-index: 100010 !important;\n        box-shadow: 2px 3px 20px 0px #00000014;\n        background-color: white;\n        min-height: 200px;\n        width: 260px;\n        padding: 16px 20px;\n        border-radius: 6px;\n        .link-dropdown-item {\n          display: flex;\n          padding: 8px;\n          &:hover {\n            color: #6192d3;\n            font-weight: bold;\n          }\n          img {\n            margin-right: 4px;\n          }\n        }\n      }\n    }\n  }\n  .title {\n    color: black;\n    display: flex;\n    align-items: center;\n    font-size: 20px;\n  }\n}\n\n.navMenu {\n  position: relative;\n  display: none;\n  .phoneMenu {\n    position: absolute;\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n    background-color: white;\n    top: 80px;\n    right: 0;\n    width: 260px;\n    min-height: 200px;\n    padding: 8px 16px;\n    border-radius: 6px;\n    .link {\n      padding: 8px;\n      cursor: pointer;\n      &:hover {\n        color: #6192d3;\n        font-weight: bold;\n      }\n    }\n  }\n}\n\n.fullScreen {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  z-index: 5000;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.active {\n  color: #6192d3;\n  font-weight: bold;\n}\n\n@media screen and (max-width: 991px) {\n  .navbar-basic {\n    .nav {\n      padding: 0rem 2rem;\n    }\n  }\n\n  .navMenu {\n    display: block;\n  }\n  .navLink {\n    display: none !important;\n  }\n}\n.dialogContact {\n  padding: 1rem;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544076,
+      "end": 1756100544076,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544076,
+      "end": 1756100544076,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544076,
+      "end": 1756100544076,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}",
+      "start": 1756100544077,
+      "end": 1756100544079,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/yunhao/Project/website/components/Navbar.vue",
+        "mappings": "AAAA,+BAAc,WAAW,CAAC,cCA1B,mBDAwC,qBAAqB,CAAC,+BAA+B,CAAC,WAAW,CAAC,cAAc,CAAC,KAAK,CAAC,WCA/H,ADA0I,KCA1I,mBDA+I,kBAAkB,CAAC,YAAY,CAAC,6BAA6B,CAAC,cAAc,CAAC,WCA5N,ADAuO,SCAvO,mBDAgP,cAAc,CAAC,YAAY,CAAC,kBAAkB,CAAC,kBCA/R,ADAiT,uBAAM,YAAY,CAAC,aAAa,CAAC,+CAAa,kBAAkB,CAAC,wBAAO,wBAAwB,CAAC,iBAAiB,CAAC,UAAU,CAAC,mBAAmB,CAAC,sBAAsB,CAAC,iBAAiB,CAAC,WAAW,CAAC,eCAxf,mBDAugB,qBAAqB,CAAC,iBAAiB,CAAC,mCAAmC,CAAC,gBAAgB,CAAC,iBAAiB,CAAC,iBAAiB,CAAC,QAAQ,CAAC,WAAW,CAAC,yBCA7pB,ADAsrB,oBCAtrB,mBDA0sB,YAAY,CAAC,YCAvtB,ADAmuB,yBAAQ,aAAa,CAAC,eAAe,CAAC,qBAAI,gBAAgB,CAAC,CAAC,CAAC,CAAC,CAAC,wBAAO,kBAAkB,CAAC,UAAU,CAAC,YAAY,CAAC,cAAc,CAAC,CAAC,SCAp2B,mBDA62B,YAAY,CAAC,kBCA13B,ADA44B,WCA54B,mBDAu5B,qBAAqB,CAAC,iBAAiB,CAAC,2CAA2C,CAAC,gBAAgB,CAAC,gBAAgB,CAAC,iBAAiB,CAAC,OAAO,CAAC,QAAQ,CAAC,YCAhjC,ADA4jC,MCA5jC,mBDAkkC,cAAc,CAAC,YCAjlC,ADA6lC,yBAAQ,aAAa,CAAC,eAAe,CAAC,CAAC,CAAC,CAAC,6BAAY,+BAA+B,CAAC,YAAY,CAAC,cAAc,CAAC,WAAW,CAAC,YAAY,CAAC,yBAAQ,aAAa,CAAC,eAAe,CAAC,oCAAoC,cAAc,sBAAK,cAAc,CAAC,CAAC,0BAAS,aAAa,CAAC,0BAAS,sBAAsB,CAAC,CAAC,gCAAe,YAAY",
+        "names": [],
+        "sources": [
+          "/Users/yunhao/Project/website/components/Navbar.vue",
+          "\u0000<no source>"
+        ],
+        "sourcesContent": [
+          null,
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544079,
+      "end": 1756100544079,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544080,
+      "end": 1756100544080,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544081,
+      "end": 1756100544081,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1756100544081,
+      "end": 1756100544081,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}\"",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544082,
+      "end": 1756100544082,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}\"",
+      "start": 1756100544082,
+      "end": 1756100544083,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Navbar.vue?vue&type=style&index=0&scoped=df7b2633&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}\""
+        ],
+        "names": [],
+        "mappings": "sCAAA,MAAM,CAAC,OAAO,CAAC,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,QAAQ,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,OAAO,CAAC,IAAI,CAAC,OAAO,CAAC,OAAO,CAAC,KAAK,CAAC,OAAO,CAAC,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,SAAS,CAAC,GAAG,CAAC,QAAQ,CAAC,QAAQ,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,MAAM,CAAC,MAAM,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC,OAAO,CAAC,MAAM,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC,GAAG,CAAC,GAAG,CAAC,MAAM,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,QAAQ,CAAC,GAAG,CAAC,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC,QAAQ,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,MAAM,CAAC,SAAS,CAAC,CAAC,IAAI,CAAC,QAAQ,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,QAAQ,CAAC,QAAQ,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC,GAAG,CAAC,GAAG,CAAC,MAAM,CAAC,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,QAAQ,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,UAAU,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,QAAQ,CAAC,KAAK,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,KAAK,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,KAAK,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC,SAAS,CAAC,CAAC,CAAC,aAAa,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,CAAC,OAAO,CAAC,IAAI,CAAC"
+      }
+    },
+    {
+      "name": "unplugin-vue-components",
+      "result": "/* unplugin-vue-components disabled */export default \".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}\"",
+      "start": 1756100544082,
+      "end": 1756100544083,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/yunhao/Project/website/components/Navbar.vue?vue&type=style&index=0&scoped=df7b2633&lang.css?inline&used"
+        ],
+        "sourcesContent": [
+          "export default \".navbar-stack[data-v-df7b2633]{height:80px}.navbar-basic{&[data-v-df7b2633]{background-color:#fff;border-bottom:1px solid #dde1e6;height:80px;position:fixed;top:0;width:100%}.nav{&[data-v-df7b2633]{align-items:center;display:flex;justify-content:space-between;padding:0 6rem;width:100%}.navLink{&[data-v-df7b2633]{cursor:pointer;display:flex;flex-direction:row;position:relative}.link[data-v-df7b2633]{display:flex;margin:0 24px}.link[data-v-df7b2633],button[data-v-df7b2633]{align-items:center}button[data-v-df7b2633]{background-color:#6192d3;border-radius:6px;color:#fff;display:inline-flex;justify-content:center;padding:16px 12px;width:122px}.link-dropdown{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:2px 3px 20px 0 #00000014;min-height:200px;padding:16px 20px;position:absolute;top:80px;width:260px;z-index:100010!important}.link-dropdown-item{&[data-v-df7b2633]{display:flex;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}img[data-v-df7b2633]{margin-right:4px}}}}}.title[data-v-df7b2633]{align-items:center;color:#000;display:flex;font-size:20px}}.navMenu{&[data-v-df7b2633]{display:none;position:relative}.phoneMenu{&[data-v-df7b2633]{background-color:#fff;border-radius:6px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);min-height:200px;padding:8px 16px;position:absolute;right:0;top:80px;width:260px}.link{&[data-v-df7b2633]{cursor:pointer;padding:8px}&[data-v-df7b2633]:hover{color:#6192d3;font-weight:700}}}}.fullScreen[data-v-df7b2633]{background-color:rgba(0,0,0,.5);height:100vh;position:fixed;width:100vw;z-index:5000}.active[data-v-df7b2633]{color:#6192d3;font-weight:700}@media screen and (max-width:991px){.navbar-basic{.nav[data-v-df7b2633]{padding:0 2rem}}.navMenu[data-v-df7b2633]{display:block}.navLink[data-v-df7b2633]{display:none!important}}.dialogContact[data-v-df7b2633]{padding:1rem}\""
+        ],
+        "names": [],
+        "mappings": "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"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544083,
+      "end": 1756100544083,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "resolvedId": "/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/watermark/Watermark.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineComponent, nextTick, onUnmounted, ref, watch, watchEffect, createVNode as _createVNode } from \"vue\";\nimport { extend, truthProp, numericProp, createNamespace, getZIndexStyle, makeNumberProp, makeNumericProp, makeStringProp } from \"../utils/index.mjs\";\nconst [name, bem] = createNamespace(\"watermark\");\nconst watermarkProps = {\n  gapX: makeNumberProp(0),\n  gapY: makeNumberProp(0),\n  image: String,\n  width: makeNumberProp(100),\n  height: makeNumberProp(100),\n  rotate: makeNumericProp(-22),\n  zIndex: numericProp,\n  content: String,\n  opacity: numericProp,\n  fullPage: truthProp,\n  textColor: makeStringProp(\"#dcdee0\")\n};\nvar stdin_default = defineComponent({\n  name,\n  props: watermarkProps,\n  setup(props, {\n    slots\n  }) {\n    const svgElRef = ref();\n    const watermarkUrl = ref(\"\");\n    const imageBase64 = ref(\"\");\n    const renderWatermark = () => {\n      const rotateStyle = {\n        transformOrigin: \"center\",\n        transform: `rotate(${props.rotate}deg)`\n      };\n      const svgInner = () => {\n        if (props.image && !slots.content) {\n          return _createVNode(\"image\", {\n            \"href\": imageBase64.value,\n            \"xlink:href\": imageBase64.value,\n            \"x\": \"0\",\n            \"y\": \"0\",\n            \"width\": props.width,\n            \"height\": props.height,\n            \"style\": rotateStyle\n          }, null);\n        }\n        return _createVNode(\"foreignObject\", {\n          \"x\": \"0\",\n          \"y\": \"0\",\n          \"width\": props.width,\n          \"height\": props.height\n        }, [_createVNode(\"div\", {\n          \"xmlns\": \"http://www.w3.org/1999/xhtml\",\n          \"style\": rotateStyle\n        }, [slots.content ? slots.content() : _createVNode(\"span\", {\n          \"style\": {\n            color: props.textColor\n          }\n        }, [props.content])])]);\n      };\n      const svgWidth = props.width + props.gapX;\n      const svgHeight = props.height + props.gapY;\n      return _createVNode(\"svg\", {\n        \"viewBox\": `0 0 ${svgWidth} ${svgHeight}`,\n        \"width\": svgWidth,\n        \"height\": svgHeight,\n        \"xmlns\": \"http://www.w3.org/2000/svg\",\n        \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n        \"style\": {\n          padding: `0 ${props.gapX}px ${props.gapY}px 0`,\n          opacity: props.opacity\n        }\n      }, [svgInner()]);\n    };\n    const makeImageToBase64 = (url) => {\n      const canvas = document.createElement(\"canvas\");\n      const image = new Image();\n      image.crossOrigin = \"anonymous\";\n      image.referrerPolicy = \"no-referrer\";\n      image.onload = () => {\n        canvas.width = image.naturalWidth;\n        canvas.height = image.naturalHeight;\n        const ctx = canvas.getContext(\"2d\");\n        ctx == null ? void 0 : ctx.drawImage(image, 0, 0);\n        imageBase64.value = canvas.toDataURL();\n      };\n      image.src = url;\n    };\n    const makeSvgToBlobUrl = (svgStr) => {\n      const svgBlob = new Blob([svgStr], {\n        type: \"image/svg+xml\"\n      });\n      return URL.createObjectURL(svgBlob);\n    };\n    watchEffect(() => {\n      if (props.image) {\n        makeImageToBase64(props.image);\n      }\n    });\n    watch(() => [imageBase64.value, props.content, props.textColor, props.height, props.width, props.rotate, props.gapX, props.gapY], () => {\n      nextTick(() => {\n        if (svgElRef.value) {\n          if (watermarkUrl.value) {\n            URL.revokeObjectURL(watermarkUrl.value);\n          }\n          watermarkUrl.value = makeSvgToBlobUrl(svgElRef.value.innerHTML);\n        }\n      });\n    }, {\n      immediate: true\n    });\n    onUnmounted(() => {\n      if (watermarkUrl.value) {\n        URL.revokeObjectURL(watermarkUrl.value);\n      }\n    });\n    return () => {\n      const style = extend({\n        backgroundImage: `url(${watermarkUrl.value})`\n      }, getZIndexStyle(props.zIndex));\n      return _createVNode(\"div\", {\n        \"class\": bem({\n          full: props.fullPage\n        }),\n        \"style\": style\n      }, [_createVNode(\"div\", {\n        \"class\": bem(\"wrapper\"),\n        \"ref\": svgElRef\n      }, [renderWatermark()])]);\n    };\n  }\n});\nexport {\n  stdin_default as default,\n  watermarkProps\n};\n",
+      "start": 1756100544712,
+      "end": 1756100544735,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1756100544735,
+      "end": 1756100544735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { defineComponent, nextTick, onUnmounted, ref, watch, watchEffect, createVNode as _createVNode } from \"vue\";\nimport { extend, truthProp, numericProp, createNamespace, getZIndexStyle, makeNumberProp, makeNumericProp, makeStringProp } from \"../utils/index.mjs\";\nconst [name, bem] = createNamespace(\"watermark\");\nconst watermarkProps = {\n  gapX: makeNumberProp(0),\n  gapY: makeNumberProp(0),\n  image: String,\n  width: makeNumberProp(100),\n  height: makeNumberProp(100),\n  rotate: makeNumericProp(-22),\n  zIndex: numericProp,\n  content: String,\n  opacity: numericProp,\n  fullPage: truthProp,\n  textColor: makeStringProp(\"#dcdee0\")\n};\nvar stdin_default = defineComponent({\n  name,\n  props: watermarkProps,\n  setup(props, {\n    slots\n  }) {\n    const svgElRef = ref();\n    const watermarkUrl = ref(\"\");\n    const imageBase64 = ref(\"\");\n    const renderWatermark = () => {\n      const rotateStyle = {\n        transformOrigin: \"center\",\n        transform: `rotate(${props.rotate}deg)`\n      };\n      const svgInner = () => {\n        if (props.image && !slots.content) {\n          return _createVNode(\"image\", {\n            \"href\": imageBase64.value,\n            \"xlink:href\": imageBase64.value,\n            \"x\": \"0\",\n            \"y\": \"0\",\n            \"width\": props.width,\n            \"height\": props.height,\n            \"style\": rotateStyle\n          }, null);\n        }\n        return _createVNode(\"foreignObject\", {\n          \"x\": \"0\",\n          \"y\": \"0\",\n          \"width\": props.width,\n          \"height\": props.height\n        }, [_createVNode(\"div\", {\n          \"xmlns\": \"http://www.w3.org/1999/xhtml\",\n          \"style\": rotateStyle\n        }, [slots.content ? slots.content() : _createVNode(\"span\", {\n          \"style\": {\n            color: props.textColor\n          }\n        }, [props.content])])]);\n      };\n      const svgWidth = props.width + props.gapX;\n      const svgHeight = props.height + props.gapY;\n      return _createVNode(\"svg\", {\n        \"viewBox\": `0 0 ${svgWidth} ${svgHeight}`,\n        \"width\": svgWidth,\n        \"height\": svgHeight,\n        \"xmlns\": \"http://www.w3.org/2000/svg\",\n        \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n        \"style\": {\n          padding: `0 ${props.gapX}px ${props.gapY}px 0`,\n          opacity: props.opacity\n        }\n      }, [svgInner()]);\n    };\n    const makeImageToBase64 = (url) => {\n      const canvas = (void 0).createElement(\"canvas\");\n      const image = new Image();\n      image.crossOrigin = \"anonymous\";\n      image.referrerPolicy = \"no-referrer\";\n      image.onload = () => {\n        canvas.width = image.naturalWidth;\n        canvas.height = image.naturalHeight;\n        const ctx = canvas.getContext(\"2d\");\n        ctx == null ? void 0 : ctx.drawImage(image, 0, 0);\n        imageBase64.value = canvas.toDataURL();\n      };\n      image.src = url;\n    };\n    const makeSvgToBlobUrl = (svgStr) => {\n      const svgBlob = new Blob([svgStr], {\n        type: \"image/svg+xml\"\n      });\n      return URL.createObjectURL(svgBlob);\n    };\n    watchEffect(() => {\n      if (props.image) {\n        makeImageToBase64(props.image);\n      }\n    });\n    watch(() => [imageBase64.value, props.content, props.textColor, props.height, props.width, props.rotate, props.gapX, props.gapY], () => {\n      nextTick(() => {\n        if (svgElRef.value) {\n          if (watermarkUrl.value) {\n            URL.revokeObjectURL(watermarkUrl.value);\n          }\n          watermarkUrl.value = makeSvgToBlobUrl(svgElRef.value.innerHTML);\n        }\n      });\n    }, {\n      immediate: true\n    });\n    onUnmounted(() => {\n      if (watermarkUrl.value) {\n        URL.revokeObjectURL(watermarkUrl.value);\n      }\n    });\n    return () => {\n      const style = extend({\n        backgroundImage: `url(${watermarkUrl.value})`\n      }, getZIndexStyle(props.zIndex));\n      return _createVNode(\"div\", {\n        \"class\": bem({\n          full: props.fullPage\n        }),\n        \"style\": style\n      }, [_createVNode(\"div\", {\n        \"class\": bem(\"wrapper\"),\n        \"ref\": svgElRef\n      }, [renderWatermark()])]);\n    };\n  }\n});\nexport {\n  stdin_default as default,\n  watermarkProps\n};\n",
+      "start": 1756100544735,
+      "end": 1756100544961,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/yunhao/Project/website/node_modules/.pnpm/vant@4.9.16_vue@3.5.11/node_modules/vant/es/watermark/Watermark.mjs\"],\n  \"sourcesContent\": [\"import { defineComponent, nextTick, onUnmounted, ref, watch, watchEffect, createVNode as _createVNode } from \\\"vue\\\";\\nimport { extend, truthProp, numericProp, createNamespace, getZIndexStyle, makeNumberProp, makeNumericProp, makeStringProp } from \\\"../utils/index.mjs\\\";\\nconst [name, bem] = createNamespace(\\\"watermark\\\");\\nconst watermarkProps = {\\n  gapX: makeNumberProp(0),\\n  gapY: makeNumberProp(0),\\n  image: String,\\n  width: makeNumberProp(100),\\n  height: makeNumberProp(100),\\n  rotate: makeNumericProp(-22),\\n  zIndex: numericProp,\\n  content: String,\\n  opacity: numericProp,\\n  fullPage: truthProp,\\n  textColor: makeStringProp(\\\"#dcdee0\\\")\\n};\\nvar stdin_default = defineComponent({\\n  name,\\n  props: watermarkProps,\\n  setup(props, {\\n    slots\\n  }) {\\n    const svgElRef = ref();\\n    const watermarkUrl = ref(\\\"\\\");\\n    const imageBase64 = ref(\\\"\\\");\\n    const renderWatermark = () => {\\n      const rotateStyle = {\\n        transformOrigin: \\\"center\\\",\\n        transform: `rotate(${props.rotate}deg)`\\n      };\\n      const svgInner = () => {\\n        if (props.image && !slots.content) {\\n          return _createVNode(\\\"image\\\", {\\n            \\\"href\\\": imageBase64.value,\\n            \\\"xlink:href\\\": imageBase64.value,\\n            \\\"x\\\": \\\"0\\\",\\n            \\\"y\\\": \\\"0\\\",\\n            \\\"width\\\": props.width,\\n            \\\"height\\\": props.height,\\n            \\\"style\\\": rotateStyle\\n          }, null);\\n        }\\n        return _createVNode(\\\"foreignObject\\\", {\\n          \\\"x\\\": \\\"0\\\",\\n          \\\"y\\\": \\\"0\\\",\\n          \\\"width\\\": props.width,\\n          \\\"height\\\": props.height\\n        }, [_createVNode(\\\"div\\\", {\\n          \\\"xmlns\\\": \\\"http://www.w3.org/1999/xhtml\\\",\\n          \\\"style\\\": rotateStyle\\n        }, [slots.content ? slots.content() : _createVNode(\\\"span\\\", {\\n          \\\"style\\\": {\\n            color: props.textColor\\n          }\\n        }, [props.content])])]);\\n      };\\n      const svgWidth = props.width + props.gapX;\\n      const svgHeight = props.height + props.gapY;\\n      return _createVNode(\\\"svg\\\", {\\n        \\\"viewBox\\\": `0 0 ${svgWidth} ${svgHeight}`,\\n        \\\"width\\\": svgWidth,\\n        \\\"height\\\": svgHeight,\\n        \\\"xmlns\\\": \\\"http://www.w3.org/2000/svg\\\",\\n        \\\"xmlns:xlink\\\": \\\"http://www.w3.org/1999/xlink\\\",\\n        \\\"style\\\": {\\n          padding: `0 ${props.gapX}px ${props.gapY}px 0`,\\n          opacity: props.opacity\\n        }\\n      }, [svgInner()]);\\n    };\\n    const makeImageToBase64 = (url) => {\\n      const canvas = document.createElement(\\\"canvas\\\");\\n      const image = new Image();\\n      image.crossOrigin = \\\"anonymous\\\";\\n      image.referrerPolicy = \\\"no-referrer\\\";\\n      image.onload = () => {\\n        canvas.width = image.naturalWidth;\\n        canvas.height = image.naturalHeight;\\n        const ctx = canvas.getContext(\\\"2d\\\");\\n        ctx == null ? void 0 : ctx.drawImage(image, 0, 0);\\n        imageBase64.value = canvas.toDataURL();\\n      };\\n      image.src = url;\\n    };\\n    const makeSvgToBlobUrl = (svgStr) => {\\n      const svgBlob = new Blob([svgStr], {\\n        type: \\\"image/svg+xml\\\"\\n      });\\n      return URL.createObjectURL(svgBlob);\\n    };\\n    watchEffect(() => {\\n      if (props.image) {\\n        makeImageToBase64(props.image);\\n      }\\n    });\\n    watch(() => [imageBase64.value, props.content, props.textColor, props.height, props.width, props.rotate, props.gapX, props.gapY], () => {\\n      nextTick(() => {\\n        if (svgElRef.value) {\\n          if (watermarkUrl.value) {\\n            URL.revokeObjectURL(watermarkUrl.value);\\n          }\\n          watermarkUrl.value = makeSvgToBlobUrl(svgElRef.value.innerHTML);\\n        }\\n      });\\n    }, {\\n      immediate: true\\n    });\\n    onUnmounted(() => {\\n      if (watermarkUrl.value) {\\n        URL.revokeObjectURL(watermarkUrl.value);\\n      }\\n    });\\n    return () => {\\n      const style = extend({\\n        backgroundImage: `url(${watermarkUrl.value})`\\n      }, getZIndexStyle(props.zIndex));\\n      return _createVNode(\\\"div\\\", {\\n        \\\"class\\\": bem({\\n          full: props.fullPage\\n        }),\\n        \\\"style\\\": style\\n      }, [_createVNode(\\\"div\\\", {\\n        \\\"class\\\": bem(\\\"wrapper\\\"),\\n        \\\"ref\\\": svgElRef\\n      }, [renderWatermark()])]);\\n    };\\n  }\\n});\\nexport {\\n  stdin_default as default,\\n  watermarkProps\\n};\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "unplugin-vue-components",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1756100544961,
+      "end": 1756100544961,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544961,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1756100544961,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "element-plus:transform",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "vant:transform",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1756100544962,
+      "end": 1756100544962,
+      "order": "normal"
+    }
+  ]
+}
