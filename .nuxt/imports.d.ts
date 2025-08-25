@@ -41,4 +41,5 @@ export { useToast } from 'primevue/usetoast';
 export { useDialog } from 'primevue/usedialog';
 export { useSwiper, useSwiperSlide } from 'swiper/vue';
 export { Navigation as SwiperNavigation, Pagination as SwiperPagination } from 'swiper/modules';
+export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@1.1.5_@unocss+reset@0.59.0_floating-vue@5.2.2_nuxt@3.11.2_unocss@0.59.0_vue@3.5.11/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/.pnpm/nuxt@3.11.2_@unocss+reset@0.59.0_floating-vue@5.2.2_sass@1.74.1_typescript@5.4.4_unocss@0.59.0/node_modules/nuxt/dist/pages/runtime/composables';
